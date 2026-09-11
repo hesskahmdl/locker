@@ -63,14 +63,14 @@
     }
 
     .icon-epic-left {
-      height: 40px;
+      height: 42px;
       width: auto;
       object-fit: contain;
     }
 
-    /* Logo Fortnite agrandi à 65px */
+    /* Logo Fortnite agrandi à 85px */
     .logo-fortnite-img {
-      height: 65px;
+      height: 85px;
       width: auto;
       object-fit: contain;
       filter: brightness(0) invert(1);
@@ -79,7 +79,7 @@
     nav {
       display: flex;
       gap: 25px;
-      margin-left: 45px;
+      margin-left: 30px;
     }
 
     nav a {
@@ -101,13 +101,19 @@
       gap: 20px;
     }
 
-    /* Nouvelle icône Globe PNG (passée en blanc via filtre) */
+    /* Style du globe SVG identique à ton image */
     .globe-icon {
-      height: 28px;
-      width: auto;
-      object-fit: contain;
+      width: 26px;
+      height: 26px;
       cursor: pointer;
-      filter: brightness(0) invert(1);
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2;
+      transition: opacity 0.2s;
+    }
+
+    .globe-icon:hover {
+      opacity: 0.8;
     }
 
     .btn-epic {
@@ -222,7 +228,7 @@
       <div class="header-left">
         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1280px-Epic_Games_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Epic Games Logo" class="icon-epic-left">
         
-        <!-- Logo Fortnite encore plus grand (65px) -->
+        <!-- Logo Fortnite très grand (85px) -->
         <img src="https://images.seeklogo.com/logo-png/49/2/fortnite-logo-png_seeklogo-499822.png" alt="Fortnite Logo" class="logo-fortnite-img">
         
         <nav>
@@ -235,8 +241,14 @@
       </div>
 
       <div class="header-right">
-        <!-- Nouvelle image de Globe PNG -->
-        <img src="https://e7.pngegg.com/pngimages/683/106/png-clipart-computer-icons-internet-globe-icon-text-logo.png" alt="Langue" class="globe-icon">
+        <!-- Globe vectoriel SVG exactement comme ton image -->
+        <svg class="globe-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          <line x1="3.6" y1="7" x2="20.4" y2="7" />
+          <line x1="3.6" y1="17" x2="20.4" y2="17" />
+        </svg>
         
         <button class="btn-epic">
           <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1280px-Epic_Games_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Epic Logo" class="btn-epic-icon">
