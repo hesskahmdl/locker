@@ -35,7 +35,6 @@
       align-items: center;
     }
 
-    /* Overlay sombre optionnel si besoin de lisibilité */
     .overlay {
       position: absolute;
       top: 0;
@@ -62,20 +61,22 @@
     .header-left {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 15px;
     }
 
-    .logo-epic {
-      width: 28px;
-      height: auto;
+    /* Icône à gauche du logo */
+    .icon-left {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
     }
 
-    .logo-fortnite {
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: #fff;
-      text-transform: uppercase;
+    /* Image du logo Fortnite au lieu du texte */
+    .logo-fortnite-img {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1); /* Rendre le logo blanc si l'image est noire */
     }
 
     nav {
@@ -113,7 +114,7 @@
       background-color: #f8f013;
       color: #000;
       border: none;
-      padding: 10px 16px;
+      padding: 8px 16px;
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
@@ -121,11 +122,18 @@
       border-radius: 4px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .btn-epic:hover {
       background-color: #e6de00;
+    }
+
+    /* Nouvelle icône dans le bouton connexion */
+    .btn-epic-icon {
+      height: 18px;
+      width: auto;
+      object-fit: contain;
     }
 
     /* Contenu Principal */
@@ -197,7 +205,6 @@
       margin-top: 10px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .main-title {
         font-size: 32px;
@@ -213,14 +220,13 @@
   <div class="hero-container">
     <div class="overlay"></div>
 
-    <!-- En-tête / Navbar -->
     <header>
       <div class="header-left">
-        <!-- Logo Epic Games basique -->
-        <svg class="logo-epic" viewBox="0 0 44 50" fill="white">
-          <path d="M0 0h44v37.5L22 50 0 37.5V0zm22 4.5l-16.5 4.5v24l16.5 11.5 16.5-11.5v-24L22 4.5z"/>
-        </svg>
-        <span class="logo-fortnite">FORTNITE</span>
+        <!-- Icône à gauche -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl_xzriFXQqQKEHx5K26ROPpvUivmFkgGVGR37TLhhjQ&s=10" alt="Icon Left" class="icon-left">
+        <!-- Image Logo Fortnite -->
+        <img src="https://i0.wp.com/www.dafontfree.io/wp-content/uploads/2020/12/fortnite.png?resize=2000%2C1311&ssl=1" alt="Fortnite Logo" class="logo-fortnite-img">
+        
         <nav>
           <a href="#">Accueil</a>
           <a href="#" class="active">Casier</a>
@@ -233,12 +239,12 @@
       <div class="header-right">
         <span class="globe-icon">🌐</span>
         <button class="btn-epic">
-          <span>👤</span> SE CONNECTER AVEC EPIC
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNq0Rfa-NRnVCiDunYxdeAP3y-PfYLNYcMYqHbYKbkQ&s=10" alt="Epic Icon" class="btn-epic-icon">
+          SE CONNECTER AVEC EPIC
         </button>
       </div>
     </header>
 
-    <!-- Contenu Central -->
     <div class="main-content">
       <div class="subtitle-yellow">Ton casier, c'est ton héritage</div>
       <h1 class="main-title">Vérifie instantanément la valeur de ton casier <span>Fortnite</span></h1>
@@ -249,10 +255,8 @@
       <div class="footer-note">Unité Epic officiel • Entièrement sécurisé</div>
     </div>
 
-    <!-- Espace bas pour équilibrer la mise en page -->
     <div style="height: 40px; position: relative; z-index: 10;"></div>
   </div>
 
 </body>
 </html>
-
