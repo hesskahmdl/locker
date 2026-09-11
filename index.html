@@ -20,7 +20,7 @@
       overflow-x: hidden;
     }
 
-    /* Fond avec l'image fournie */
+    /* Fond principal avec l'image Fortnite */
     .hero-container {
       position: relative;
       width: 100%;
@@ -64,19 +64,19 @@
       gap: 15px;
     }
 
-    /* Icône à gauche du logo */
-    .icon-left {
-      height: 28px;
+    /* Icône Epic à gauche de Fortnite */
+    .icon-epic-left {
+      height: 32px;
       width: auto;
       object-fit: contain;
     }
 
-    /* Image du logo Fortnite au lieu du texte */
+    /* Logo texte Fortnite */
     .logo-fortnite-img {
-      height: 28px;
+      height: 30px;
       width: auto;
       object-fit: contain;
-      filter: brightness(0) invert(1); /* Rendre le logo blanc si l'image est noire */
+      filter: brightness(0) invert(1); /* Maintient le texte en blanc si l'image source est noire */
     }
 
     nav {
@@ -104,10 +104,12 @@
       gap: 15px;
     }
 
+    /* Icône Internet/Globe */
     .globe-icon {
-      color: #ccc;
+      height: 22px;
+      width: auto;
+      object-fit: contain;
       cursor: pointer;
-      font-size: 16px;
     }
 
     .btn-epic {
@@ -129,9 +131,9 @@
       background-color: #e6de00;
     }
 
-    /* Nouvelle icône dans le bouton connexion */
+    /* Icône Epic dans le bouton de connexion */
     .btn-epic-icon {
-      height: 18px;
+      height: 20px;
       width: auto;
       object-fit: contain;
     }
@@ -222,10 +224,10 @@
 
     <header>
       <div class="header-left">
-        <!-- Icône à gauche -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl_xzriFXQqQKEHx5K26ROPpvUivmFkgGVGR37TLhhjQ&s=10" alt="Icon Left" class="icon-left">
-        <!-- Image Logo Fortnite -->
-        <img src="https://i0.wp.com/www.dafontfree.io/wp-content/uploads/2020/12/fortnite.png?resize=2000%2C1311&ssl=1" alt="Fortnite Logo" class="logo-fortnite-img">
+        <!-- Icône Epic Games à gauche -->
+        <img src="https://i.imgur.com/xmwbTcZ.png" alt="Epic Games Icon" class="icon-epic-left">
+        <!-- Texte / Logo Fortnite -->
+        <img src="https://www.citypng.com/public/uploads/preview/hd-black-fortnite-text-logo-png-7017516947870524edzsglk3q.png" alt="Fortnite Logo" class="logo-fortnite-img">
         
         <nav>
           <a href="#">Accueil</a>
@@ -237,9 +239,12 @@
       </div>
 
       <div class="header-right">
-        <span class="globe-icon">🌐</span>
+        <!-- Icône Internet -->
+        <img src="https://i.imgur.com/vrHui92.png" alt="Langue" class="globe-icon">
+        
+        <!-- Bouton Connexion avec Icône Epic -->
         <button class="btn-epic">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNq0Rfa-NRnVCiDunYxdeAP3y-PfYLNYcMYqHbYKbkQ&s=10" alt="Epic Icon" class="btn-epic-icon">
+          <img src="https://i.imgur.com/BCxGmEW.png" alt="Epic Icon" class="btn-epic-icon">
           SE CONNECTER AVEC EPIC
         </button>
       </div>
