@@ -71,7 +71,7 @@
       object-fit: contain;
     }
 
-    /* Logo texte Fortnite */
+    /* Logo Fortnite transparent (inversé en blanc) */
     .logo-fortnite-img {
       height: 30px;
       width: auto;
@@ -104,12 +104,13 @@
       gap: 15px;
     }
 
-    /* Icône Internet */
+    /* Icône Globe (inversée en blanc pour ressortir sur le fond sombre) */
     .globe-icon {
-      height: 24px;
+      height: 22px;
       width: auto;
       object-fit: contain;
       cursor: pointer;
+      filter: brightness(0) invert(1);
     }
 
     .btn-epic {
@@ -224,10 +225,10 @@
 
     <header>
       <div class="header-left">
-        <!-- Logo Epic Games à gauche -->
+        <!-- Logo Epic Games -->
         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1280px-Epic_Games_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Epic Games Logo" class="icon-epic-left">
-        <!-- Logo Fortnite -->
-        <img src="https://www.citypng.com/public/uploads/preview/hd-black-fortnite-text-logo-png-7017516947870524edzsglk3q.png" alt="Fortnite Logo" class="logo-fortnite-img">
+        <!-- Nouveau Logo Fortnite sans cadre -->
+        <img src="https://images.seeklogo.com/logo-png/49/2/fortnite-logo-png_seeklogo-499822.png" alt="Fortnite Logo" class="logo-fortnite-img">
         
         <nav>
           <a href="#">Accueil</a>
@@ -239,8 +240,8 @@
       </div>
 
       <div class="header-right">
-        <!-- Icône Internet Pngtree -->
-        <img src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-cartoon-internet-icon-image_1174298.jpg" alt="Langue" class="globe-icon">
+        <!-- Nouvelle Icône Globe -->
+        <img src="https://www.citypng.com/public/uploads/preview/hd-internet-globe-black-icon-png-701751695035225xjvml1stbn.png" alt="Langue" class="globe-icon">
         
         <!-- Bouton Connexion avec Logo Epic -->
         <button class="btn-epic">
