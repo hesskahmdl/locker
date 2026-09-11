@@ -63,20 +63,19 @@
     }
 
     .icon-epic-left {
-      height: 38px;
+      height: 40px;
       width: auto;
       object-fit: contain;
     }
 
-    /* Logo Fortnite agrandi */
+    /* Logo Fortnite agrandi à 65px */
     .logo-fortnite-img {
-      height: 48px;
+      height: 65px;
       width: auto;
       object-fit: contain;
       filter: brightness(0) invert(1);
     }
 
-    /* Onglets décalés plus à droite */
     nav {
       display: flex;
       gap: 25px;
@@ -102,18 +101,13 @@
       gap: 20px;
     }
 
-    /* Icône Globe SVG bien visible en blanc */
+    /* Nouvelle icône Globe PNG (passée en blanc via filtre) */
     .globe-icon {
-      width: 24px;
-      height: 24px;
-      fill: #ffffff;
+      height: 28px;
+      width: auto;
+      object-fit: contain;
       cursor: pointer;
-      display: block;
-      transition: opacity 0.2s;
-    }
-
-    .globe-icon:hover {
-      opacity: 0.8;
+      filter: brightness(0) invert(1);
     }
 
     .btn-epic {
@@ -228,10 +222,9 @@
       <div class="header-left">
         <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1280px-Epic_Games_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Epic Games Logo" class="icon-epic-left">
         
-        <!-- Logo Fortnite agrandi à 48px -->
+        <!-- Logo Fortnite encore plus grand (65px) -->
         <img src="https://images.seeklogo.com/logo-png/49/2/fortnite-logo-png_seeklogo-499822.png" alt="Fortnite Logo" class="logo-fortnite-img">
         
-        <!-- Navigation décalée avec margin-left: 45px -->
         <nav>
           <a href="#">Accueil</a>
           <a href="#" class="active">Casier</a>
@@ -242,10 +235,8 @@
       </div>
 
       <div class="header-right">
-        <!-- Globe vectoriel SVG blanc net -->
-        <svg class="globe-icon" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-        </svg>
+        <!-- Nouvelle image de Globe PNG -->
+        <img src="https://e7.pngegg.com/pngimages/683/106/png-clipart-computer-icons-internet-globe-icon-text-logo.png" alt="Langue" class="globe-icon">
         
         <button class="btn-epic">
           <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1280px-Epic_Games_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Epic Logo" class="btn-epic-icon">
