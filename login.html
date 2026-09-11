@@ -1,4025 +1,501 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" data-rh="lang,dir"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_oEL3wn"></div><head>
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="googlebot" content="noindex,nofollow">
-<meta name="bingbot" content="noindex,nofollow">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, shrink-to-fit=no, viewport-fit=cover, maximum-scale=1, user-scalable=0">
-    <meta id="theme-color-meta" name="theme-color" content="#101014">
-    <meta name="referrer" content="origin-when-cross-origin">
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Se connecter à Epic Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page: #121117;
+    --bg-modal: #18181c;
+    --bg-input: #202024;
+    --bg-btn-social: #202024;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.65);
+    --text-link: #26bbff;
+    --blue-primary: #26bbff;
+    --blue-hover: #50dcff;
+    --red-error: #ff3f56;
+    --font-main: 'Inter', Arial, sans-serif;
+  }
 
-    <link rel="shortcut icon" href="fonts/icons/epic-favicon-96x96.png">
-    <link rel="apple-touch-icon" href="fonts/icons/epic_logo.png">
-    <link rel="preload" href="fonts/woff2/Inter-Bold-CuhepTt8.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/woff2/Inter-Light-CdXm_ABL.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/woff2/Inter-Medium-P1cOs5ep.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/woff2/Inter-Regular-CKDp9E3C.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/woff2/InterTight-Bold-CPdZBAQJ.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/woff2/InterTight-Black-CBljiM1E.woff2" as="font" type="font/woff2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <style>/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--bg-page);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    padding: 30px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: 563px;
+    background: var(--bg-modal);
+    border-radius: 22px;
+    padding: 46px 50px 50px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ====== LOGO EPIC ====== */
+  .epic-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 19px;
+  }
+  .epic-logo-svg {
+    width: 36px;
+    height: 42px;
+    color: #fff;
+  }
+
+  /* ====== TITRE ====== */
+  .header {
+    text-align: center;
+    padding: 0 0 16px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.334;
+  }
+
+  /* ====== FORMULAIRE EMAIL ====== */
+  .login-form {
+    margin-bottom: 8px;
+  }
+  .login-form input#email {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--bg-input);
+    color: #fff;
+    padding: 0 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .login-form input#email:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .login-form input#email:focus {
+    border-color: var(--blue-primary);
+    border-width: 2px;
+  }
+  .login-form input#email.error {
+    border-color: var(--red-error) !important;
+    border-width: 1px !important;
+  }
+  .login-form input#email::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--blue-primary);
+    color: #101014;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: var(--blue-hover);
+  }
+  .btn-primary:disabled {
+    background: #444448;
+    cursor: not-allowed;
+  }
+
+  /* ====== MESSAGE D'ERREUR ====== */
+  .error-text {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--red-error);
+    font-weight: 400;
+    margin-top: 7px;
+    margin-bottom: 10px;
+  }
+  .error-text.show {
+    display: flex;
+  }
+  .error-icon {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border-radius: 50%;
+    border: 1.5px solid var(--red-error);
+    color: var(--red-error);
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* ====== SECTION DIVIDER ====== */
+  .section-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 10px 0 24px;
+  }
+
+  /* ====== LIEN CRÉER UN COMPTE ====== */
+  .link-section {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 6px 0;
+    margin-bottom: 4px;
+  }
+  .link-section a {
+    color: var(--text-link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ====== SECTIONS CONSOLE & SOCIAL ====== */
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 4px;
+  }
+
+  /* Boutons plateformes */
+  .platform-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 4px 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--bg-btn-social);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-align: center;
+  }
+  .platform-btn:hover {
+    background: #2a2a2f;
+  }
+
+  .platform-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .platform-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  .platform-icon.round-icon {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .platform-icon.round-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .footer a {
+    display: block;
+    font-size: 14px;
+    color: var(--text-link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-bottom: 24px;
+  }
+  .footer a:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 479px) {
+    body {
+      padding: 0 30px;
+      align-items: flex-start;
+    }
+    .modal {
+      width: 90%;
+      max-width: 563px;
+      margin: 0 auto;
+      padding: 24px 30px 28px;
+    }
+    .platform-btn {
+      font-size: 10px;
+      padding: 12px 2px 8px;
+    }
+    .platform-icon {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .modal {
+      padding: 16px 12px 20px;
+    }
+    .header h1 {
+      font-size: 16px;
+    }
+  }
 </style>
-    <script src="assets/tlsh.bundle.js" async="" defer=""></script>
-    <script src="assets/api.js?render=explicit&amp;uj=true" async="" defer=""></script>
-    <script>
-(function(){var l=['en','fr','de','es','it','pt','pl','tr','nl','sv','cs','no','da','fi','ro','el','hu','ja','ko','zh-CN','zh-TW','th','vi','id','hi','bn','ms','tl','ar','he','fa','sw'];var d='en';var b=d;try{var n=navigator.language||navigator.userLanguage||'en';var c=n.toLowerCase();if(l.indexOf(c)!==-1){b=c;}else{var s=c.split('-')[0];if(s==='zh'){b=n.indexOf('TW')!==-1||n.indexOf('HK')!==-1||n.indexOf('Hant')!==-1?'zh-TW':'zh-CN';}else if(l.indexOf(s)!==-1){b=s;}}}catch(e){}window.detectedLanguage=b;var sc=document.createElement('script');sc.src='lang/'+b+'.js';sc.onload=function(){window.languageLoaded=true;window.dispatchEvent(new Event('languageready'));};document.head.appendChild(sc);})();
-    </script><script src="lang/fr.js"></script>
-    <script type="text/javascript">
-      try {
-        window.AppInit = Date.now().toString();
-      } catch (err) {
-        console.error(err);
-      }
-      window._epicEnableCookieGuard = false;
-      if (window.flexview) {
-        (function () {
-          window.flexview.showProgress();
-          var buttonsSwapped =
-            window.kitt.version.major === 2
-              ? window.kitt.queryFaceButtonFunction("FaceButton_Right") ===
-                "FaceButton_Enter"
-              : window.kitt.queryFaceButtonFunction(3) === 0;
-          function onKeyDown(event) {
-            var backButton = buttonsSwapped
-              ? event.keyCode === 13
-              : event.keyCode === 27;
-            if (backButton) window.close();
-          }
-          document.addEventListener("keydown", onKeyDown);
-          var checkProgressInterval = window.setInterval(function () {
-            if (window.flexview.getProgress() >= 99) {
-              window.clearInterval(checkProgressInterval);
-              document.removeEventListener("keydown", onKeyDown);
-            }
-          }, 1000);
-        })();
-      }
-    </script>
-    <title>Sign in to Your Epic Games account | Epic Games</title>
-    <style>      @font-face {
-        font-family: "InterTight-Bold";
-        src: url("../fonts/InterTight-Bold.ttf") format("truetype");
-      }
-      @font-face {
-        font-family: "InterTight-Regular";
-        src: url("../fonts/InterTight-Regular.ttf") format("truetype");
-      }
-      @font-face {
-        font-family: "InterTight-Light";
-        src: url("../fonts/InterTight-Light.ttf") format("truetype");
-      }
-      @font-face {
-        font-family: "InterTight-SemiBold";
-        src: url("../fonts/InterTight-SemiBold.ttf") format("truetype");
-      }
-
-      @font-face {
-        font-family: "Inter-Light";
-        src: url("../fonts/Inter/Inter-Light.otf") format("opentype");
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Inter, Arial, sans-serif;
-      }
-
-      body {
-        min-height: 100vh;
-        background: #121117;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-      }
-
-      input,
-      textarea {
-        user-select: text;
-        -webkit-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-      }
-
-      .modal {
-        margin: 30px 0;
-        width: 563px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 46px 50px 50px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .header {
-        padding: 0 0 16px;
-        text-align: center;
-      }
-
-      .header h1 {
-        margin: 0;
-        font-family: Inter, sans-serif;
-        letter-spacing: 0;
-        text-align: center;
-        text-overflow: ellipsis;
-        font-size: 1.5rem;
-        line-height: 1.334;
-        padding-bottom: 0;
-        color: rgb(255, 255, 255);
-        font-weight: 700;
-        text-transform: none;
-        overflow: hidden;
-        overflow-wrap: anywhere;
-      }
-
-      .section {
-        border-radius: 15px;
-        padding: 18px 30px;
-        margin-bottom: 18px;
-        border: none;
-        background: transparent;
-      }
-
-      .section:first-of-type {
-        margin-bottom: 13px;
-      }
-
-      .section:nth-of-type(2) {
-        margin-top: 0;
-      }
-
-      .section p {
-        margin: 0 auto 17px;
-        max-width: 100%;
-        font-family: Inter, sans-serif;
-        letter-spacing: 0;
-        text-align: center;
-        text-overflow: ellipsis;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.65);
-        font-weight: normal;
-        text-transform: none;
-        overflow: visible;
-      }
-
-      .btn {
-        width: 100%;
-        height: 50px;
-        border-radius: 28px;
-        border: none;
-        background: #202024;
-        color: #fff;
-        font-size: 16px;
-        letter-spacing: 0.03em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 30px;
-        margin-bottom: 15px;
-        cursor: pointer;
-        position: relative;
-        font-family: "Inter-Light", sans-serif;
-      }
-
-      .btn:last-child {
-        margin-bottom: 0;
-      }
-      .btn:hover {
-        background: #29292e;
-      }
-
-      .btn-primary {
-        display: inline-flex;
-        -moz-box-align: center;
-        align-items: center;
-        -moz-box-pack: center;
-        justify-content: center;
-        position: relative;
-        box-sizing: border-box;
-        outline: 0;
-        border: 0;
-        margin: 0;
-        cursor: pointer;
-        user-select: none;
-        vertical-align: middle;
-        appearance: none;
-        text-decoration: none;
-        padding: 6px 16px;
-        border-radius: 10px;
-        width: 100%;
-        box-shadow: none;
-        text-align: center;
-        font-family: "Inter", sans-serif;
-        font-size: 1.5rem;
-        line-height: 140%;
-        letter-spacing: 0.02em;
-        transition: none;
-        text-transform: none;
-        min-width: auto;
-        min-height: 2.5rem;
-        height: 47px;
-        background-color: rgb(38, 187, 255);
-        color: rgb(16, 16, 20);
-        margin-top: 20px;
-        margin-bottom: 18px;
-      }
-
-      .btn-primary:hover:not(:disabled) {
-        background-color: rgb(80, 220, 255);
-      }
-
-      .btn-primary:disabled {
-        background-color: #444448;
-        cursor: not-allowed;
-      }
-
-      .btn-primary:disabled:hover {
-        background-color: #444448;
-      }
-
-      .icon {
-        width: 39px;
-        height: 39px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px;
-        font-weight: 700;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        position: absolute;
-        left: 5px;
-      }
-
-      .ps {
-        background: #00439c;
-      }
-      .xbox {
-        background: #107c10;
-      }
-      .nintendo {
-        background: #e60012;
-      }
-      .google {
-        background: #fff;
-        color: #000;
-      }
-      .steam {
-        background: #206495;
-        border: 1px solid #206495;
-      }
-
-      .mui-c1v24y svg,
-      .mui-c1v24y > svg,
-      .icon.steam svg,
-      .icon.steam.mui-c1v24y svg {
-        width: 26px;
-        height: 26px;
-      }
-      .apple {
-        background: #fff;
-      }
-      .facebook {
-        background: #1877f2;
-      }
-      .lego {
-        background: #ffcf00;
-        color: #000;
-      }
-      .autodesk {
-        background: #fff;
-        color: #000;
-      }
-      .vk {
-        background: #0077FF;
-      }
-
-      .label {
-        font-size: 14px;
-        color: #aeb0b6;
-        margin-bottom: 10px;
-        line-height: 165%;
-        font-weight: 200;
-        letter-spacing: 0.04em;
-        font-family: "Inter-Light";
-      }
-
-      input {
-        margin-block-start: 0.5rem;
-        width: 100%;
-        height: 44px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: #202024;
-        color: #fff;
-        padding: 0 18px;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 0;
-        margin-top: 0;
-        outline: none;
-        transition: border-width 0.15s ease, border-color 0.15s ease;
-      }
-
-      input:focus {
-        border-color: #2fb8ff;
-        border-width: 2px;
-      }
-
-      input.error {
-        border-color: #ff3f56;
-      }
-
-      .error-text {
-        font-size: 12px;
-        color: #ff6173;
-        display: none;
-        align-items: center;
-        gap: 6px;
-        font-weight: 400;
-      }
-
-      .error-text.suggestion {
-        color: #aeaeaf;
-        white-space: nowrap;
-      }
-
-      .suggested-email {
-        color: #26bbff;
-        text-decoration: underline;
-        cursor: pointer;
-        margin-left: -6px;
-        letter-spacing: -0.6px;
-      }
-
-      .suggested-email:hover {
-        color: #4fc9ff;
-      }
-
-      .email-prefix {
-        color: #eeeeef;
-        font-weight: 400;
-        margin-left: -2px;
-      }
-
-      .question-mark {
-        margin-left: -6px;
-      }
-
-      .error-text.show {
-        display: flex;
-        margin-top: 7px;
-        margin-bottom: 10px;
-      }
-
-      .error-icon {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 1px solid #ff3f56;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        font-weight: 700;
-        color: #ff3f56;
-      }
-
-      .link-section {
-        letter-spacing: 0.01em;
-        padding: 6px 0;
-        margin-bottom: 4px;
-        border: none;
-        text-align: center;
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.6);
-        font-family: Inter, sans-serif;
-      }
-
-      .link-section span {
-        font-family: Inter, sans-serif;
-        font-weight: 400;
-      }
-
-      .link-section a {
-        color: #26bbff;
-        text-decoration: underline;
-        font-weight: 400;
-        text-underline-offset: 3px;
-      }
-
-      .footer a {
-        color: #26bbff;
-        text-decoration: underline;
-        font-weight: 400;
-        text-underline-offset: 3px;
-      }
-
-      #emailLoginPage .footer {
-        margin-top: 48px;
-        text-align: center;
-      }
-
-      .footer {
-        margin-top: 30px;
-        text-align: center;
-      }
-
-      .footer a {
-        display: block;
-        font-size: 14px;
-        line-height: 1.43;
-        font-weight: 400;
-        margin-top: 0;
-      }
-
-      #emailLoginPage .footer a:first-child {
-        margin-bottom: 24px;
-      }
-
-      .footer a:first-child {
-        margin-bottom: 10px;
-      }
-
-      .footer a:nth-child(2) {
-        margin-top: 20px;
-      }
-
-      .skeleton-loader {
-        position: fixed;
-        inset: 0;
-        background: #121117;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-      }
-
-      .skeleton-card {
-        width: 600px;
-        background: #18181c;
-        border-radius: 26px;
-        padding: 60px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .skel {
-        border-radius: 999px;
-        background: #2a2a2f;
-        margin: 0 auto;
-        animation: pulse 1.4s ease-in-out infinite;
-      }
-
-      .skel.tiny {
-        width: min(230px, calc(100% - 40px));
-        height: 20px;
-        margin-bottom: 18px;
-      }
-      .skel.small {
-        width: min(150px, calc(100% - 40px));
-        height: 20px;
-        margin-top: 30px;
-      }
-      .skel.medium {
-        width: min(450px, calc(100% - 40px));
-        height: 20px;
-        margin-top: 15px;
-      }
-      .skel.long {
-        width: min(450px, calc(100% - 40px));
-        height: 55px;
-        border-radius: 18px;
-        margin-top: 30px;
-      }
-      .skel.block {
-        width: min(450px, calc(100% - 40px));
-        height: 55px;
-        border-radius: 18px;
-        margin-top: 30px;
-      }
-      .skel.thin {
-        width: min(250px, calc(100% - 40px));
-        height: 20px;
-        border-radius: 18px;
-        margin-top: 30px;
-      }
-
-      @keyframes pulse {
-        0% {
-          opacity: 0.35;
-        }
-        50% {
-          opacity: 0.18;
-        }
-        100% {
-          opacity: 0.35;
-        }
-      }
-
-      /* --- Epic Logo --- */
-      .epic-logo-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 19px;
-      }
-
-      .epic-logo-svg {
-        width: 36px;
-        height: 42px;
-        color: #fff;
-      }
-
-      /* --- Login Form (flat, no card) --- */
-      .login-form {
-        padding: 0;
-        margin-bottom: 8px;
-      }
-
-      .login-form input#email {
-        margin-block-start: 0;
-        height: 3rem;
-        font-size: 1rem;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        background: #202024;
-        padding: 0 16px;
-        transition: border-color 0.2s ease, border-width 0.15s ease;
-      }
-
-      .login-form input#email:hover {
-        border-color: rgba(255, 255, 255, 0.35);
-      }
-
-      .login-form input#email:focus {
-        border-color: #2fb8ff;
-        border-width: 2px;
-      }
-
-      .login-form input#email::placeholder {
-        color: rgba(255, 255, 255, 0.4);
-        font-weight: 400;
-        font-size: 1rem;
-      }
-
-      .login-form .btn-primary {
-        margin-top: 16px;
-        margin-bottom: 0;
-        height: 48px;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 10px;
-      }
-
-      /* --- Section Divider --- */
-      .section-divider {
-        height: 1px;
-        background: rgba(255, 255, 255, 0.08);
-        margin: 10px 0 24px;
-      }
-
-      /* --- Options Title (for console/social sections) --- */
-      .options-title {
-        margin: 0 auto 8px;
-        max-width: 100%;
-        font-family: Inter, sans-serif;
-        letter-spacing: 0;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.65);
-        font-weight: normal;
-      }
-
-      #consoleSection .options-title {
-        font-weight: 700;
-        color: #fff;
-        font-size: 1rem;
-      }
-
-      .console-header {
-        grid-column: 1 / -1;
-        text-align: center;
-        margin-bottom: 8px;
-      }
-
-      #consoleSection .console-title {
-        font-family: Inter, sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        color: #fff;
-        margin: 0 0 6px;
-        max-width: 100%;
-        letter-spacing: 0;
-        line-height: 1.5;
-      }
-
-      #consoleSection .console-subtitle {
-        font-family: Inter, sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.55);
-        margin: 0;
-        max-width: 100%;
-        letter-spacing: 0;
-        line-height: 1.5;
-      }
-
-      /* --- Console & Social sections: 3-column grid --- */
-      #consoleSection,
-      #socialSection {
-        border: none;
-        background: transparent;
-        padding: 0;
-        margin-bottom: 16px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-      }
-
-      #consoleSection .options-title,
-      #socialSection .options-title,
-      .console-header {
-        grid-column: 1 / -1;
-        margin-bottom: 8px;
-      }
-
-      #socialSection .options-title {
-        font-weight: 700;
-        color: #fff;
-        font-size: 1rem;
-        max-width: 100%;
-        margin-bottom: 8px;
-        margin-top: 8px;
-      }
-
-      #consoleSection .btn,
-      #socialSection .btn {
-        flex-direction: column;
-        border-radius: 16px;
-        height: auto;
-        padding: 10px 8px 10px;
-        margin-bottom: 0;
-        gap: 8px;
-        background: #202024;
-        font-size: 0.625rem;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        line-height: 1.4;
-        text-align: center;
-        font-family: Inter, sans-serif;
-      }
-
-      #consoleSection .btn:hover,
-      #socialSection .btn:hover {
-        background: #2a2a2f;
-      }
-
-      #consoleSection .btn:last-child,
-      #socialSection .btn:last-child {
-        margin-bottom: 0;
-      }
-
-      #consoleSection .icon,
-      #socialSection .icon {
-        position: static;
-        left: auto;
-        width: 40px;
-        height: 40px;
-        border: none;
-      }
-
-      #consoleSection .icon svg,
-      #socialSection .icon svg {
-        width: 24px;
-        height: 24px;
-      }
-
-      #consoleSection .icon.ps svg {
-        width: 24px;
-        height: 24px;
-      }
-
-      #consoleSection .icon.nintendo svg {
-        width: 33px;
-        height: 14px;
-      }
-
-      #socialSection .icon.autodesk svg {
-        width: 24px;
-        height: 16px;
-      }
-
-      #socialSection .icon.lego svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      #socialSection .icon.apple img {
-        width: 34px;
-        height: 34px;
-      }
-
-      #socialSection .icon.steam img,
-      #socialSection .icon.steam.mui-c1v24y img {
-        width: 28px;
-        height: 28px;
-      }
-
-      @media (max-width: 479px) {
-        body {
-          padding: 0 30px;
-          align-items: flex-start;
-        }
-
-        #emailLoginPage {
-          width: 90%;
-          max-width: 563px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 24px 30px 28px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .header h1 {
-          margin-left: 0;
-          margin-right: 0;
-        }
-
-        .section {
-          padding: 16px;
-          margin-bottom: 16px;
-        }
-
-        .section p {
-          font-size: 15px;
-        }
-
-        .btn {
-          height: 48px;
-          font-size: 15px;
-          margin-bottom: 14px;
-        }
-
-        input {
-          height: 48px;
-          font-size: 15px;
-          padding: 0 16px;
-        }
-
-        .label {
-          margin-bottom: 8px;
-        }
-
-        .link-section {
-          margin-bottom: 16px;
-          font-size: 14px;
-        }
-
-        .footer {
-          margin-top: 16px;
-        }
-
-        .footer a {
-          font-size: 14px;
-          margin-top: 14px;
-        }
-
-        .icon {
-          width: 36px;
-          height: 36px;
-          font-size: 14px;
-        }
-
-        .icon svg {
-          width: 30px;
-          height: 30px;
-        }
-
-        .password-page .modal,
-        .code-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 70px 10px 30px 10px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .code-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 24px 20px 28px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .epic-logo-svg {
-          width: 30px;
-          height: 35px;
-        }
-
-        #consoleSection,
-        #socialSection {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 6px;
-          padding: 0;
-          margin-bottom: 12px;
-        }
-
-        #consoleSection .btn,
-        #socialSection .btn {
-          padding: 14px 4px 10px;
-          font-size: 11px;
-          gap: 6px;
-          border-radius: 8px;
-        }
-
-        #consoleSection .icon,
-        #socialSection .icon {
-          width: 36px;
-          height: 36px;
-        }
-
-        .console-header {
-          margin-bottom: 6px;
-        }
-
-        #consoleSection .console-title {
-          font-size: 14px;
-        }
-
-        #consoleSection .console-subtitle {
-          font-size: 13px;
-        }
-
-        #socialSection .options-title {
-          font-size: 14px;
-        }
-      }
-
-</style>
-    <style>      /* Password page styles */
-      .password-page {
-        display: none;
-      }
-
-      .password-page.active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      .password-page .modal {
-        width: 560px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 70px 20px 30px 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: auto;
-        opacity: 0;
-        transform: translateX(60px);
-        animation: passwordIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        align-self: center;
-      }
-
-      @keyframes passwordIn {
-        0% {
-          opacity: 0;
-          transform: translateX(60px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      .password-page .header {
-        padding: 0 0 20px;
-        position: relative;
-        text-align: left;
-      }
-
-      .password-page .header h1 {
-        font-size: 1.5rem;
-        font-family: "InterTight-SemiBold", sans-serif;
-        color: #fff;
-        margin-bottom: 14px;
-
-        margin-top: 10px;
-        margin-left: 24px;
-        letter-spacing: 0.3px;
-        text-align: left;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-      }
-
-      .password-page.active .header h1 {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .password-page .section {
-        border: none;
-        background: transparent;
-        padding: 0;
-        margin: 0 auto 24px;
-
-        max-width: 520px;
-        width: 90%;
-        border-radius: 0;
-      }
-
-      .password-page .label {
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-        text-align: left;
-      }
-
-      .password-page.active .label {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .password-page .btn-primary {
-        margin-top: 1px;
-        margin-bottom: 4px;
-        font-size: 16px !important;
-        font-weight: 0 !important;
-        margin-left: 0;
-        max-width: 460px;
-        width: min(460px, calc(100%));
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
-      }
-
-      .password-page.active .btn-primary {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .password-page .footer {
-        margin-top: 2px;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 460px;
-        width: min(460px, calc(100% - 20px));
-        text-align: center;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
-      }
-
-      .password-page.active .footer {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .password-page .footer a {
-        font-size: 14px;
-      }
-
-      .password-page .back-button {
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        padding: 0;
-        margin-bottom: 20px;
-        margin-top: -15px;
-        display: flex;
-        align-items: center;
-        margin-left: 17px;
-        font-size: 14px;
-        gap: 8px;
-        opacity: 0;
-        transform: translateX(30px);
-        font-weight: 100;
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-          transform 0.3s ease;
-      }
-      .code-page .back-button {
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        padding: 0;
-        margin-bottom: 30px;
-        margin-top: -15px;
-        display: flex;
-        align-items: center;
-        margin-left: 0px;
-        font-size: 14px;
-        gap: 8px;
-        opacity: 0;
-        transform: translateX(30px);
-        font-weight: 100;
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-          transform 0.3s ease;
-      }
-
-      .password-page.active .back-button {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .code-page .back-button {
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-          transform 0.3s ease;
-      }
-
-      .code-page.active .back-button {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .back-button svg {
-        width: 19px;
-        height: 24px;
-      }
-
-      .back-button:hover {
-        opacity: 0.8;
-      }
-
-      .back-text {
-        display: inline-block;
-        transition: transform 0.3s ease;
-      }
-
-      .back-button:hover .back-text {
-        transform: translateX(5px);
-      }
-
-      .email-display {
-        font-size: 1rem;
-        color: #aeb0b6;
-        margin-bottom: 12px;
-        margin-top: 1px;
-        margin-left: 0px;
-        letter-spacing: 0.02em;
-        line-height: 165%;
-        font-weight: normal;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-        text-align: left;
-        padding-left: 24px;
-        font-family: "Inter-Light", sans-serif;
-      }
-
-      .password-page.active .email-display {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .email-display mark {
-        font-weight: 600;
-        color: #fff;
-        background: none;
-        padding: 0;
-      }
-
-      .password-wrapper {
-        position: relative;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        margin-left: 0;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.35s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
-        max-width: 460px;
-        width: min(460px, calc(100%));
-      }
-
-      .password-page.active .password-wrapper {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .password-page input {
-        width: 100%;
-        height: 50px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: #232327;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 400;
-        margin-bottom: 0;
-        margin-top: 0;
-        outline: none;
-        transition: border-color 0.3s ease;
-        box-sizing: border-box;
-      }
-
-      .password-page input:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
-
-      .password-toggle {
-        position: absolute;
-        right: 18px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 27px;
-        height: 27px;
-      }
-
-      .password-toggle svg {
-        width: 22px !important;
-        height: 22px !important;
-        min-width: 22px;
-        min-height: 22px;
-        max-width: 26px;
-        max-height: 27px;
-        transition: opacity 0.3s ease, filter 0.3s ease;
-      }
-
-      .password-toggle:hover svg {
-        opacity: 0.8;
-        filter: brightness(1.3);
-      }
-
-      .password-page input:focus {
-        border: 2px solid #fff;
-        border-color: #fff;
-      }
-
-      .password-page input.error {
-        border-color: #ff6173;
-      }
-
-      .password-page .error-text.show {
-        margin-top: 1px;
-        margin-left: 0;
-        margin-right: auto;
-        max-width: 460px;
-        width: min(460px, calc(100%));
-      }
-
-      .forgot-password-link {
-        color: #26bbff;
-        text-decoration: underline;
-        font-size: 14px;
-        font-weight: 400;
-        display: block;
-        text-align: left;
-        margin-top: 5px;
-        margin-bottom: 24px;
-        margin-left: 0;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
-      }
-
-      .password-page.active .forgot-password-link {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .remember-me {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 8px;
-        margin-left: 0;
-        margin-bottom: 32px;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
-          transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-      }
-
-      .password-page.active .remember-me {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .remember-me input[type="checkbox"] {
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        margin-top: 1px;
-        padding: 0;
-        background: #232327;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        box-sizing: border-box;
-        position: relative;
-        flex-shrink: 0;
-        aspect-ratio: 1;
-      }
-
-      .remember-me input[type="checkbox"]:hover,
-      .remember-me:hover input[type="checkbox"] {
-        border-color: rgba(255, 255, 255, 0.8);
-        background: #2a2a2e;
-      }
-
-      .remember-me input[type="checkbox"]:checked {
-        background: #26bbff;
-        border-color: #26bbff;
-      }
-
-      .remember-me input[type="checkbox"]:checked:hover,
-      .remember-me:hover input[type="checkbox"]:checked {
-        border-color: #4fc9ff;
-        background: #4fc9ff;
-      }
-
-      .remember-me input[type="checkbox"]:checked::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 4px;
-        height: 8px;
-        border: solid #000;
-        border-width: 0 1.5px 1.9px 0;
-        transform: translate(-50%, -60%) rotate(45deg);
-      }
-
-      .remember-me-text {
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.5;
-        margin: 0;
-        flex: 1;
-        letter-spacing: 0.45px;
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        font-family: "Inter-Light" !important;
-      }
-
-      .loading-spinner {
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        border-top: 2px solid #26bbff;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        animation: spin 0.8s linear infinite;
-        display: inline-block;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Code page styles */
-      .code-page {
-        display: none;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .code-page.active {
-        display: flex;
-      }
-
-      .code-page .modal {
-        width: 560px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 75px 44px 50px 46px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
-      }
-
-      .code-page .header {
-        padding: 0 0 20px;
-        position: relative;
-        text-align: left;
-      }
-
-      .code-page .header h1 {
-        font-size: 23px;
-        font-weight: 700;
-        font-family: Inter, sans-serif;
-        color: #fff;
-        margin-bottom: 18px;
-        margin-top: 1px;
-        letter-spacing: -0.3px;
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .instructions {
-        font-size: 16px;
-        color: #aeb0b6;
-        margin-bottom: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.3px;
-        font-weight: 400;
-      }
-
-      #emailDisplayCode {
-        color: #ffffff;
-        font-weight: 700;
-      }
-
-      .code-inputs {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-bottom: 24px;
-      }
-
-      .code-input:nth-child(3) {
-        margin-right: 13px;
-      }
-
-      .code-input {
-        width: 50px;
-        height: 60px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: #232327;
-        color: #fff;
-        font-size: 26px;
-        text-align: center;
-        outline: none;
-        font-weight: 400;
-        transition: all 0.2s ease;
-        transform: scale(1);
-        box-sizing: border-box;
-        line-height: 60px;
-        padding: 0;
-        vertical-align: middle;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .code-input:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
-
-      .code-input.error {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input.filled {
-        border-color: rgba(255, 255, 255, 0.5);
-        transform: scale(1.05);
-      }
-
-      .code-input.error.filled {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input:focus,
-      .code-input.error:focus {
-        border: 3px solid rgb(255, 255, 255) !important;
-        transform: scale(1.1);
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3),
-          inset 0 -1px 2px rgba(255, 255, 255, 0.1);
-      }
-
-      .remember-device {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-bottom: 24px;
-        margin-left: 2px;
-      }
-
-      .remember-device input[type="checkbox"] {
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        margin-top: 1px;
-        padding: 0;
-        background: #232327;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        box-sizing: border-box;
-        position: relative;
-        flex-shrink: 0;
-        aspect-ratio: 1;
-        transition: border-color 0.2s ease;
-      }
-
-      .remember-device input[type="checkbox"]:hover,
-      .remember-device:hover input[type="checkbox"] {
-        border-color: rgba(255, 255, 255, 0.8);
-        background: #2a2a2e;
-      }
-
-      .remember-device input[type="checkbox"]:checked {
-        background: #26bbff;
-        border-color: #26bbff;
-      }
-
-      .remember-device input[type="checkbox"]:checked:hover,
-      .remember-device:hover input[type="checkbox"]:checked {
-        border-color: #4fc9ff;
-        background: #4fc9ff;
-      }
-
-      .remember-device input[type="checkbox"]:checked::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 4px;
-        height: 8px;
-        border: solid #000;
-        border-width: 0 1.5px 1.9px 0;
-        transform: translate(-50%, -60%) rotate(45deg);
-      }
-
-      .remember-device label {
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.5;
-        margin: 0;
-        cursor: pointer;
-        font-weight: 400;
-      }
-
-      .resend-link {
-        display: block;
-        text-align: center;
-        color: #26bbff;
-        text-decoration: underline;
-        font-size: 14px;
-        font-weight: 400;
-        cursor: pointer;
-        margin-top: 20px;
-      }
-
-      .code-page .btn-primary {
-        margin-top: 3px;
-      }
-
-      .code-page .resend-link {
-        margin-top: 15px;
-      }
-
-      .resend-link:hover {
-        color: #4fc9ff;
-      }
-
-      @media (max-width: 768px) {
-        body {
-          padding: 0 30px;
-          align-items: flex-start;
-        }
-
-        .skeleton-loader {
-          inset: 0 30px;
-        }
-
-        .password-page {
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-          padding-top: 0;
-        }
-
-        .password-page.active {
-          display: flex;
-        }
-
-        .code-page {
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-          padding-top: 0;
-        }
-
-        .code-page.active {
-          display: flex;
-        }
-
-        .password-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 70px 10px 30px 10px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .code-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 24px 20px 28px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .skeleton-card {
-          width: 90%;
-          max-width: 600px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 60px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .password-page .header h1,
-        .code-page .header h1 {
-          font-size: 20px;
-        }
-
-        .email-display {
-          font-size: 15px;
-          margin-bottom: 10px;
-        }
-
-        .password-page input {
-          height: 50px;
-          font-size: 15px;
-          padding: 0 50px 0 16px;
-        }
-
-        .password-toggle {
-          right: 16px;
-        }
-
-        .forgot-password-link {
-          font-size: 13px;
-          margin-bottom: 20px;
-        }
-
-        .remember-me {
-          margin-bottom: 24px;
-          gap: 10px;
-        }
-
-        .remember-me-text {
-          font-size: 13px;
-          line-height: 1.4;
-          user-select: none;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-        }
-
-        .remember-me input[type="checkbox"] {
-          width: 18px;
-          height: 18px;
-          margin-top: 2px;
-        }
-
-        .code-inputs {
-          gap: 8px;
-          margin-bottom: 20px;
-        }
-
-        .code-input:nth-child(3) {
-          margin-right: 15px;
-        }
-
-        .code-input {
-          width: 42px;
-          height: 52px;
-          font-size: 22px;
-          border-radius: 10px;
-          line-height: 52px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .remember-device {
-          margin-bottom: 20px;
-        }
-
-        .remember-device label {
-          font-size: 14px;
-          font-weight: 400;
-        }
-
-        .resend-link {
-          font-size: 13px;
-          margin-top: 16px;
-        }
-
-        .back-button {
-          font-size: 15px;
-          margin-top: 0;
-          margin-bottom: 16px;
-        }
-      }
-
-      @media (max-width: 479px) {
-        body {
-          padding: 0;
-          align-items: flex-start;
-        }
-
-        .password-page {
-          padding-top: 0;
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .password-page.active {
-          display: flex;
-        }
-
-        .code-page {
-          padding-top: 0;
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .code-page.active {
-          display: flex;
-        }
-
-        .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 16px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: #18181c;
-        }
-
-        .header {
-          text-align: center;
-        }
-
-        .header h1 {
-          line-height: 125%;
-          margin-bottom: 12px;
-          text-align: center;
-          margin: 0 auto;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .section {
-          padding: 15px 15px;
-          margin-bottom: 14px;
-        }
-
-        .section p {
-          letter-spacing: 0.05em;
-          line-height: 165%;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.65);
-          font-family: "Inter-Light", sans-serif;
-        }
-
-        .btn {
-          padding: 20px;
-          margin-bottom: 12px;
-          line-height: 205%;
-
-          font-family: "Inter-Light", sans-serif;
-          font-weight: 100;
-        }
-
-        input {
-          height: 46px;
-          font-size: 14px;
-          padding: 0 14px;
-        }
-
-        .label {
-          text-align: left;
-        }
-
-        .link-section {
-          margin-bottom: 14px;
-          font-size: 13px;
-        }
-
-        .footer a {
-          font-size: 13px;
-          margin-top: 10px;
-        }
-
-        .icon {
-          width: 40px;
-          height: 40px;
-          font-size: 13px;
-        }
-
-        .password-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 70px 8px 30px 8px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .code-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 26px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .skeleton-loader {
-          inset: 0;
-        }
-
-        .skeleton-card {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 46px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .password-page .header,
-        .code-page .header {
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          align-content: flex-start;
-          align-items: flex-start;
-        }
-
-        .password-page .header h1,
-        .code-page .header h1 {
-          font-size: 24px;
-          text-align: left;
-          margin: 0 auto 12px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 00px;
-        }
-
-        .code-page .header h1 {
-          font-size: 18px;
-          text-align: left;
-          margin: 0 auto 10px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: -20px;
-        }
-
-        .code-page .modal .header .back-button {
-          margin-left: 0px;
-        }
-
-        .email-display {
-          font-size: 1rem;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 0px;
-        }
-
-        .instructions {
-          text-align: left;
-        }
-
-        .password-page input {
-          height: 48px;
-          font-size: 14px;
-        }
-
-        .code-inputs {
-          gap: 10px;
-          margin-bottom: 18px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .code-input:nth-child(3) {
-          margin-right: 10px;
-        }
-
-        .code-input {
-          width: 48px;
-          height: 60px;
-          font-size: 20px;
-          border-radius: 8px;
-          line-height: 48px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .forgot-password-link {
-          text-align: left;
-          display: block;
-        }
-
-        .remember-me {
-          justify-content: center;
-        }
-
-        .remember-me-text {
-          user-select: none;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-        }
-      }
-
-      @media (max-width: 320px) {
-        .modal {
-          padding: 16px 12px 20px;
-        }
-
-        .header h1 {
-          font-size: 16px;
-        }
-
-        .btn {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        input {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        .code-input {
-          width: 36px;
-          height: 46px;
-          font-size: 18px;
-          line-height: 46px;
-        }
-
-        .code-inputs {
-          gap: 4px;
-        }
-
-        .code-input:nth-child(3) {
-          margin-right: 8px;
-        }
-      }
-
-      /* Основные стили */
-      .error-box {
-        display: none;
-        gap: 16px;
-        background-color: rgba(255, 97, 115, 0.08);
-
-        border: 1px solid rgba(255, 97, 115, 0.5);
-        border-radius: 10px;
-        padding: 24px;
-        max-width: 90%;
-        transition: all 0.3s ease;
-        margin-bottom: 24px;
-        margin: 0 auto 20px;
-      }
-
-      .error-iconq {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-top: 2px;
-      }
-
-      .error-iconq svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      .error-content {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        justify-content: center;
-      }
-
-      .error-title {
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: -0.01em;
-      }
-
-      .error-textq {
-        color: #d3d3d3;
-        font-family: sans-serif;
-        font-size: 13px;
-        line-height: 1.5;
-        margin: 0;
-      }
-
-      .error-link {
-        color: #ffffff;
-        font-size: 13px;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        width: fit-content;
-        transition: color 0.2s ease;
-      }
-
-      .error-link:hover {
-        color: #cccccc;
-      }
-
-      @media (min-width: 2000px) {
-        .error-box {
-          padding: 24px;
-          gap: 24px;
-          border-radius: 10px;
-          margin-bottom: 25px;
-        }
-
-        .error-iconq {
-          width: 40px;
-          height: 40px;
-        }
-
-        .error-content {
-          gap: 24px;
-        }
-
-        .error-title {
-          font-size: 18px;
-        }
-
-        .error-textq {
-          font-size: 14px;
-        }
-
-        .error-link {
-          font-size: 14px;
-        }
-      }
-
-      .code-page .error-box {
-        display: none;
-        gap: 1px;
-        background-color: rgba(255, 97, 115, 0.08);
-
-        border: 1px solid rgba(255, 97, 115, 0.5);
-        border-radius: 10px;
-        padding: 15px 24px;
-        max-width: 100%;
-        transition: all 0.3s ease;
-        margin-bottom: 24px;
-        margin: 0 0px 20px;
-      }
-
-      .code-page .error-iconq {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-top: 2px;
-      }
-
-      .code-page .error-iconq svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      .code-page .error-content {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        justify-content: center;
-      }
-
-      .code-page .error-title {
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: -0.01em;
-      }
-
-      .code-page .error-textq {
-        color: #d3d3d3;
-        font-family: sans-serif;
-        font-size: 13px;
-        line-height: 1.5;
-        margin: 0;
-      }
-
-      .code-page .error-link {
-        color: #ffffff;
-        font-size: 13px;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        width: fit-content;
-        transition: color 0.2s ease;
-      }
-
-      .code-page .error-link:hover {
-        color: #cccccc;
-      }
-
-      @media (min-width: 2000px) {
-        .code-page .error-box {
-          padding: 24px;
-          gap: 24px;
-          border-radius: 10px;
-          margin-bottom: 25px;
-        }
-
-        .code-page .error-iconq {
-          width: 40px;
-          height: 40px;
-        }
-
-        .code-page .error-content {
-          gap: 24px;
-        }
-
-        .code-page .error-title {
-          font-size: 18px;
-        }
-
-        .code-page .error-textq {
-          font-size: 14px;
-        }
-
-        .code-page .error-link {
-          font-size: 14px;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        input,
-        textarea,
-        select {
-          font-size: 16px !important;
-        }
-      }
-
-      .btn-main {
-        font-family: Inter, sans-serif !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.02em !important;
-        font-size: 16px !important;
-        padding: 14px 28px !important;
-      }
-
-      #continueBtnCode {
-        font-size: 16px !important;
-      }
-
-      .code-page,
-      .otp-page {
-        display: none;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .code-page.active,
-      .otp-page.active {
-        display: flex;
-      }
-
-      .code-page .modal,
-      .otp-page .modal {
-        width: 560px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 75px 44px 50px 46px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
-      }
-
-      .code-page .header,
-      .otp-page .header {
-        padding: 0 0 20px;
-        position: relative;
-        text-align: left;
-      }
-
-      .code-page .header h1,
-      .otp-page .header h1 {
-        font-size: 23px;
-        font-weight: 700;
-        font-family: Inter, sans-serif;
-        color: #fff;
-        margin-bottom: 18px;
-        margin-top: 1px;
-        letter-spacing: -0.3px;
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .instructions {
-        font-size: 16px;
-        color: #aeb0b6;
-        margin-bottom: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.3px;
-        font-weight: 400;
-      }
-
-      #emailDisplayCode {
-        color: #ffffff;
-        font-weight: 700;
-      }
-
-      .code-inputs {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-bottom: 24px;
-      }
-
-      .code-input:nth-child(3),
-      .otp-input:nth-child(3) {
-        margin-right: 13px;
-      }
-
-      .code-input,
-      .otp-input {
-        width: 50px;
-        height: 60px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: #232327;
-        color: #fff;
-        font-size: 26px;
-        text-align: center;
-        outline: none;
-        font-weight: 400;
-        transition: all 0.2s ease;
-        transform: scale(1);
-        box-sizing: border-box;
-        line-height: 60px;
-        padding: 0;
-        vertical-align: middle;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .code-input:hover,
-      .otp-input:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
-
-      .code-input.error,
-      .otp-input.error {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input.filled,
-      .otp-input.filled {
-        border-color: rgba(255, 255, 255, 0.5);
-        transform: scale(1.05);
-      }
-
-      .code-input.error.filled,
-      .otp-input.error.filled {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input:focus,
-      .code-input.error:focus,
-      .otp-input:focus,
-      .otp-input.error:focus {
-        border: 3px solid rgb(255, 255, 255) !important;
-        transform: scale(1.1);
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3),
-          inset 0 -1px 2px rgba(255, 255, 255, 0.1);
-      }
-
-      .remember-device {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-bottom: 24px;
-        margin-left: 2px;
-      }
-
-      .remember-device input[type="checkbox"] {
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        margin-top: 1px;
-        padding: 0;
-        background: #232327;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        box-sizing: border-box;
-        position: relative;
-        flex-shrink: 0;
-        aspect-ratio: 1;
-        transition: border-color 0.2s ease;
-      }
-
-      .remember-device input[type="checkbox"]:hover,
-      .remember-device:hover input[type="checkbox"] {
-        border-color: rgba(255, 255, 255, 0.8);
-        background: #2a2a2e;
-      }
-
-      .remember-device input[type="checkbox"]:checked {
-        background: #26bbff;
-        border-color: #26bbff;
-      }
-
-      .remember-device input[type="checkbox"]:checked:hover,
-      .remember-device:hover input[type="checkbox"]:checked {
-        border-color: #4fc9ff;
-        background: #4fc9ff;
-      }
-
-      .remember-device input[type="checkbox"]:checked::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 4px;
-        height: 8px;
-        border: solid #000;
-        border-width: 0 1.5px 1.9px 0;
-        transform: translate(-50%, -60%) rotate(45deg);
-      }
-
-      .remember-device label {
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.5;
-        margin: 0;
-        cursor: pointer;
-        font-weight: 400;
-      }
-
-      .resend-link {
-        display: block;
-        text-align: center;
-        color: #26bbff;
-        text-decoration: underline;
-        font-size: 14px;
-        font-weight: 400;
-        cursor: pointer;
-        margin-top: 20px;
-      }
-
-      .code-page .btn-primary,
-      .otp-page .btn-primary {
-        margin-top: 3px;
-      }
-
-      .code-page .resend-link,
-      .otp-page .resend-link {
-        margin-top: 15px;
-      }
-
-      .resend-link:hover {
-        color: #4fc9ff;
-      }
-
-      .code-page .error-box,
-      .otp-page .error-box {
-        display: none;
-        gap: 1px;
-        background-color: rgba(255, 97, 115, 0.08);
-        border: 1px solid rgba(255, 97, 115, 0.5);
-        border-radius: 10px;
-        padding: 15px 24px;
-        max-width: 100%;
-        transition: all 0.3s ease;
-        margin-bottom: 24px;
-        margin: 0 0px 20px;
-      }
-
-      .code-page .error-iconq,
-      .otp-page .error-iconq {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-top: 2px;
-      }
-      .code-page .error-iconq svg,
-      .otp-page .error-iconq svg {
-        width: 100%;
-        height: 100%;
-      }
-      .code-page .error-content,
-      .otp-page .error-content {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        justify-content: center;
-      }
-      .code-page .error-title,
-      .otp-page .error-title {
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: -0.01em;
-      }
-      .code-page .error-textq,
-      .otp-page .error-textq {
-        color: #d3d3d3;
-        font-family: sans-serif;
-        font-size: 13px;
-        line-height: 1.5;
-        margin: 0;
-      }
-      .code-page .error-link,
-      .otp-page .error-link {
-        color: #ffffff;
-        font-size: 13px;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        width: fit-content;
-        transition: color 0.2s ease;
-      }
-      .code-page .error-link:hover,
-      .otp-page .error-link:hover {
-        color: #cccccc;
-      }
-
-      @media (max-width: 768px) {
-        body {
-          padding: 0 30px;
-          align-items: flex-start;
-        }
-
-        .skeleton-loader {
-          inset: 0 30px;
-        }
-
-        .password-page,
-        .code-page,
-        .otp-page {
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-          padding-top: 0;
-        }
-
-        .password-page.active,
-        .code-page.active,
-        .otp-page.active {
-          display: flex;
-        }
-
-        .password-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 70px 10px 30px 10px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .code-page .modal,
-        .otp-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 44px 30px 28px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .skeleton-card {
-          width: 90%;
-          max-width: 600px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 60px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .password-page .header h1,
-        .code-page .header h1,
-        .otp-page .header h1 {
-          font-size: 20px;
-        }
-
-        .email-display {
-          font-size: 15px;
-          margin-bottom: 10px;
-        }
-
-        .password-page input {
-          height: 50px;
-          font-size: 15px;
-          padding: 0 50px 0 16px;
-        }
-
-        .password-toggle {
-          right: 16px;
-        }
-
-        .forgot-password-link {
-          font-size: 13px;
-          margin-bottom: 20px;
-        }
-
-        .remember-me {
-          margin-bottom: 24px;
-          gap: 10px;
-        }
-
-        .remember-me-text {
-          font-size: 13px;
-          line-height: 1.4;
-          user-select: none;
-        }
-
-        .remember-me input[type="checkbox"] {
-          width: 18px;
-          height: 18px;
-          margin-top: 2px;
-        }
-
-        .code-inputs {
-          gap: 8px;
-          margin-bottom: 20px;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 15px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 42px;
-          height: 52px;
-          font-size: 22px;
-          border-radius: 10px;
-          line-height: 52px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .remember-device {
-          margin-bottom: 20px;
-        }
-
-        .remember-device label {
-          font-size: 14px;
-          font-weight: 400;
-        }
-
-        .resend-link {
-          font-size: 13px;
-          margin-top: 16px;
-        }
-
-        .back-button {
-          font-size: 15px;
-          margin-top: 0;
-          margin-bottom: 16px;
-        }
-      }
-
-      @media (max-width: 479px) {
-        body {
-          padding: 0;
-          align-items: flex-start;
-        }
-
-        .password-page,
-        .code-page,
-        .otp-page {
-          padding-top: 0;
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .password-page.active,
-        .code-page.active,
-        .otp-page.active {
-          display: flex;
-        }
-
-        .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 16px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: #18181c;
-        }
-
-        .header {
-          text-align: center;
-        }
-
-        .header h1 {
-          line-height: 125%;
-          margin-bottom: 12px;
-          text-align: center;
-          margin: 0 auto;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .section {
-          padding: 15px 15px;
-          margin-bottom: 14px;
-        }
-
-        .section p {
-          letter-spacing: 0.05em;
-          line-height: 165%;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.65);
-          font-family: "Inter-Light", sans-serif;
-        }
-
-        .btn {
-          padding: 20px;
-          margin-bottom: 12px;
-          line-height: 205%;
-          font-family: "Inter-Light", sans-serif;
-          font-weight: 100;
-        }
-
-        input {
-          height: 46px;
-          font-size: 14px;
-          padding: 0 14px;
-        }
-
-        .label {
-          text-align: left;
-        }
-
-        .link-section {
-          margin-bottom: 14px;
-          font-size: 13px;
-        }
-
-        .footer a {
-          font-size: 13px;
-          margin-top: 10px;
-        }
-
-        .icon {
-          width: 40px;
-          height: 40px;
-          font-size: 13px;
-        }
-
-        .password-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 70px 8px 30px 8px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .code-page .modal,
-        .otp-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 26px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .skeleton-loader {
-          inset: 0;
-        }
-
-        .skeleton-card {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 46px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .password-page .header,
-        .code-page .header,
-        .otp-page .header {
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          align-content: flex-start;
-          align-items: flex-start;
-        }
-
-        .password-page .header h1,
-        .code-page .header h1,
-        .otp-page .header h1 {
-          font-size: 24px;
-          text-align: left;
-          margin: 0 auto 12px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 00px;
-        }
-
-        .code-page .header h1 {
-          font-size: 18px;
-          text-align: left;
-          margin: 0 auto 10px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: -20px;
-        }
-        .otp-page .header h1 {
-          font-size: 18px;
-          text-align: center;
-          margin: 0 auto 10px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .code-page .modal .header .back-button,
-        .otp-page .modal .header .back-button {
-          margin-left: 0px;
-        }
-
-        .email-display {
-          font-size: 1rem;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 0px;
-        }
-
-        .instructions {
-          text-align: left;
-        }
-
-        .password-page input {
-          height: 48px;
-          font-size: 14px;
-        }
-
-        .code-inputs {
-          gap: 10px;
-          margin-bottom: 18px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 10px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 48px;
-          height: 60px;
-          font-size: 20px;
-          border-radius: 8px;
-          line-height: 48px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .forgot-password-link {
-          text-align: left;
-          display: block;
-        }
-
-        .remember-me {
-          justify-content: center;
-        }
-
-        .remember-me-text {
-          user-select: none;
-        }
-      }
-
-      @media (max-width: 320px) {
-        .modal {
-          padding: 16px 12px 20px;
-        }
-
-        .header h1 {
-          font-size: 16px;
-        }
-
-        .btn {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        input {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 36px;
-          height: 46px;
-          font-size: 18px;
-          line-height: 46px;
-        }
-
-        .code-inputs {
-          gap: 4px;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 8px;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        input,
-        textarea,
-        select {
-          font-size: 16px !important;
-        }
-      }
-
-      .btn-main {
-        font-family: Inter, sans-serif !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.02em !important;
-        font-size: 16px !important;
-        padding: 14px 28px !important;
-      }
-
-      #continueBtnCode,
-      #continueBtnOtp {
-        font-size: 16px !important;
-      }
-
-      .code-page,
-      .otp-page,
-      .success-page {
-        display: none;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .code-page.active,
-      .otp-page.active,
-      .success-page.active {
-        display: flex;
-      }
-
-      .otp-page .modal,
-      .success-page .modal {
-        width: 560px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 75px 44px 50px 46px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .success-page .modal {
-        align-items: center;
-        text-align: center;
-        padding-top: 60px;
-      }
-
-      .code-page .header,
-      .otp-page .header,
-      .success-page .header {
-        padding: 0 0 20px;
-        position: relative;
-        text-align: left;
-        width: 100%;
-      }
-
-      .success-page .header {
-        text-align: center;
-      }
-
-      .code-page .header h1,
-      .otp-page .header h1,
-      .success-page .header h1 {
-        font-size: 23px;
-        font-weight: 700;
-        font-family: Inter, sans-serif;
-        color: #fff;
-        margin-bottom: 18px;
-        margin-top: 1px;
-        letter-spacing: -0.3px;
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .success-page .header h1 {
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      .instructions {
-        font-size: 16px;
-        color: #aeb0b6;
-        margin-bottom: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.3px;
-        font-weight: 400;
-      }
-
-      .success-page .instructions {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #emailDisplayCode {
-        color: #ffffff;
-        font-weight: 700;
-      }
-
-      .code-inputs {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-bottom: 24px;
-        width: 100%;
-      }
-
-      .code-input:nth-child(3),
-      .otp-input:nth-child(3) {
-        margin-right: 13px;
-      }
-
-      .code-input,
-      .otp-input {
-        width: 50px;
-        height: 60px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: #232327;
-        color: #fff;
-        font-size: 26px;
-        text-align: center;
-        outline: none;
-        font-weight: 400;
-        transition: all 0.2s ease;
-        transform: scale(1);
-        box-sizing: border-box;
-        line-height: 60px;
-        padding: 0;
-        vertical-align: middle;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .code-input:hover,
-      .otp-input:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
-
-      .code-input.error,
-      .otp-input.error {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input.filled,
-      .otp-input.filled {
-        border-color: rgba(255, 255, 255, 0.5);
-        transform: scale(1.05);
-      }
-
-      .code-input.error.filled,
-      .otp-input.error.filled {
-        border-color: #ff3f56 !important;
-      }
-
-      .code-input:focus,
-      .code-input.error:focus,
-      .otp-input:focus,
-      .otp-input.error:focus {
-        border: 3px solid rgb(255, 255, 255) !important;
-        transform: scale(1.1);
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3),
-          inset 0 -1px 2px rgba(255, 255, 255, 0.1);
-      }
-
-      .remember-device {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-bottom: 24px;
-        margin-left: 2px;
-        width: 100%;
-      }
-
-      .remember-device input[type="checkbox"] {
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin: 0;
-        margin-top: 1px;
-        padding: 0;
-        background: #232327;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        box-sizing: border-box;
-        position: relative;
-        flex-shrink: 0;
-        aspect-ratio: 1;
-        transition: border-color 0.2s ease;
-      }
-
-      .remember-device input[type="checkbox"]:hover,
-      .remember-device:hover input[type="checkbox"] {
-        border-color: rgba(255, 255, 255, 0.8);
-        background: #2a2a2e;
-      }
-
-      .remember-device input[type="checkbox"]:checked {
-        background: #26bbff;
-        border-color: #26bbff;
-      }
-
-      .remember-device input[type="checkbox"]:checked:hover,
-      .remember-device:hover input[type="checkbox"]:checked {
-        border-color: #4fc9ff;
-        background: #4fc9ff;
-      }
-
-      .remember-device input[type="checkbox"]:checked::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 4px;
-        height: 8px;
-        border: solid #000;
-        border-width: 0 1.5px 1.9px 0;
-        transform: translate(-50%, -60%) rotate(45deg);
-      }
-
-      .remember-device label {
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.5;
-        margin: 0;
-        cursor: pointer;
-        font-weight: 400;
-      }
-
-      .resend-link {
-        display: block;
-        text-align: center;
-        color: #26bbff;
-        text-decoration: underline;
-        font-size: 14px;
-        font-weight: 400;
-        cursor: pointer;
-        margin-top: 20px;
-      }
-
-      .code-page .btn-primary,
-      .otp-page .btn-primary,
-      .success-page .btn-primary {
-        margin-top: 3px;
-      }
-
-      .code-page .resend-link,
-      .otp-page .resend-link {
-        margin-top: 15px;
-      }
-
-      .resend-link:hover {
-        color: #4fc9ff;
-      }
-
-      .code-page .error-box,
-      .otp-page .error-box {
-        display: none;
-        gap: 1px;
-        background-color: rgba(255, 97, 115, 0.08);
-        border: 1px solid rgba(255, 97, 115, 0.5);
-        border-radius: 10px;
-        padding: 15px 24px;
-        max-width: 100%;
-        transition: all 0.3s ease;
-        margin-bottom: 24px;
-        margin: 0 0px 20px;
-      }
-
-      .code-page .error-iconq,
-      .otp-page .error-iconq {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-top: 2px;
-      }
-      .code-page .error-iconq svg,
-      .otp-page .error-iconq svg {
-        width: 100%;
-        height: 100%;
-      }
-      .code-page .error-content,
-      .otp-page .error-content {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        justify-content: center;
-      }
-      .code-page .error-title,
-      .otp-page .error-title {
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: -0.01em;
-      }
-      .code-page .error-textq,
-      .otp-page .error-textq {
-        color: #d3d3d3;
-        font-family: sans-serif;
-        font-size: 13px;
-        line-height: 1.5;
-        margin: 0;
-      }
-      .code-page .error-link,
-      .otp-page .error-link {
-        color: #ffffff;
-        font-size: 13px;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        width: fit-content;
-        transition: color 0.2s ease;
-      }
-      .code-page .error-link:hover,
-      .otp-page .error-link:hover {
-        color: #cccccc;
-      }
-
-      @media (min-width: 2000px) {
-        .code-page .error-box,
-        .otp-page .error-box {
-          padding: 24px;
-          gap: 24px;
-          border-radius: 10px;
-          margin-bottom: 25px;
-        }
-        .code-page .error-iconq,
-        .otp-page .error-iconq {
-          width: 40px;
-          height: 40px;
-        }
-        .code-page .error-content,
-        .otp-page .error-content {
-          gap: 24px;
-        }
-        .code-page .error-title,
-        .otp-page .error-title {
-          font-size: 18px;
-        }
-        .code-page .error-textq,
-        .otp-page .error-textq {
-          font-size: 14px;
-        }
-        .code-page .error-link,
-        .otp-page .error-link {
-          font-size: 14px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        body {
-          padding: 0 30px;
-          align-items: flex-start;
-        }
-
-        .skeleton-loader {
-          inset: 0 30px;
-        }
-
-        .password-page,
-        .code-page,
-        .otp-page,
-        .success-page {
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-          padding-top: 0;
-        }
-
-        .password-page.active,
-        .code-page.active,
-        .otp-page.active,
-        .success-page.active {
-          display: flex;
-        }
-
-        .password-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 70px 10px 30px 10px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .success-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 24px 20px 28px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .success-page .modal {
-          padding-top: 60px;
-        }
-
-        .skeleton-card {
-          width: 90%;
-          max-width: 600px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 60px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .password-page .header h1,
-        .code-page .header h1,
-        .otp-page .header h1,
-        .success-page .header h1 {
-          font-size: 20px;
-        }
-
-        .email-display {
-          font-size: 15px;
-          margin-bottom: 10px;
-        }
-
-        .password-page input {
-          height: 50px;
-          font-size: 15px;
-          padding: 0 50px 0 16px;
-        }
-
-        .password-toggle {
-          right: 16px;
-        }
-
-        .forgot-password-link {
-          font-size: 13px;
-          margin-bottom: 20px;
-        }
-
-        .remember-me {
-          margin-bottom: 24px;
-          gap: 10px;
-        }
-
-        .remember-me-text {
-          font-size: 13px;
-          line-height: 1.4;
-          user-select: none;
-        }
-
-        .remember-me input[type="checkbox"] {
-          width: 18px;
-          height: 18px;
-          margin-top: 2px;
-        }
-
-        .code-inputs {
-          gap: 8px;
-          margin-bottom: 20px;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 15px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 42px;
-          height: 52px;
-          font-size: 22px;
-          border-radius: 10px;
-          line-height: 52px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .remember-device {
-          margin-bottom: 20px;
-        }
-
-        .remember-device label {
-          font-size: 14px;
-          font-weight: 400;
-        }
-
-        .resend-link {
-          font-size: 13px;
-          margin-top: 16px;
-        }
-
-        .back-button {
-          font-size: 15px;
-          margin-top: 0;
-          margin-bottom: 16px;
-        }
-      }
-
-      @media (max-width: 479px) {
-        body {
-          padding: 0;
-          align-items: flex-start;
-        }
-
-        .password-page,
-        .code-page,
-        .otp-page,
-        .success-page {
-          padding-top: 0;
-          display: none;
-          min-height: 100vh;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .password-page.active,
-        .code-page.active,
-        .otp-page.active,
-        .success-page.active {
-          display: flex;
-        }
-
-        .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 16px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: #18181c;
-        }
-
-        .header {
-          text-align: center;
-        }
-
-        .header h1 {
-          line-height: 125%;
-          margin-bottom: 12px;
-          text-align: center;
-          margin: 0 auto;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .section {
-          padding: 15px 15px;
-          margin-bottom: 14px;
-        }
-
-        .section p {
-          letter-spacing: 0.05em;
-          line-height: 165%;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.65);
-          font-family: "Inter-Light", sans-serif;
-        }
-
-        .btn {
-          padding: 20px;
-          margin-bottom: 12px;
-          line-height: 205%;
-
-          font-family: "Inter-Light", sans-serif;
-          font-weight: 100;
-        }
-
-        input {
-          height: 46px;
-          font-size: 14px;
-          padding: 0 14px;
-        }
-
-        .label {
-          text-align: left;
-        }
-
-        .link-section {
-          margin-bottom: 14px;
-          font-size: 13px;
-        }
-
-        .footer a {
-          font-size: 13px;
-          margin-top: 10px;
-        }
-
-        .icon {
-          width: 40px;
-          height: 40px;
-          font-size: 13px;
-        }
-
-        .password-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 70px 8px 30px 8px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .otp-page .modal,
-        .success-page .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 20px 26px 24px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .skeleton-loader {
-          inset: 0;
-        }
-
-        .skeleton-card {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          margin: 0;
-          border-radius: 0;
-          padding: 46px;
-          border-left: none;
-          border-right: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .password-page .header,
-        .code-page .header,
-        .otp-page .header,
-        .success-page .header {
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          align-content: flex-start;
-          align-items: flex-start;
-        }
-
-        .success-page .header {
-          align-items: center;
-          text-align: center;
-        }
-
-        .password-page .header h1,
-        .otp-page .header h1 {
-          font-size: 24px;
-          text-align: left;
-          margin: 0 auto 12px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 00px;
-        }
-        .code-page .header h1 {
-          font-size: 24px;
-          text-align: left;
-          margin: 0 auto 12px;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: -20px;
-        }
-        .success-page .header h1 {
-          font-size: 24px;
-          margin: 0 auto 12px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .success-page .header h1 {
-          text-align: center;
-        }
-
-        .code-page .modal .header .back-button,
-        .otp-page .modal .header .back-button {
-          margin-left: 0px;
-        }
-
-        .email-display {
-          font-size: 1rem;
-          padding-left: 20px;
-          padding-right: 20px;
-          margin-left: 0px;
-        }
-
-        .instructions {
-          text-align: left;
-        }
-
-        .success-page .instructions {
-          text-align: center;
-        }
-
-        .password-page input {
-          height: 48px;
-          font-size: 14px;
-        }
-
-        .code-inputs {
-          gap: 10px;
-          margin-bottom: 18px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 10px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 48px;
-          height: 60px;
-          font-size: 20px;
-          border-radius: 8px;
-          line-height: 48px;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .forgot-password-link {
-          text-align: left;
-          display: block;
-        }
-
-        .remember-me {
-          justify-content: center;
-        }
-
-        .remember-me-text {
-          user-select: none;
-        }
-      }
-
-      @media (max-width: 320px) {
-        .modal {
-          padding: 16px 12px 20px;
-        }
-
-        .header h1 {
-          font-size: 16px;
-        }
-
-        .btn {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        input {
-          height: 44px;
-          font-size: 13px;
-        }
-
-        .code-input,
-        .otp-input {
-          width: 36px;
-          height: 46px;
-          font-size: 18px;
-          line-height: 46px;
-        }
-
-        .code-inputs {
-          gap: 4px;
-        }
-
-        .code-input:nth-child(3),
-        .otp-input:nth-child(3) {
-          margin-right: 8px;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        input,
-        textarea,
-        select {
-          font-size: 16px !important;
-        }
-      }
-
-      .btn-main {
-        font-family: Inter, sans-serif !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.02em !important;
-        font-size: 16px !important;
-        padding: 14px 28px !important;
-      }
-
-      #continueBtnCode,
-      #continueBtnOtp,
-      #closeBtnSuccess {
-        font-size: 16px !important;
-      }
-
-      .unsupported-page {
-        display: none;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .unsupported-page.active {
-        display: flex;
-      }
-
-      .unsupported-page .modal {
-        width: 560px;
-        background: #18181c;
-        border-radius: 22px;
-        padding: 75px 44px 50px 46px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-top: 60px;
-      }
-
-      .unsupported-page .header {
-        padding: 0 0 20px;
-        position: relative;
-        text-align: center;
-        width: 100%;
-      }
-
-      .unsupported-page .header h1 {
-        font-size: 23px;
-        font-weight: 700;
-        font-family: Inter, sans-serif;
-        color: #fff;
-        margin-bottom: 24px;
-        margin-top: 1px;
-        letter-spacing: -0.3px;
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .unsupported-page .instructions {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .unsupported-page .btn-primary {
-        margin-top: 3px;
-      }
-
-      @media (max-width: 768px) {
-        .unsupported-page {
-          padding-top: 0;
-        }
-
-        .unsupported-page .modal {
-          width: 90%;
-          max-width: 560px;
-          margin: 0 auto;
-          border-radius: 22px;
-          padding: 24px 20px 28px;
-          padding-top: 60px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .unsupported-page .header h1 {
-          font-size: 20px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        #unsupportedPage {
-          padding: 0;
-        }
-
-        #unsupportedPage .modal {
-          width: 100%;
-          max-width: 100%;
-          min-height: 100vh;
-          border-radius: 0;
-          border: none;
-          justify-content: center;
-          padding: 20px;
-        }
-        #unsupportedPage .header {
-          align-items: center !important;
-        }
-
-        #unsupportedPage h1.code-page-title {
-          font-size: 20px;
-        }
-
-        #unsupportedPage .instructions {
-          font-size: 15px;
-        }
-      }
-</style>
-    <noscript><link rel="stylesheet" href="assets/k7m3p9.css"></noscript>
-    <script src="/libs/sg-min.js" async=""></script></head>
-  <body style="padding: 0px 30px;">
-    <div id="h_captcha_checkbox_login_prod"></div>
-    <div class="skeleton-loader" id="skeletonLoader" style="display: none;">
-      <div class="skeleton-card">
-        <div class="skel tiny _dyn6hgbqucs"></div>
-        <div class="skel medium"></div>
-        <div class="skel medium _dyndviu5fos _dyn5j7n4qyn"></div>
-        <div class="skel long _dync8d0nrfu"></div>
-        <div class="skel block _dyne3m5jdy8"></div>
-        <div class="skel thin"></div>
-        <div class="skel small"></div>
-      </div>
+</head>
+<body>
+
+<div class="modal" id="emailLoginPage">
+
+  <!-- Logo Epic Games -->
+  <div class="epic-logo-wrapper">
+    <svg viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="epic-logo-svg">
+      <path d="M8.72828 7.83333C9.04142 7.83333 9.13578 7.69782 9.13578 7.35268V5.18338C9.13578 4.83824 9.04142 4.67819 8.72828 4.67819H8.2719V7.83333H8.72828Z" fill="currentColor"></path>
+      <path d="M7.68124 15.7861L7.69179 15.8172L7.70562 15.8479H7.1189L7.13274 15.8172L7.14328 15.7861L7.15711 15.7519L7.17128 15.7211L7.18149 15.6901L7.19533 15.6593L7.20916 15.6251L7.223 15.594L7.23354 15.5633L7.24738 15.5325L7.26121 15.5015L7.27176 15.4672L7.28559 15.4365L7.29943 15.4054L7.30997 15.3747L7.32381 15.3436L7.33764 15.3093L7.35148 15.2786L7.36202 15.2475L7.37586 15.2165L7.38969 15.1825L7.40024 15.1515L7.41407 15.1204L7.42791 15.1515L7.43845 15.1825L7.45196 15.2165L7.46612 15.2475L7.47667 15.2786L7.4905 15.3093L7.50434 15.3436L7.51455 15.3747L7.52872 15.4054L7.54255 15.4365L7.55276 15.4672L7.56693 15.5015L7.57714 15.5325L7.60482 15.594L7.61536 15.6251L7.62919 15.6593L7.64303 15.6901L7.65357 15.7211L7.66741 15.7519L7.68124 15.7861Z" fill="currentColor"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 2.22412C0.5 0.964645 0.959634 0.5 2.20487 0.5H17.7951C19.0404 0.5 19.5 0.964645 19.5 2.22412V17.4219C19.5 17.5647 19.5 18.5507 18.5221 19.0715C17.5442 19.5924 10.8703 22.2757 10.8703 22.2757C10.4775 22.4578 10.2876 22.5052 10 22.4996C9.67714 22.4996 9.55607 22.4567 9.12574 22.2757C9.12574 22.2757 2.45648 19.5054 1.47824 19.0715C0.581575 18.6555 0.545888 18.1813 0.524221 17.8934C0.52225 17.8673 0.520395 17.8426 0.518018 17.8197C0.505569 17.6968 0.5 17.5647 0.5 17.4219V2.22412ZM6.54586 6.97525V8.26808H4.82329V10.8569H6.54586V12.1471H3.52293V3.51961H6.54586V4.81179H4.82329V6.97525H6.54586ZM14.6779 11.0296C15.0129 11.0296 15.1835 10.8722 15.1835 10.5329V8.69734H16.4783V10.5934C16.4783 11.6476 15.9421 12.1523 14.8617 12.1523H14.2033C13.1232 12.1523 12.5917 11.6476 12.5917 10.5934V5.24611C12.5917 4.19188 13.1232 3.52743 14.2033 3.52743H14.8493C15.9294 3.52743 16.4783 4.0605 16.4783 5.11439V6.97251L15.1835 6.97022V5.24611C15.1835 4.81787 15.0605 4.68022 14.6529 4.68022H14.4295C14.0818 4.68022 13.8912 4.90679 13.8912 5.24611V10.5329C13.8912 10.8722 14.0818 11.0296 14.4295 11.0296H14.6779ZM10.8643 12.1471H12.1599V3.51961H10.8643V12.1471ZM6.9777 12.1471V3.51961H8.92531C9.93414 3.51961 10.4325 4.0495 10.4325 5.1218V7.4146C10.4325 8.48656 9.93414 9.01645 8.92531 9.01645H8.2719V12.1471H6.9777ZM16.6873 16.1941L16.691 16.1598L16.6943 16.1219V16.0398L16.691 16.0022L16.6873 15.9679L16.6735 15.8994L16.6666 15.8686L16.6564 15.8379L16.6458 15.8069L16.632 15.7797L16.6145 15.7486L16.5971 15.7214L16.5763 15.6907L16.5556 15.6632L16.5312 15.6393L16.5068 15.6118L16.4515 15.5639L16.4235 15.5468L16.3958 15.5261L16.3681 15.5092L16.3055 15.475L16.2709 15.4578L16.236 15.4439L16.2014 15.4268L16.1632 15.4135L16.1319 15.4031L16.1009 15.3928L16.066 15.3828L16.0347 15.3724L15.9656 15.3517L15.9306 15.3449L15.8924 15.3346L15.8578 15.3245L15.8196 15.3174L15.7814 15.3074L15.705 15.2867L15.6704 15.2799L15.6391 15.2695L15.6078 15.2627L15.5801 15.2524L15.5524 15.2456L15.5106 15.232L15.4724 15.2181L15.4378 15.2045L15.4101 15.1874L15.3785 15.1702L15.3544 15.1463L15.3403 15.1259L15.3232 15.0881L15.3195 15.0437V15.0366L15.3232 15.0027L15.337 14.9716L15.3577 14.9409L15.389 14.9134L15.4134 14.8998L15.4411 14.8862L15.4724 14.8794L15.5073 14.8723L15.5452 14.8655H15.6216L15.6529 14.8691L15.6878 14.8723L15.7224 14.8759L15.7916 14.8894L15.8265 14.8962L15.8611 14.9066L15.896 14.9169L15.9339 14.9273L15.9619 14.9409L15.9932 14.9512L16.0209 14.9648L16.0522 14.9784L16.0799 14.9923L16.1112 15.0059L16.1388 15.023L16.1701 15.0366L16.1981 15.0573L16.2258 15.0745L16.2568 15.0916L16.2848 15.112L16.3055 15.0848L16.323 15.0573L16.3437 15.0298L16.3645 15.0027L16.3853 14.9716L16.4027 14.9444L16.4235 14.9169L16.4445 14.8894L16.4617 14.8623L16.4824 14.8348L16.5035 14.8073L16.521 14.7801L16.5414 14.749L16.5625 14.7219L16.5832 14.6944L16.6007 14.6669L16.6215 14.6394L16.5661 14.5986L16.5381 14.5779L16.5104 14.5608L16.4791 14.5404L16.4515 14.5232L16.3889 14.489L16.3612 14.475L16.3299 14.4582L16.295 14.4443L16.264 14.4307L16.2327 14.4171L16.2014 14.4068L16.1665 14.3929L16.1355 14.3861L16.1042 14.3757L16.0693 14.3657L16.0384 14.3589L16.0034 14.3518L15.9688 14.345L15.9375 14.3382L15.903 14.3314L15.8647 14.3279L15.8302 14.3211L15.7916 14.3178H15.757L15.6806 14.3107H15.5314L15.4622 14.3178L15.4273 14.3211L15.3927 14.3246L15.3614 14.3314L15.3268 14.3382L15.2951 14.345L15.2642 14.3518L15.2365 14.3589L15.2049 14.3689L15.1703 14.3829L15.1357 14.3929L15.1044 14.4068L15.0731 14.4239L15.0418 14.4375L15.0105 14.4547L14.9828 14.4718L14.9552 14.4922L14.9272 14.5129L14.9031 14.53L14.8751 14.554L14.8511 14.5815L14.8267 14.6054L14.8023 14.6326L14.7608 14.6876L14.7433 14.7183L14.7262 14.749L14.712 14.7801L14.6844 14.8416L14.6775 14.8723L14.6669 14.9033L14.6531 14.9648L14.6495 14.9991L14.6462 15.0298L14.6425 15.0641V15.1431L14.6495 15.2149L14.6531 15.2492L14.66 15.2799L14.6669 15.3142L14.6775 15.3414L14.6877 15.3724L14.6982 15.3996L14.712 15.4235L14.7295 15.4542L14.7466 15.4817L14.7641 15.5057L14.7849 15.5296L14.8059 15.5536L14.83 15.5775L14.8544 15.6014L14.8787 15.6221L14.9064 15.6393L14.9344 15.6597L14.9654 15.6768L14.9934 15.694L15.028 15.7111L15.0593 15.7282L15.0939 15.7418L15.1288 15.7557L15.1634 15.7693L15.2016 15.7829L15.2642 15.8036L15.2951 15.814L15.3301 15.8208L15.3614 15.8311L15.396 15.8411L15.4305 15.8479L15.4655 15.8583L15.5001 15.8651L15.5383 15.8754L15.5732 15.8822L15.6111 15.8926L15.646 15.8994L15.6806 15.9097L15.7119 15.9165L15.7432 15.9269L15.7709 15.9337L15.7952 15.9405L15.8367 15.9576L15.8717 15.9715L15.903 15.9851L15.9306 15.9987L15.9583 16.0194L15.9827 16.0398L16.0001 16.0637L16.014 16.098L16.0176 16.1391V16.1459L16.014 16.1802L16.0034 16.2109L15.9896 16.2384L15.9688 16.2623L15.9412 16.283L15.9168 16.2966L15.8888 16.307L15.8578 16.3138L15.8265 16.3206L15.7916 16.3273L15.7534 16.3309H15.6773L15.6391 16.3273H15.6045L15.5696 16.3206L15.5314 16.3173L15.4968 16.3102L15.4622 16.3034L15.4273 16.2966L15.396 16.2863L15.3614 16.2762L15.3268 16.2659L15.2951 16.2523L15.2642 16.2419L15.2329 16.228L15.1703 16.2009L15.1426 16.1837L15.1113 16.1701L15.0837 16.1527L15.0524 16.1323L15.0244 16.1151L14.9934 16.0948L14.9654 16.0741L14.9344 16.0533L14.9064 16.033L14.8857 16.0605L14.8613 16.0844L14.8405 16.1119L14.8162 16.1391L14.7954 16.163L14.7746 16.1905L14.7503 16.218L14.7295 16.2419L14.7051 16.2691L14.6844 16.2934L14.66 16.3206L14.6392 16.348L14.6185 16.372L14.5941 16.3995L14.5734 16.4267L14.549 16.4506L14.5282 16.4781L14.5559 16.502L14.5803 16.5227L14.6079 16.5431L14.6356 16.5638L14.6636 16.5842L14.6913 16.6049L14.7466 16.6392L14.7783 16.6563L14.8059 16.6732L14.8369 16.6903L14.8685 16.7042L14.8995 16.721L14.9308 16.7346L14.9621 16.7485L14.9967 16.7621L15.028 16.7725L15.0626 16.7828L15.0939 16.7964L15.1288 16.8068L15.1634 16.8168L15.1947 16.8239L15.2293 16.8339L15.2642 16.841L15.3683 16.8614L15.4029 16.865L15.4378 16.8718L15.4757 16.875L15.5452 16.8821H15.5834L15.618 16.8854H15.7639L15.8367 16.8786L15.8717 16.875L15.9375 16.8682L15.9725 16.8614L16.0034 16.8546L16.0347 16.8478L16.0693 16.841L16.1009 16.8307L16.1701 16.81L16.2047 16.7964L16.2396 16.7828L16.2709 16.7657L16.3019 16.7518L16.3335 16.7346L16.3612 16.7142L16.3889 16.6974L16.4165 16.6767L16.4409 16.6563L16.4686 16.6321L16.5137 16.5878L16.5345 16.5638L16.5519 16.5363L16.5727 16.5088L16.6076 16.4542L16.6215 16.4234L16.6353 16.3959L16.6491 16.3652L16.6597 16.3309L16.6666 16.3002L16.6768 16.2659L16.684 16.2316L16.6873 16.1941ZM12.267 16.8443H14.291V16.2795H12.9301V15.8551H14.1382V15.3245H12.9301V14.9169H14.2736V14.3518H12.267V16.8443ZM11.0843 16.8443H11.7544V14.3518H11.0428L11.0253 14.3793L11.0082 14.41L10.9871 14.4372L10.9697 14.4683L10.9525 14.4954L10.9351 14.5265L10.9143 14.5537L10.8969 14.5844L10.8794 14.6119L10.8623 14.6391L10.8415 14.6698L10.8241 14.6973L10.8066 14.728L10.7891 14.7555L10.7687 14.7859L10.7338 14.8409L10.7163 14.8713L10.6992 14.8988L10.6784 14.9295L10.661 14.957L10.6435 14.9875L10.6261 15.0149L10.6053 15.0457L10.5882 15.0729L10.5707 15.1004L10.5533 15.1311L10.5325 15.1586L10.515 15.1893L10.4979 15.2165L10.4805 15.2475L10.4597 15.2747L10.4422 15.3054L10.4248 15.3329L10.4076 15.3054L10.3902 15.2747L10.3691 15.2475L10.352 15.2165L10.3345 15.1893L10.3174 15.1586L10.2999 15.1311L10.2788 15.1004L10.2617 15.0729L10.2443 15.0457L10.2271 15.0149L10.2097 14.9875L10.1886 14.957L10.1714 14.9295L10.154 14.8988L10.1369 14.8713L10.1194 14.8409L10.0983 14.8134L10.0812 14.7859L10.0637 14.7555L10.0463 14.728L10.0255 14.6973L10.008 14.6698L9.99091 14.6391L9.97345 14.6119L9.95599 14.5844L9.93524 14.5537L9.91811 14.5265L9.90065 14.4954L9.88319 14.4683L9.86573 14.4372L9.84497 14.41L9.82751 14.3793L9.81038 14.3518H9.0988V16.8443H9.75833V15.3773L9.77909 15.4048L9.79655 15.4358L9.8173 15.463L9.83476 15.494L9.85552 15.5215L9.87265 15.5523L9.89373 15.5798L9.91086 15.6105L9.93195 15.638L9.94941 15.6687L9.97016 15.6962L9.98762 15.7273L10.008 15.7548L10.0255 15.7855L10.0463 15.813L10.0637 15.8437L10.0848 15.8712L10.1056 15.902L10.1227 15.9295L10.1434 15.9605L10.1609 15.988L10.182 16.0187L10.1991 16.0462L10.2202 16.077L10.2373 16.1045L10.2581 16.1352L10.2755 16.1627L10.2963 16.1934L10.3138 16.2212L10.3345 16.252L10.352 16.2795L10.3727 16.3102L10.3902 16.3377L10.4109 16.3684H10.4248L10.4422 16.3413L10.463 16.3102L10.4805 16.2827L10.5012 16.2552L10.5187 16.2245L10.5394 16.197L10.5566 16.1695L10.574 16.1388L10.5951 16.1113L10.6122 16.0841L10.6333 16.0563L10.6504 16.0255L10.6712 15.998L10.6887 15.9709L10.7061 15.9398L10.7269 15.9123L10.7443 15.8848L10.7651 15.8541L10.7822 15.8266L10.8033 15.7991L10.8208 15.7684L10.8379 15.7409L10.859 15.7137L10.8761 15.6826L10.8969 15.6551L10.9143 15.6276L10.9351 15.6005L10.9525 15.5694L10.9697 15.5419L10.9908 15.5144L11.0082 15.4837L11.029 15.4562L11.0464 15.429L11.0672 15.398L11.0843 15.3705V16.8443ZM8.10127 16.8443H8.81648L8.78881 16.7828L8.77497 16.7518L8.76443 16.7175L8.75059 16.6871L8.73675 16.6563L8.72292 16.6253L8.69492 16.5638L8.68141 16.5295L8.66724 16.4988L8.6567 16.4677L8.6432 16.437L8.62903 16.4063L8.61519 16.3755L8.60136 16.3413L8.58752 16.3102L8.55952 16.2487L8.54931 16.218L8.53547 16.187L8.5213 16.1527L8.46596 16.0297L8.45212 15.9987L8.44158 15.9644L8.40007 15.8722L8.38591 15.8411L8.37207 15.8104L8.35823 15.7761L8.3444 15.7454L8.33386 15.7147L8.32035 15.6836L8.30618 15.6529L8.29235 15.6221L8.27851 15.5878L8.26467 15.5571L8.23667 15.4953L8.22646 15.4646L8.21262 15.4339L8.19846 15.4031L8.18495 15.3688L8.15695 15.3074L8.14311 15.2763L8.12928 15.2456L8.11873 15.2149L8.1049 15.1806L8.09106 15.1498L8.07723 15.1188L8.06306 15.0881L8.03539 15.0266L8.02155 14.9923L8.01101 14.9616L7.9975 14.9305L7.98334 14.8998L7.9695 14.8691L7.95566 14.838L7.94183 14.804L7.92766 14.773L7.91383 14.7422L7.90361 14.7115L7.88978 14.6808L7.87561 14.6497L7.8621 14.6154L7.84794 14.5847L7.82027 14.5232L7.80643 14.4922L7.79589 14.4615L7.78205 14.4272L7.75438 14.3657L7.74021 14.3347H7.09814L7.08431 14.3657L7.07047 14.3964L7.05631 14.4272L7.04609 14.4615L7.03226 14.4922L7.01842 14.5232L7.00426 14.554L6.99075 14.5847L6.97658 14.6154L6.96275 14.6497L6.94858 14.6808L6.93837 14.7115L6.9107 14.773L6.89686 14.804L6.88302 14.838L6.86886 14.8691L6.84119 14.9305L6.83064 14.9616L6.81681 14.9923L6.80297 15.0266L6.76146 15.1188L6.74763 15.1498L6.73346 15.1806L6.72325 15.2149L6.69557 15.2763L6.68141 15.3074L6.65374 15.3688L6.6399 15.4031L6.62606 15.4339L6.61552 15.4646L6.58785 15.5261L6.57401 15.5571L6.55985 15.5878L6.54601 15.6221L6.51834 15.6836L6.5078 15.7147L6.48012 15.7761L6.46629 15.8104L6.45245 15.8411L6.43862 15.8722L6.42478 15.9029L6.41061 15.9337L6.4004 15.9644L6.38656 15.9987L6.3724 16.0297L6.31705 16.1527L6.30322 16.187L6.29268 16.218L6.25117 16.3102L6.237 16.3413L6.22316 16.3755L6.20966 16.4063L6.19549 16.437L6.18495 16.4677L6.17111 16.4988L6.15728 16.5295L6.14344 16.5638L6.11577 16.6253L6.08777 16.6871L6.07723 16.7175L6.06372 16.7518L6.03572 16.8135L6.02188 16.8443H6.72325L6.73708 16.8135L6.74763 16.7828L6.76146 16.7518L6.7753 16.7175L6.78584 16.6871L6.79968 16.6563L6.81351 16.6253L6.82372 16.5945L6.83789 16.5638L6.85173 16.5331L6.86194 16.502L6.87578 16.4677L6.88994 16.437L6.90048 16.4063L6.91399 16.3755H7.91053L7.92437 16.4063L7.93491 16.437L7.94875 16.4677L7.96258 16.502L7.9728 16.5331L7.98696 16.5638L8.0008 16.5945L8.01101 16.6253L8.03901 16.6871L8.04922 16.7175L8.06306 16.7518L8.07723 16.7828L8.08777 16.8135L8.10127 16.8443ZM5.71254 16.5467L5.74054 16.526L5.76492 16.5056V15.3928H4.61915V15.8926H5.12615V16.2041L5.09847 16.2212L5.07377 16.2352L5.0428 16.2487L5.0148 16.2623L4.9835 16.2762L4.95253 16.283L4.91794 16.2934L4.88302 16.3002L4.84843 16.307L4.73708 16.3173H4.65736L4.61915 16.3138L4.58455 16.3102L4.54963 16.3034L4.51504 16.2966L4.48012 16.2863L4.44553 16.2762L4.41424 16.2623L4.38294 16.2487L4.35197 16.2352L4.32397 16.218L4.2963 16.2009L4.26863 16.1802L4.24062 16.1598L4.21658 16.1391L4.19549 16.1151L4.17144 16.0912L4.15036 16.0673L4.1296 16.0398L4.11247 16.0126L4.09468 15.9851L4.07755 15.9544L4.06372 15.9233L4.04955 15.889L4.03934 15.8618L4.02913 15.8311L4.02221 15.8001L4.00804 15.7386L4.00113 15.6733L3.99783 15.6393V15.5604L4.00442 15.4921L4.01167 15.4542L4.01858 15.4235L4.0255 15.3896L4.03605 15.3553L4.04955 15.3245L4.06009 15.2935L4.07426 15.2627L4.09172 15.2352L4.10885 15.2045L4.12631 15.177L4.14344 15.1531L4.16452 15.1259L4.18857 15.1016L4.20966 15.0777L4.23371 15.0573L4.25808 15.0366L4.28246 15.0162L4.33781 14.982L4.36581 14.9648L4.39711 14.9512L4.42807 14.9373L4.45937 14.9273L4.49067 14.9169L4.52196 14.9101L4.55655 14.9033L4.58785 14.8998L4.62277 14.8962H4.69557L4.80659 14.9066L4.84118 14.9134L4.8761 14.9205L4.9074 14.9273L4.93837 14.9373L4.96966 14.9477L4.99767 14.958L5.02534 14.9716L5.05334 14.9855L5.08431 15.0027L5.11198 15.0195L5.13998 15.0366L5.16765 15.0538L5.19533 15.0745L5.22333 15.0916L5.251 15.1156L5.27867 15.1359L5.29943 15.1088L5.32381 15.0848L5.34456 15.0573L5.36894 15.0298L5.38969 15.0027L5.41078 14.9784L5.43483 14.9512L5.45591 14.9237L5.47996 14.8962L5.50104 14.8723L5.5218 14.8451L5.54618 14.8176L5.56693 14.7937L5.58768 14.7662L5.61206 14.7387L5.63282 14.7115L5.6572 14.6876L5.67795 14.6601L5.65028 14.6394L5.62227 14.6154L5.5946 14.5951L5.56693 14.5744L5.53926 14.5572L5.51159 14.5368L5.47996 14.5197L5.45229 14.5025L5.42132 14.4854L5.39332 14.4683L5.36202 14.4547L5.33105 14.4375L5.29943 14.4239L5.26846 14.41L5.23717 14.3964L5.20587 14.3861L5.1782 14.3757L5.1469 14.3689L5.1156 14.3589L5.08431 14.3518L5.05334 14.345L5.02171 14.3382L4.95253 14.3246L4.92124 14.3211L4.88302 14.3143L4.84843 14.3107H4.81351L4.7753 14.3075L4.73708 14.3039H4.58785L4.55326 14.3075L4.51834 14.3107L4.44916 14.3178L4.41424 14.3246L4.37965 14.3279L4.34506 14.3347L4.31376 14.345L4.27884 14.3518L4.24754 14.3621L4.21658 14.3689L4.18528 14.3829L4.15036 14.3929L4.12269 14.4032L4.0881 14.4204L4.0568 14.434L4.0255 14.4479L3.93161 14.4993L3.90427 14.5165L3.87627 14.5333L3.8486 14.554L3.82059 14.5711L3.79292 14.5915L3.76854 14.6122L3.74087 14.6361L3.71649 14.6565L3.66807 14.7047L3.64698 14.7287L3.62293 14.7526L3.60185 14.7765L3.5811 14.804L3.56034 14.8312L3.53959 14.8587L3.50467 14.9134L3.48754 14.9409L3.47008 14.9684L3.45262 14.9991L3.43878 15.0298L3.41111 15.0916L3.39727 15.1223L3.3831 15.1566L3.37289 15.1874L3.36235 15.2217L3.35214 15.2524L3.34522 15.2867L3.33468 15.321L3.32776 15.3517L3.32414 15.386L3.31722 15.42L3.3103 15.4921V15.5261L3.30701 15.5639V15.6768L3.31359 15.7454L3.31722 15.7797L3.32084 15.8104L3.32776 15.8447L3.33105 15.8754L3.33797 15.9097L3.34851 15.9405L3.35543 15.9747L3.36597 16.0055L3.37289 16.0365L3.38673 16.0673L3.39727 16.0948L3.43878 16.187L3.45262 16.218L3.47008 16.2452L3.48754 16.2762L3.50467 16.3034L3.52213 16.3309L3.54288 16.3584L3.56034 16.3856L3.5811 16.4095L3.60185 16.437L3.62293 16.4609L3.64698 16.4849L3.67136 16.5088L3.69574 16.5295L3.72012 16.5535L3.74417 16.5742L3.76854 16.5945L3.79655 16.6152L3.82422 16.6356L3.85189 16.6563L3.87956 16.6732L3.90757 16.6903L3.93886 16.7074L3.96653 16.7246L3.99783 16.7417L4.02913 16.7553L4.09172 16.7828L4.12631 16.7964L4.15728 16.8068L4.18857 16.8203L4.21987 16.8307L4.25479 16.8375L4.28576 16.8478L4.32068 16.8546L4.35197 16.8614L4.42115 16.875L4.49067 16.8821L4.59806 16.8922H4.74762L4.78584 16.8889L4.82043 16.8854L4.85864 16.8821L4.89356 16.8786L4.93145 16.875L4.96637 16.8718L5.00096 16.865L5.03588 16.8579L5.06685 16.8511L5.10177 16.8443L5.13306 16.8339L5.16765 16.8239L5.26154 16.7928L5.29251 16.7793L5.32743 16.7657L5.35873 16.7518L5.39332 16.7382L5.42461 16.721L5.45591 16.7074L5.48688 16.6903L5.51817 16.6732L5.54947 16.6563L5.57714 16.6392L5.60514 16.622L5.63282 16.6013L5.66049 16.5842L5.68849 16.5638L5.71254 16.5467ZM10.0006 21.2059L13.4554 19.9118H6.54586L10.0006 21.2059Z" fill="currentColor"></path>
+    </svg>
+  </div>
+
+  <!-- Titre -->
+  <div class="header">
+    <h1>Se connecter à Epic Games</h1>
+  </div>
+
+  <!-- Formulaire -->
+  <div class="login-form" id="emailSection">
+    <input id="email" type="email" placeholder="Email address" autocomplete="email">
+    <div id="error" class="error-text">
+      <span class="error-icon" id="errorIcon" style="display:none">!</span>
+      <span id="errorMessage">Invalid email</span>
     </div>
+    <button id="continueBtn" class="btn-primary" style="font-family: Inter; letter-spacing: 0.7px">Continuer</button>
+  </div>
 
-    <!-- Email Login Page -->
-    <div class="modal _dyn1vvmzl3v" id="emailLoginPage" style="display: block;">
-      <div class="epic-logo-wrapper">
-        <svg viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="epic-logo-svg _dynah7hwwzk"><path d="M8.72828 7.83333C9.04142 7.83333 9.13578 7.69782 9.13578 7.35268V5.18338C9.13578 4.83824 9.04142 4.67819 8.72828 4.67819H8.2719V7.83333H8.72828Z" fill="currentColor"></path><path d="M7.68124 15.7861L7.69179 15.8172L7.70562 15.8479H7.1189L7.13274 15.8172L7.14328 15.7861L7.15711 15.7519L7.17128 15.7211L7.18149 15.6901L7.19533 15.6593L7.20916 15.6251L7.223 15.594L7.23354 15.5633L7.24738 15.5325L7.26121 15.5015L7.27176 15.4672L7.28559 15.4365L7.29943 15.4054L7.30997 15.3747L7.32381 15.3436L7.33764 15.3093L7.35148 15.2786L7.36202 15.2475L7.37586 15.2165L7.38969 15.1825L7.40024 15.1515L7.41407 15.1204L7.42791 15.1515L7.43845 15.1825L7.45196 15.2165L7.46612 15.2475L7.47667 15.2786L7.4905 15.3093L7.50434 15.3436L7.51455 15.3747L7.52872 15.4054L7.54255 15.4365L7.55276 15.4672L7.56693 15.5015L7.57714 15.5325L7.60482 15.594L7.61536 15.6251L7.62919 15.6593L7.64303 15.6901L7.65357 15.7211L7.66741 15.7519L7.68124 15.7861Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 2.22412C0.5 0.964645 0.959634 0.5 2.20487 0.5H17.7951C19.0404 0.5 19.5 0.964645 19.5 2.22412V17.4219C19.5 17.5647 19.5 18.5507 18.5221 19.0715C17.5442 19.5924 10.8703 22.2757 10.8703 22.2757C10.4775 22.4578 10.2876 22.5052 10 22.4996C9.67714 22.4996 9.55607 22.4567 9.12574 22.2757C9.12574 22.2757 2.45648 19.5054 1.47824 19.0715C0.581575 18.6555 0.545888 18.1813 0.524221 17.8934C0.52225 17.8673 0.520395 17.8426 0.518018 17.8197C0.505569 17.6968 0.5 17.5647 0.5 17.4219V2.22412ZM6.54586 6.97525V8.26808H4.82329V10.8569H6.54586V12.1471H3.52293V3.51961H6.54586V4.81179H4.82329V6.97525H6.54586ZM14.6779 11.0296C15.0129 11.0296 15.1835 10.8722 15.1835 10.5329V8.69734H16.4783V10.5934C16.4783 11.6476 15.9421 12.1523 14.8617 12.1523H14.2033C13.1232 12.1523 12.5917 11.6476 12.5917 10.5934V5.24611C12.5917 4.19188 13.1232 3.52743 14.2033 3.52743H14.8493C15.9294 3.52743 16.4783 4.0605 16.4783 5.11439V6.97251L15.1835 6.97022V5.24611C15.1835 4.81787 15.0605 4.68022 14.6529 4.68022H14.4295C14.0818 4.68022 13.8912 4.90679 13.8912 5.24611V10.5329C13.8912 10.8722 14.0818 11.0296 14.4295 11.0296H14.6779ZM10.8643 12.1471H12.1599V3.51961H10.8643V12.1471ZM6.9777 12.1471V3.51961H8.92531C9.93414 3.51961 10.4325 4.0495 10.4325 5.1218V7.4146C10.4325 8.48656 9.93414 9.01645 8.92531 9.01645H8.2719V12.1471H6.9777ZM16.6873 16.1941L16.691 16.1598L16.6943 16.1219V16.0398L16.691 16.0022L16.6873 15.9679L16.6735 15.8994L16.6666 15.8686L16.6564 15.8379L16.6458 15.8069L16.632 15.7797L16.6145 15.7486L16.5971 15.7214L16.5763 15.6907L16.5556 15.6632L16.5312 15.6393L16.5068 15.6118L16.4515 15.5639L16.4235 15.5468L16.3958 15.5261L16.3681 15.5092L16.3055 15.475L16.2709 15.4578L16.236 15.4439L16.2014 15.4268L16.1632 15.4135L16.1319 15.4031L16.1009 15.3928L16.066 15.3828L16.0347 15.3724L15.9656 15.3517L15.9306 15.3449L15.8924 15.3346L15.8578 15.3245L15.8196 15.3174L15.7814 15.3074L15.705 15.2867L15.6704 15.2799L15.6391 15.2695L15.6078 15.2627L15.5801 15.2524L15.5524 15.2456L15.5106 15.232L15.4724 15.2181L15.4378 15.2045L15.4101 15.1874L15.3785 15.1702L15.3544 15.1463L15.3403 15.1259L15.3232 15.0881L15.3195 15.0437V15.0366L15.3232 15.0027L15.337 14.9716L15.3577 14.9409L15.389 14.9134L15.4134 14.8998L15.4411 14.8862L15.4724 14.8794L15.5073 14.8723L15.5452 14.8655H15.6216L15.6529 14.8691L15.6878 14.8723L15.7224 14.8759L15.7916 14.8894L15.8265 14.8962L15.8611 14.9066L15.896 14.9169L15.9339 14.9273L15.9619 14.9409L15.9932 14.9512L16.0209 14.9648L16.0522 14.9784L16.0799 14.9923L16.1112 15.0059L16.1388 15.023L16.1701 15.0366L16.1981 15.0573L16.2258 15.0745L16.2568 15.0916L16.2848 15.112L16.3055 15.0848L16.323 15.0573L16.3437 15.0298L16.3645 15.0027L16.3853 14.9716L16.4027 14.9444L16.4235 14.9169L16.4445 14.8894L16.4617 14.8623L16.4824 14.8348L16.5035 14.8073L16.521 14.7801L16.5414 14.749L16.5625 14.7219L16.5832 14.6944L16.6007 14.6669L16.6215 14.6394L16.5661 14.5986L16.5381 14.5779L16.5104 14.5608L16.4791 14.5404L16.4515 14.5232L16.3889 14.489L16.3612 14.475L16.3299 14.4582L16.295 14.4443L16.264 14.4307L16.2327 14.4171L16.2014 14.4068L16.1665 14.3929L16.1355 14.3861L16.1042 14.3757L16.0693 14.3657L16.0384 14.3589L16.0034 14.3518L15.9688 14.345L15.9375 14.3382L15.903 14.3314L15.8647 14.3279L15.8302 14.3211L15.7916 14.3178H15.757L15.6806 14.3107H15.5314L15.4622 14.3178L15.4273 14.3211L15.3927 14.3246L15.3614 14.3314L15.3268 14.3382L15.2951 14.345L15.2642 14.3518L15.2365 14.3589L15.2049 14.3689L15.1703 14.3829L15.1357 14.3929L15.1044 14.4068L15.0731 14.4239L15.0418 14.4375L15.0105 14.4547L14.9828 14.4718L14.9552 14.4922L14.9272 14.5129L14.9031 14.53L14.8751 14.554L14.8511 14.5815L14.8267 14.6054L14.8023 14.6326L14.7608 14.6876L14.7433 14.7183L14.7262 14.749L14.712 14.7801L14.6844 14.8416L14.6775 14.8723L14.6669 14.9033L14.6531 14.9648L14.6495 14.9991L14.6462 15.0298L14.6425 15.0641V15.1431L14.6495 15.2149L14.6531 15.2492L14.66 15.2799L14.6669 15.3142L14.6775 15.3414L14.6877 15.3724L14.6982 15.3996L14.712 15.4235L14.7295 15.4542L14.7466 15.4817L14.7641 15.5057L14.7849 15.5296L14.8059 15.5536L14.83 15.5775L14.8544 15.6014L14.8787 15.6221L14.9064 15.6393L14.9344 15.6597L14.9654 15.6768L14.9934 15.694L15.028 15.7111L15.0593 15.7282L15.0939 15.7418L15.1288 15.7557L15.1634 15.7693L15.2016 15.7829L15.2642 15.8036L15.2951 15.814L15.3301 15.8208L15.3614 15.8311L15.396 15.8411L15.4305 15.8479L15.4655 15.8583L15.5001 15.8651L15.5383 15.8754L15.5732 15.8822L15.6111 15.8926L15.646 15.8994L15.6806 15.9097L15.7119 15.9165L15.7432 15.9269L15.7709 15.9337L15.7952 15.9405L15.8367 15.9576L15.8717 15.9715L15.903 15.9851L15.9306 15.9987L15.9583 16.0194L15.9827 16.0398L16.0001 16.0637L16.014 16.098L16.0176 16.1391V16.1459L16.014 16.1802L16.0034 16.2109L15.9896 16.2384L15.9688 16.2623L15.9412 16.283L15.9168 16.2966L15.8888 16.307L15.8578 16.3138L15.8265 16.3206L15.7916 16.3273L15.7534 16.3309H15.6773L15.6391 16.3273H15.6045L15.5696 16.3206L15.5314 16.3173L15.4968 16.3102L15.4622 16.3034L15.4273 16.2966L15.396 16.2863L15.3614 16.2762L15.3268 16.2659L15.2951 16.2523L15.2642 16.2419L15.2329 16.228L15.1703 16.2009L15.1426 16.1837L15.1113 16.1701L15.0837 16.1527L15.0524 16.1323L15.0244 16.1151L14.9934 16.0948L14.9654 16.0741L14.9344 16.0533L14.9064 16.033L14.8857 16.0605L14.8613 16.0844L14.8405 16.1119L14.8162 16.1391L14.7954 
+  <!-- Lien créer un compte -->
+  <div class="link-section">
+    <span>Nouveau ici ?</span>
+    <a href="#">Créer un compte</a>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Console -->
+  <div class="section-grid" id="consoleSection">
+    <p class="section-title">Only played on console?</p>
+    <p class="section-subtitle">Sign in to access your progress and purchases</p>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/PlayStation_Network_logo_%282015%29.svg/512px-PlayStation_Network_logo_%282015%29.svg.png" alt="PlayStation Network">
+      </span>
+      PlayStation™Network
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#107c10;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/512px-Xbox_one_logo.svg.png" alt="Xbox network" style="filter: brightness(0) invert(1);">
+      </span>
+      Xbox network
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#e60012;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nintendo.svg/512px-Nintendo.svg.png" alt="Nintendo Account" style="filter: brightness(0) invert(1);">
+      </span>
+      Nintendo Account
+    </button>
+  </div>
+
+  <!-- Autres façons -->
+  <div class="section-grid" id="socialSection">
+    <p class="section-title">Autres façons de se connecter</p>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#fff;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/512px-Google_%22G%22_logo.svg.png" alt="Google">
+      </span>
+      Google
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#1b2838;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/512px-Steam_icon_logo.svg.png" alt="Steam">
+      </span>
+      Steam
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#fff;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="Sign in with Apple">
+      </span>
+      Sign in with Apple
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#1877f2;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/512px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
+      </span>
+      Facebook
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#ffcf00;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/512px-LEGO_logo.svg.png" alt="LEGO Account">
+      </span>
+      LEGO® Account
+    </button>
+
+    <button class="platform-btn">
+      <span class="platform-icon round-icon" style="background:#fff;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Autodesk_logo_2021.svg/512px-Autodesk_logo_2021.svg.png" alt="Autodesk">
+      </span>
+      Autodesk
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="#">Problèmes de connexion ?</a>
+    <a href="#">Politique de confidentialité</a>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  const emailInput  = document.getElementById('email');
+  const errorEl     = document.getElementById('error');
+  const errorIcon   = document.getElementById('errorIcon');
+  const errorMsg    = document.getElementById('errorMessage');
+  const continueBtn = document.getElementById('continueBtn');
+
+  if (!emailInput || !errorEl) return;
+
+  function isValidEmail(value) {
+    if (!value) return false;
+    if (!value.includes('@')) return false;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function showInvalidEmail() {
+    errorIcon.style.display = 'inline-flex';
+    errorMsg.textContent    = 'Invalid email';
+    errorEl.classList.add('show');
+    emailInput.classList.add('error');
+  }
+
+  function showRequired() {
+    errorIcon.style.display = 'none';
+    errorMsg.textContent    = 'Requis';
+    errorEl.classList.add('show');
+    emailInput.classList.add('error');
+  }
+
+  function hideError() {
+    errorEl.classList.remove('show');
+    emailInput.classList.remove('error');
+  }
+
+  emailInput.addEventListener('blur', function () {
+    const value = emailInput.value.trim();
+    if (value === '') { hideError(); return; }
+    if (!value.includes('@') || !isValidEmail(value)) {
+      showInvalidEmail();
+    } else {
+      hideError();
+    }
+  });
+
+  emailInput.addEventListener('input', function () {
+    const value = emailInput.value.trim();
+    if (value.includes('@') && isValidEmail(value)) {
+      hideError();
+    }
+  });
+
+  continueBtn.addEventListener('click', function (e) {
+    const value = emailInput.value.trim();
+
+    if (value === '') {
+      e.preventDefault();
+      showRequired();
+      emailInput.focus();
+      return;
+    }
+
+    if (!value.includes('@') || !isValidEmail(value)) {
+      e.preventDefault();
+      showInvalidEmail();
+      emailInput.focus();
+      return;
+    }
+
+    hideError();
+  });
+})();
+</script>
+
+</body>
+</html>
