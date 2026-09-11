@@ -239,19 +239,34 @@
     border-radius: 50%;
     flex-shrink: 0;
   }
+
   .platform-icon img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
   }
+
   .platform-icon.round-icon {
     border-radius: 50%;
     overflow: hidden;
   }
-  .platform-icon.round-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+  /* Ajustements spécifiques pour les logos non carrés */
+  .platform-icon.round-icon img[alt="Nintendo Account"] {
+    width: 30px;
+    height: 16px;
+  }
+  .platform-icon.round-icon img[alt="Autodesk"] {
+    width: 28px;
+    height: 14px;
+  }
+  .platform-icon.round-icon img[alt="Sign in with Apple"] {
+    width: 20px;
+    height: 24px;
+  }
+  .platform-icon.round-icon img[alt="LEGO Account"] {
+    width: 24px;
+    height: 24px;
   }
 
   /* ====== FOOTER ====== */
@@ -290,6 +305,22 @@
     .platform-icon {
       width: 34px;
       height: 34px;
+    }
+    .platform-icon img {
+      width: 18px;
+      height: 18px;
+    }
+    .platform-icon.round-icon img[alt="Nintendo Account"] {
+      width: 26px;
+      height: 14px;
+    }
+    .platform-icon.round-icon img[alt="Autodesk"] {
+      width: 24px;
+      height: 12px;
+    }
+    .platform-icon.round-icon img[alt="Sign in with Apple"] {
+      width: 16px;
+      height: 20px;
     }
   }
 
