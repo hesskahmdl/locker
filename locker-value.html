@@ -5,17 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fortnite Locker Value — Ton estimation</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/960px-Epic_Games_logo.svg.png">
 
-<!-- Police Fortnite -->
 <link rel="preconnect" href="https://fonts.cdnfonts.com">
 <link href="https://fonts.cdnfonts.com/css/burbank-big-condensed" rel="stylesheet">
 
 <style>
-/* ============================================================
-   VARIABLES & RESET
-============================================================ */
 :root{
   --yellow:        #ffff00;
   --yellow-btn:    #f8f013;
@@ -35,7 +30,6 @@
 }
 
 *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-
 html{ scroll-behavior:smooth; }
 
 body{
@@ -60,16 +54,9 @@ h1,h2,h3,h4{
 a{ text-decoration:none; color:inherit; }
 img{ display:block; max-width:100%; }
 
-.container{
-  width:100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.container{ width:100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-/* ============================================================
-   ÉCRAN DE CHARGEMENT (0.49s)
-============================================================ */
+/* ====== ÉCRAN DE CHARGEMENT ====== */
 .loading-screen{
   position: fixed;
   inset: 0;
@@ -80,7 +67,7 @@ img{ display:block; max-width:100%; }
   align-items: center;
   justify-content: center;
   gap: 32px;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .loading-screen.hidden{
@@ -89,7 +76,6 @@ img{ display:block; max-width:100%; }
   pointer-events: none;
 }
 
-/* Logo avec anneau animé */
 .loading-logo{
   position: relative;
   width: 110px;
@@ -127,9 +113,7 @@ img{ display:block; max-width:100%; }
   animation: spinRing 1.4s linear infinite reverse;
 }
 
-@keyframes spinRing{
-  to { transform: rotate(360deg); }
-}
+@keyframes spinRing{ to { transform: rotate(360deg); } }
 
 .loading-icon{
   width: 44px;
@@ -144,10 +128,7 @@ img{ display:block; max-width:100%; }
   50%      { transform: scale(1.08); opacity: 0.85; }
 }
 
-/* Texte de chargement */
-.loading-text{
-  text-align: center;
-}
+.loading-text{ text-align: center; }
 
 .loading-title{
   font-family: var(--font-title);
@@ -185,7 +166,6 @@ img{ display:block; max-width:100%; }
   80%, 100%{ content: '...'; }
 }
 
-/* Barre de progression */
 .loading-bar{
   width: 240px;
   height: 3px;
@@ -209,9 +189,7 @@ img{ display:block; max-width:100%; }
   to   { width: 100%; }
 }
 
-/* ============================================================
-   BOUTONS
-============================================================ */
+/* ====== BOUTONS ====== */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -256,9 +234,7 @@ img{ display:block; max-width:100%; }
   transform: translateY(-2px);
 }
 
-/* ============================================================
-   HEADER
-============================================================ */
+/* ====== HEADER ====== */
 .site-header{
   position: sticky;
   top: 0;
@@ -325,9 +301,7 @@ img{ display:block; max-width:100%; }
 
 .back-btn svg{ width: 16px; height: 16px; }
 
-/* ============================================================
-   FOND ANIMÉ
-============================================================ */
+/* ====== FOND ANIMÉ ====== */
 .bg-grid{
   position: fixed;
   inset: 0;
@@ -361,9 +335,7 @@ img{ display:block; max-width:100%; }
   66%      { transform: translate(-30px, 30px) scale(0.95); }
 }
 
-/* ============================================================
-   WRAPPER
-============================================================ */
+/* ====== WRAPPER ====== */
 .wrapper{
   position: relative;
   z-index: 2;
@@ -372,9 +344,7 @@ img{ display:block; max-width:100%; }
   padding: 70px 24px 80px;
 }
 
-/* ============================================================
-   HEADER DE PAGE
-============================================================ */
+/* ====== HEADER DE PAGE ====== */
 .page-header{
   text-align: center;
   margin-bottom: 50px;
@@ -416,9 +386,7 @@ img{ display:block; max-width:100%; }
   line-height: 1.7;
 }
 
-/* ============================================================
-   CARTE VALEUR
-============================================================ */
+/* ====== CARTE VALEUR ====== */
 .value-card{
   position: relative;
   background: linear-gradient(135deg, rgba(255,251,0,0.04), rgba(255,255,255,0.02));
@@ -453,7 +421,6 @@ img{ display:block; max-width:100%; }
   pointer-events: none;
 }
 
-/* ====== HAUT DE CARTE ====== */
 .account-info{
   display: flex;
   align-items: center;
@@ -521,7 +488,6 @@ img{ display:block; max-width:100%; }
 
 @keyframes blinkDot{ 50% { opacity: 0.4; } }
 
-/* ====== VALEUR ====== */
 .value-label{
   text-align: center;
   font-family: var(--font-title);
@@ -567,7 +533,6 @@ img{ display:block; max-width:100%; }
   opacity: 0.85;
 }
 
-/* ====== BARRE PROGRESSION ====== */
 .progress{
   height: 6px;
   background: rgba(255,255,255,0.06);
@@ -603,7 +568,6 @@ img{ display:block; max-width:100%; }
   100% { transform: translateX(0); }
 }
 
-/* ====== MINI STATS ====== */
 .mini-stats{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -643,7 +607,6 @@ img{ display:block; max-width:100%; }
   font-weight: 600;
 }
 
-/* ====== BOUTON PARTAGER UNIQUEMENT ====== */
 .recalc-zone{
   display: flex;
   justify-content: center;
@@ -655,7 +618,6 @@ img{ display:block; max-width:100%; }
 
 .recalc-zone .btn svg{ width: 18px; height: 18px; }
 
-/* ====== INFO GRID ====== */
 .info-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -702,7 +664,6 @@ img{ display:block; max-width:100%; }
   line-height: 1.6;
 }
 
-/* ====== FOOTER ====== */
 .site-footer{
   background: #08090c;
   border-top: 1px solid rgba(255,255,255,.07);
@@ -712,13 +673,11 @@ img{ display:block; max-width:100%; }
   font-size: .84rem;
 }
 
-/* ====== ANIMATIONS ====== */
 @keyframes fadeUp{
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== CONFETTIS ====== */
 .confetti{
   position: fixed;
   top: -10px;
@@ -734,7 +693,6 @@ img{ display:block; max-width:100%; }
   100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 900px){
   .header-inner{ height: 72px; gap: 16px; padding: 0 16px; }
   .brand-epic{ height: 22px; }
@@ -757,7 +715,7 @@ img{ display:block; max-width:100%; }
 <body>
 
 <!-- ============================================================
-     ÉCRAN DE CHARGEMENT (0.49s)
+     ÉCRAN DE CHARGEMENT
 ============================================================ -->
 <div class="loading-screen" id="loadingScreen">
   <div class="loading-logo">
@@ -789,7 +747,6 @@ img{ display:block; max-width:100%; }
 ============================================================ -->
 <header class="site-header">
   <div class="header-inner">
-
     <a href="https://hesskahmdl.github.io/locker/" class="brand" aria-label="Epic Games — Fortnite">
       <img class="brand-epic"
            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/960px-Epic_Games_logo.svg.png"
@@ -808,7 +765,6 @@ img{ display:block; max-width:100%; }
         <span>Retour</span>
       </a>
     </div>
-
   </div>
 </header>
 
@@ -829,7 +785,6 @@ img{ display:block; max-width:100%; }
   </div>
 
   <div class="value-card" id="valueCard">
-
     <div class="account-info">
       <div class="avatar" id="avatar">A</div>
       <div class="account-info-text">
@@ -864,7 +819,6 @@ img{ display:block; max-width:100%; }
     </div>
   </div>
 
-  <!-- Bouton PARTAGER uniquement (Recalculer supprimé) -->
   <div class="recalc-zone">
     <button class="btn btn-yellow" id="shareBtn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -923,35 +877,7 @@ img{ display:block; max-width:100%; }
 
 <script>
 /* ============================================================
-   🔒 ÉCRAN DE CHARGEMENT
-============================================================ */
-const loadingScreen = document.getElementById('loadingScreen');
-const loadingStatus = document.getElementById('loadingStatus');
-
-const loadingSteps = [
-  'Initialisation',
-  'Connexion API',
-  'Chargement du casier',
-  'Calcul de la valeur'
-];
-
-let stepIndex = 0;
-const stepInterval = setInterval(() => {
-  stepIndex++;
-  if (stepIndex < loadingSteps.length) {
-    loadingStatus.textContent = loadingSteps[stepIndex];
-  }
-}, 120);
-
-setTimeout(() => {
-  clearInterval(stepInterval);
-  loadingScreen.classList.add('hidden');
-  // Lance l'estimation après la disparition
-  setTimeout(runEstimation, 100);
-}, 490);
-
-/* ============================================================
-   🔢 ANIMATION DU COMPTEUR
+   🔢 RÉFÉRENCES DOM
 ============================================================ */
 const valueNumber   = document.getElementById('valueNumber');
 const valueDisplay  = document.getElementById('valueDisplay');
@@ -961,8 +887,12 @@ const usernameEl    = document.getElementById('username');
 const skinsCount    = document.getElementById('skinsCount');
 const emotesCount   = document.getElementById('emotesCount');
 const pickaxesCount = document.getElementById('pickaxesCount');
+const loadingScreen = document.getElementById('loadingScreen');
+const loadingStatus = document.getElementById('loadingStatus');
 
-/* Récupère le pseudo depuis l'URL ou localStorage — sinon ANONYME */
+/* ============================================================
+   👤 PSEUDO — URL > localStorage > ANONYME
+============================================================ */
 (function initUsername(){
   const params = new URLSearchParams(window.location.search);
   const pseudo = params.get('pseudo')
@@ -983,4 +913,137 @@ function randomValue(min = 200, max = 4000){
 
 /* ============================================================
    ✨ ANIMATION DU COMPTEUR
-========================================================
+============================================================ */
+function animateValue(target, duration = 2400){
+  const start = performance.now();
+
+  function easeOutExpo(t){
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function frame(now){
+    const elapsed = now - start;
+    const t = Math.min(elapsed / duration, 1);
+    const eased = easeOutExpo(t);
+    const current = target * eased;
+
+    valueNumber.textContent = Math.round(current).toLocaleString('fr-FR');
+
+    const pct = Math.min(((current - 200) / (4000 - 200)) * 100, 100);
+    progressBar.style.width = Math.max(0, pct) + '%';
+
+    if (t < 1) requestAnimationFrame(frame);
+    else {
+      valueDisplay.classList.add('bump');
+      setTimeout(() => valueDisplay.classList.remove('bump'), 400);
+
+      if (target > 3000) launchConfetti();
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+/* ============================================================
+   📊 ANIMATION DES STATS
+============================================================ */
+function animateCount(el, target, duration = 1200){
+  const start = performance.now();
+  function frame(now){
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.round(target * eased);
+    if (t < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+function generateStats(value){
+  const skins    = Math.floor(30 + (value / 4000) * 220 + Math.random() * 40);
+  const emotes   = Math.floor(15 + (value / 4000) * 100 + Math.random() * 25);
+  const pickaxes = Math.floor(10 + (value / 4000) * 70 + Math.random() * 20);
+
+  animateCount(skinsCount,    skins);
+  animateCount(emotesCount,   emotes);
+  animateCount(pickaxesCount, pickaxes);
+}
+
+/* ============================================================
+   🎉 CONFETTIS
+============================================================ */
+function launchConfetti(){
+  const colors = ['#fffb00', '#ff8c00', '#22d97a', '#5f1fff', '#ffffff'];
+  for (let i = 0; i < 60; i++){
+    setTimeout(() => {
+      const c = document.createElement('div');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = colors[Math.floor(Math.random() * colors.length)];
+      c.style.width = (Math.random() * 8 + 5) + 'px';
+      c.style.height = (Math.random() * 8 + 5) + 'px';
+      c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      c.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      c.style.animationDelay = (Math.random() * 0.4) + 's';
+      document.body.appendChild(c);
+
+      setTimeout(() => c.remove(), 5000);
+    }, i * 20);
+  }
+}
+
+/* ============================================================
+   🚀 LANCEMENT DE L'ESTIMATION
+============================================================ */
+function runEstimation(){
+  const value = randomValue(200, 4000);
+  animateValue(value);
+  generateStats(value);
+}
+
+/* ============================================================
+   ⏱️ ÉCRAN DE CHARGEMENT (0.49s)
+============================================================ */
+const loadingSteps = [
+  'Initialisation',
+  'Connexion API',
+  'Chargement du casier',
+  'Calcul de la valeur'
+];
+
+let stepIndex = 0;
+const stepInterval = setInterval(() => {
+  stepIndex++;
+  if (stepIndex < loadingSteps.length) {
+    loadingStatus.textContent = loadingSteps[stepIndex];
+  }
+}, 120);
+
+setTimeout(() => {
+  clearInterval(stepInterval);
+  loadingScreen.classList.add('hidden');
+  // Petit délai pour laisser l'écran disparaître avant de lancer l'anim
+  setTimeout(runEstimation, 100);
+}, 490);
+
+/* ============================================================
+   📤 BOUTON PARTAGER
+============================================================ */
+document.getElementById('shareBtn').addEventListener('click', () => {
+  const value = valueNumber.textContent;
+  const text = `Mon casier Fortnite vaut environ $${value} selon FortVault ! 💰`;
+
+  if (navigator.share){
+    navigator.share({ title: 'FortVault', text }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('shareBtn');
+      const original = btn.innerHTML;
+      btn.innerHTML = '✓ Copié !';
+      setTimeout(() => btn.innerHTML = original, 1800);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
