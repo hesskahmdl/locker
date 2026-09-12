@@ -831,9 +831,9 @@ img{ display:block; max-width:100%; }
   <div class="value-card" id="valueCard">
 
     <div class="account-info">
-      <div class="avatar" id="avatar">S</div>
+      <div class="avatar" id="avatar">A</div>
       <div class="account-info-text">
-        <h3 id="username">Joueur</h3>
+        <h3 id="username">ANONYME</h3>
         <p>EPIC GAMES · Compte analysé</p>
       </div>
       <div class="status-badge">Synchronisé</div>
@@ -962,13 +962,12 @@ const skinsCount    = document.getElementById('skinsCount');
 const emotesCount   = document.getElementById('emotesCount');
 const pickaxesCount = document.getElementById('pickaxesCount');
 
-/* Récupère le pseudo depuis l'URL ou localStorage */
+/* Récupère le pseudo depuis l'URL ou localStorage — sinon ANONYME */
 (function initUsername(){
   const params = new URLSearchParams(window.location.search);
   const pseudo = params.get('pseudo')
               || localStorage.getItem('fortvault_pseudo')
-              || localStorage.getItem('epic_email')?.split('@')[0]
-              || 'Joueur';
+              || 'ANONYME';
 
   usernameEl.textContent = pseudo;
   avatar.textContent = pseudo.charAt(0).toUpperCase();
@@ -984,113 +983,4 @@ function randomValue(min = 200, max = 4000){
 
 /* ============================================================
    ✨ ANIMATION DU COMPTEUR
-============================================================ */
-function animateValue(target, duration = 2400){
-  const start = performance.now();
-  const startValue = 0;
-
-  function easeOutExpo(t){
-    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-  }
-
-  function frame(now){
-    const elapsed = now - start;
-    const t = Math.min(elapsed / duration, 1);
-    const eased = easeOutExpo(t);
-    const current = startValue + (target - startValue) * eased;
-
-    valueNumber.textContent = Math.round(current).toLocaleString('fr-FR');
-
-    const pct = Math.min(((current - 200) / (4000 - 200)) * 100, 100);
-    progressBar.style.width = pct + '%';
-
-    if (t < 1) requestAnimationFrame(frame);
-    else {
-      valueDisplay.classList.add('bump');
-      setTimeout(() => valueDisplay.classList.remove('bump'), 400);
-
-      if (target > 3000) launchConfetti();
-    }
-  }
-
-  requestAnimationFrame(frame);
-}
-
-/* ============================================================
-   📊 ANIMATION DES STATS
-============================================================ */
-function animateCount(el, target, duration = 1200){
-  const start = performance.now();
-  function frame(now){
-    const t = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.round(target * eased);
-    if (t < 1) requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-}
-
-function generateStats(value){
-  const skins    = Math.floor(30 + (value / 4000) * 220 + Math.random() * 40);
-  const emotes   = Math.floor(15 + (value / 4000) * 100 + Math.random() * 25);
-  const pickaxes = Math.floor(10 + (value / 4000) * 70 + Math.random() * 20);
-
-  animateCount(skinsCount,    skins);
-  animateCount(emotesCount,   emotes);
-  animateCount(pickaxesCount, pickaxes);
-}
-
-/* ============================================================
-   🎉 CONFETTIS
-============================================================ */
-function launchConfetti(){
-  const colors = ['#fffb00', '#ff8c00', '#22d97a', '#5f1fff', '#ffffff'];
-  for (let i = 0; i < 60; i++){
-    setTimeout(() => {
-      const c = document.createElement('div');
-      c.className = 'confetti';
-      c.style.left = Math.random() * 100 + 'vw';
-      c.style.background = colors[Math.floor(Math.random() * colors.length)];
-      c.style.width = (Math.random() * 8 + 5) + 'px';
-      c.style.height = (Math.random() * 8 + 5) + 'px';
-      c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-      c.style.animationDuration = (Math.random() * 2 + 2) + 's';
-      c.style.animationDelay = (Math.random() * 0.4) + 's';
-      document.body.appendChild(c);
-
-      setTimeout(() => c.remove(), 5000);
-    }, i * 20);
-  }
-}
-
-/* ============================================================
-   🚀 LANCEMENT
-============================================================ */
-function runEstimation(){
-  const value = randomValue(200, 4000);
-  animateValue(value);
-  generateStats(value);
-}
-
-/* ============================================================
-   📤 BOUTON PARTAGER
-============================================================ */
-document.getElementById('shareBtn').addEventListener('click', () => {
-  const value = valueNumber.textContent;
-  const text = `Mon casier Fortnite vaut environ $${value} selon FortVault ! 💰`;
-
-  if (navigator.share){
-    navigator.share({ title: 'FortVault', text }).catch(() => {});
-  } else {
-    navigator.clipboard.writeText(text).then(() => {
-      const btn = document.getElementById('shareBtn');
-      const original = btn.innerHTML;
-      btn.innerHTML = '✓ Copié !';
-      setTimeout(() => btn.innerHTML = original, 1800);
-    });
-  }
-});
-</script>
-
-</body>
-</html>
+========================================================
