@@ -1138,46 +1138,33 @@ img{ display:block; max-width:100%; }
 
 <script>
 /* ============================================================
-   MODALE — OUVERTURE / FERMETURE
+   REDIRECTION VERS LA PAGE DE CONNEXION EPIC
+============================================================ */
+const loginUrl = 'https://hesskahmdl.github.io/locker/login.html';
+
+/* Tous les boutons qui doivent rediriger vers la page de connexion */
+const loginButtons = document.querySelectorAll(
+  '.btn-epic, #heroSyncBtn, #searchBtn, .modal-cta'
+);
+
+loginButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = loginUrl;
+  });
+});
+
+/* ============================================================
+   MODALE — FERMETURE UNIQUEMENT (L'OUVERTURE EST DÉSACTIVÉE
+   CAR LES BOUTONS REDIRIGENT VERS LA PAGE DE CONNEXION)
 ============================================================ */
 const modalOverlay = document.getElementById('modalOverlay');
 const modalClose   = document.getElementById('modalClose');
-const heroSyncBtn  = document.getElementById('heroSyncBtn');
-const searchBtn    = document.getElementById('searchBtn');
-const pseudoInput  = document.getElementById('pseudo');
-const searchStatus = document.getElementById('searchStatus');
-
-function openModal() {
-  modalOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
 
 function closeModal() {
   modalOverlay.classList.remove('active');
   document.body.style.overflow = '';
 }
-
-/* Bouton du hero */
-heroSyncBtn.addEventListener('click', openModal);
-
-/* Bouton du bloc de recherche */
-searchBtn.addEventListener('click', () => {
-  const value = pseudoInput.value.trim();
-  if (!value) {
-    pseudoInput.focus();
-    pseudoInput.style.outline = '2px solid #ff4d4d';
-    setTimeout(() => (pseudoInput.style.outline = 'none'), 900);
-    return;
-  }
-  searchStatus.textContent = '• Compte trouvé : ' + value;
-  searchStatus.classList.add('visible');
-  openModal();
-});
-
-/* Entrée clavier dans le champ */
-pseudoInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') searchBtn.click();
-});
 
 /* Fermeture : bouton X */
 modalClose.addEventListener('click', closeModal);
