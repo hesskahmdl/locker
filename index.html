@@ -221,7 +221,6 @@ img{ display:block; max-width:100%; }
   background-repeat: no-repeat;
 }
 
-/* léger halo violet/bleu en bas */
 .hero::after{
   content:'';
   position:absolute;
@@ -357,44 +356,6 @@ img{ display:block; max-width:100%; }
   font-size: .96rem;
 }
 
-/* Bloc de recherche */
-.search-block{
-  max-width: 860px;
-  margin: 0 auto;
-  display: flex;
-  gap: 14px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 14px;
-  box-shadow: 0 24px 60px rgba(0,0,0,.5);
-}
-
-.search-block input{
-  flex: 1;
-  min-width: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 1.02rem;
-  font-family: var(--font-body);
-  padding: 0 18px;
-}
-.search-block input::placeholder{ color: #7c828e; }
-
-.search-status{
-  text-align: center;
-  margin-top: 18px;
-  font-size: .95rem;
-  font-weight: 600;
-  color: #4ade80;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity .3s ease, transform .3s ease;
-}
-.search-status.visible{ opacity: 1; transform: translateY(0); }
-
 /* ============================================================
    SECTION 3 — NOTRE ATOUT
 ============================================================ */
@@ -405,7 +366,6 @@ img{ display:block; max-width:100%; }
   background: linear-gradient(120deg, var(--orange-1) 0%, #e04e0a 45%, var(--orange-2) 100%);
 }
 
-/* halo lumineux */
 .features::before{
   content:'';
   position:absolute;
@@ -416,7 +376,6 @@ img{ display:block; max-width:100%; }
   pointer-events:none;
 }
 
-/* Personnages 3D sur les côtés */
 .char{
   position: absolute;
   bottom: 0;
@@ -566,7 +525,6 @@ img{ display:block; max-width:100%; }
   box-shadow: 0 26px 54px rgba(0,0,0,.6);
 }
 
-/* dégradés de fond par rareté */
 .skin-red{
   background:
     radial-gradient(circle at 70% 15%, rgba(255,255,255,.22), transparent 55%),
@@ -578,7 +536,6 @@ img{ display:block; max-width:100%; }
     linear-gradient(160deg, #ffe23d 0%, #f2b800 45%, #a86f00 100%);
 }
 
-/* texture diagonale */
 .skin-card::before{
   content:'';
   position:absolute;
@@ -621,7 +578,6 @@ img{ display:block; max-width:100%; }
   font-weight: 600;
 }
 
-/* Images des skins */
 .skin-image{
   position: absolute;
   top: 50%;
@@ -639,7 +595,141 @@ img{ display:block; max-width:100%; }
 }
 
 /* ============================================================
-   MODALE « CONNECTE-TOI POUR VOIR LES RÉSULTATS COMPLETS »
+   SECTION 5 — CHERCHE TON COMPTE (EN BAS)
+============================================================ */
+.find-account{
+  background: var(--dark-2);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  padding: 100px 0 80px;
+}
+
+.find-account .section-eyebrow{
+  margin-bottom: 14px;
+}
+
+.find-account .section-title{
+  margin-bottom: 44px;
+}
+
+.search-block{
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  gap: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.5);
+}
+
+.search-block input{
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.02rem;
+  font-family: var(--font-body);
+  padding: 0 18px;
+}
+.search-block input::placeholder{ color: #7c828e; }
+
+.search-status{
+  text-align: center;
+  margin-top: 18px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: #4ade80;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.search-status.visible{ opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   SECTION 6 — FAQ (fond BLACK KNIGHT) — TOUT EN BAS
+============================================================ */
+.faq-section{
+  position: relative;
+  padding: 100px 0;
+  background-image:
+    linear-gradient(rgba(10,10,15,.92), rgba(10,10,15,.96)),
+    url('https://fortnite.gg/img/items/892/bg.jpg?7');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.faq-section .section-eyebrow{
+  margin-bottom: 14px;
+}
+
+.faq-section .section-title{
+  margin-bottom: 44px;
+}
+
+.faq-list{
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item{
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.faq-item:last-child{ border-bottom: none; }
+
+.faq-question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: color .2s ease;
+  user-select: none;
+  gap: 16px;
+}
+
+.faq-question:hover{ color: var(--yellow); }
+
+.faq-icon{
+  width: 24px; height: 24px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--yellow);
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+  transition: transform .3s ease;
+}
+
+.faq-item.open .faq-icon{
+  transform: rotate(45deg);
+}
+
+.faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, padding .3s ease;
+  color: rgba(255,255,255,.75);
+  font-size: .94rem;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer{
+  max-height: 400px;
+  padding-bottom: 22px;
+}
+
+/* ============================================================
+   MODALE
 ============================================================ */
 .modal-overlay{
   position: fixed;
@@ -680,7 +770,6 @@ img{ display:block; max-width:100%; }
   transform: translateY(0) scale(1);
 }
 
-/* Fond flouté avec les skins */
 .modal-bg{
   position: absolute;
   inset: 0;
@@ -694,7 +783,6 @@ img{ display:block; max-width:100%; }
   transform: scale(1.05);
 }
 
-/* Grille de skins floutée en arrière-plan */
 .modal-skins-bg{
   position: absolute;
   inset: 0;
@@ -807,6 +895,10 @@ img{ display:block; max-width:100%; }
 
   .modal{ padding: 40px 24px 36px; }
   .modal-skins-bg{ display: none; }
+
+  .find-account{ padding: 72px 0 60px; }
+  .faq-section{ padding: 72px 0; background-attachment: scroll; }
+  .faq-question{ font-size: .92rem; padding: 18px 2px; }
 }
 
 @media (max-width: 560px){
@@ -840,7 +932,7 @@ img{ display:block; max-width:100%; }
       <a href="#casier" class="active">Casier</a>
       <a href="#etapes">Étapes</a>
       <a href="#fonctionnalites">Fonctionnalités</a>
-      <a href="#essai">Essai gratuit</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
     <div class="header-actions">
@@ -924,14 +1016,6 @@ img{ display:block; max-width:100%; }
 
     </div>
 
-    <div class="search-block">
-      <input type="text" id="pseudo" placeholder="Entre ton pseudo Epic Games..." autocomplete="off">
-      <button class="btn btn-yellow" type="button" id="searchBtn">
-        Synchroniser mon casier →
-      </button>
-    </div>
-    <p class="search-status" id="searchStatus">• Compte trouvé</p>
-
   </div>
 </section>
 
@@ -941,7 +1025,6 @@ img{ display:block; max-width:100%; }
 ============================================================ -->
 <section class="features" id="fonctionnalites">
 
-  <!-- Personnages 3D décoratifs -->
   <img class="char char-left"
        src="https://fortnite-api.com/images/cosmetics/br/cid_028_athena_commando_m_blackknight/icon.png"
        alt="" onerror="this.style.display='none'">
@@ -1008,7 +1091,6 @@ img{ display:block; max-width:100%; }
 <section class="section value" id="casier">
   <div class="container">
 
-    <!-- Compteurs -->
     <div class="stats">
       <div class="stat">
         <span class="stat-value">10S</span>
@@ -1028,10 +1110,8 @@ img{ display:block; max-width:100%; }
       </div>
     </div>
 
-    <!-- Titre -->
     <h2 class="skins-title">Chaque skin a de la valeur</h2>
 
-    <!-- Grille de skins -->
     <div class="skins-grid">
 
       <article class="skin-card skin-red">
@@ -1084,15 +1164,140 @@ img{ display:block; max-width:100%; }
 
 
 <!-- ============================================================
+     SECTION 5 — CHERCHE TON COMPTE (TOUT EN BAS)
+============================================================ -->
+<section class="find-account" id="trouve-ton-compte">
+  <div class="container">
+
+    <p class="section-eyebrow">Trouve ton compte</p>
+    <h2 class="section-title">Entre ton pseudo Epic Games</h2>
+
+    <div class="search-block">
+      <input type="text" id="pseudo" placeholder="Entre ton pseudo Epic Games..." autocomplete="off">
+      <button class="btn btn-yellow" type="button" id="searchBtn">
+        Synchroniser mon casier →
+      </button>
+    </div>
+    <p class="search-status" id="searchStatus">• Compte trouvé</p>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6 — FAQ BLACK KNIGHT (TOUT EN BAS)
+============================================================ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+
+    <p class="section-eyebrow">Foire aux questions</p>
+    <h2 class="section-title">On répond à tout.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Est-ce gratuit ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Oui, l'utilisation du checker est entièrement gratuite. Aucun paiement n'est demandé pour estimer la valeur de ton casier.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Pourquoi dois-je me connecter à mon compte Epic ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          La connexion permet au système d'accéder de manière sécurisée à ton casier, d'examiner tes objets et de calculer la valeur estimée de ton compte. Sans autorisation, l'évaluation n'est pas possible.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Est-ce sécurisé ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Oui, toutes les connexions sont chiffrées et nous ne stockons jamais tes identifiants. La connexion passe directement par Epic Games.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Dois-je vendre mon compte ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Non, l'évaluation est purement informative. Tu restes libre de faire ce que tu veux avec ton compte après avoir vu le résultat.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Qu'est-ce qui influence la valeur de mon compte ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Les skins rares, les emotes, les piochs, les packs, l'ancienneté du compte et la saison d'inscription. Les objets de saison 1 à 3 valent particulièrement cher.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Comment savoir combien vaut mon compte ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Il suffit de te connecter avec ton compte Epic. Notre système analyse automatiquement ton inventaire et te donne une estimation en temps réel basée sur les prix du marché.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Si je décide de vendre mon compte, à quelle vitesse serai-je payé ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Les paiements sont traités sous 24 à 48 heures après validation de la transaction. Nous supportons la plupart des moyens de paiement.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Et si l'estimation ne me convient pas ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Aucun engagement. Tu peux simplement ignorer le résultat et garder ton compte. L'estimation est juste là pour te donner une idée.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Quels objets sont inclus dans l'évaluation ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Tous les skins, emotes, piochs, planeurs, sacs à dos, trails, enveloppes et packs présents dans ton casier, quelle que soit leur rareté.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      MODALE — CONNECTE-TOI POUR VOIR LES RÉSULTATS COMPLETS
 ============================================================ -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
 
-    <!-- Fond flouté avec l'image hero -->
     <div class="modal-bg"></div>
 
-    <!-- Grille de skins floutée en arrière-plan -->
     <div class="modal-skins-bg">
       <img src="https://fortnite-api.com/images/cosmetics/br/cid_028_athena_commando_m_blackknight/icon.png" alt="">
       <img src="https://fortnite-api.com/images/cosmetics/br/cid_030_athena_commando_m_halloween/icon.png" alt="">
@@ -1160,7 +1365,7 @@ function closeModal() {
 /* Bouton du hero */
 heroSyncBtn.addEventListener('click', openModal);
 
-/* Bouton du bloc de recherche */
+/* Bouton du bloc de recherche (bas de page) */
 searchBtn.addEventListener('click', () => {
   const value = pseudoInput.value.trim();
   if (!value) {
@@ -1192,6 +1397,22 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
     closeModal();
   }
+});
+
+/* ============================================================
+   FAQ ACCORDÉON
+============================================================ */
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const wasOpen = item.classList.contains('open');
+
+    // Ferme tous les autres
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+    // Ouvre celui cliqué (sauf s'il était déjà ouvert)
+    if (!wasOpen) item.classList.add('open');
+  });
 });
 
 /* ============================================================
