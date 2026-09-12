@@ -240,6 +240,7 @@
     flex-shrink: 0;
   }
 
+  /* Taille par défaut des logos */
   .platform-icon img {
     width: 22px;
     height: 22px;
@@ -251,22 +252,48 @@
     overflow: hidden;
   }
 
-  /* Ajustements spécifiques pour les logos non carrés */
-  .platform-icon.round-icon img[alt="Nintendo Account"] {
-    width: 30px;
-    height: 16px;
-  }
-  .platform-icon.round-icon img[alt="Autodesk"] {
+  /* ====== AJUSTEMENTS DE TAILLE PAR LOGO ====== */
+
+  /* PlayStation — taille d'origine (agrandie) */
+  .platform-icon.round-icon img[alt="PlayStation Network"] {
     width: 28px;
-    height: 14px;
+    height: 28px;
   }
+
+  /* Xbox — taille d'origine (agrandie) */
+  .platform-icon.round-icon img[alt="Xbox network"] {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Nintendo — légèrement agrandi */
+  .platform-icon.round-icon img[alt="Nintendo Account"] {
+    width: 32px;
+    height: 18px;
+  }
+
+  /* Apple — légèrement agrandi */
   .platform-icon.round-icon img[alt="Sign in with Apple"] {
-    width: 20px;
-    height: 24px;
+    width: 24px;
+    height: 28px;
   }
+
+  /* Facebook — légèrement agrandi */
+  .platform-icon.round-icon img[alt="Facebook"] {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* LEGO — inchangé */
   .platform-icon.round-icon img[alt="LEGO Account"] {
     width: 24px;
     height: 24px;
+  }
+
+  /* Autodesk — légèrement agrandi */
+  .platform-icon.round-icon img[alt="Autodesk"] {
+    width: 32px;
+    height: 16px;
   }
 
   /* ====== FOOTER ====== */
@@ -310,17 +337,29 @@
       width: 18px;
       height: 18px;
     }
-    .platform-icon.round-icon img[alt="Nintendo Account"] {
-      width: 26px;
-      height: 14px;
-    }
-    .platform-icon.round-icon img[alt="Autodesk"] {
+    .platform-icon.round-icon img[alt="PlayStation Network"] {
       width: 24px;
-      height: 12px;
+      height: 24px;
+    }
+    .platform-icon.round-icon img[alt="Xbox network"] {
+      width: 24px;
+      height: 24px;
+    }
+    .platform-icon.round-icon img[alt="Nintendo Account"] {
+      width: 28px;
+      height: 16px;
     }
     .platform-icon.round-icon img[alt="Sign in with Apple"] {
-      width: 16px;
-      height: 20px;
+      width: 20px;
+      height: 24px;
+    }
+    .platform-icon.round-icon img[alt="Facebook"] {
+      width: 22px;
+      height: 22px;
+    }
+    .platform-icon.round-icon img[alt="Autodesk"] {
+      width: 28px;
+      height: 14px;
     }
   }
 
