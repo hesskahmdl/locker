@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fortnite Locker Value — Ton estimation</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/960px-Epic_Games_logo.svg.png">
+
+<!-- Police Fortnite -->
+<link rel="preconnect" href="https://fonts.cdnfonts.com">
+<link href="https://fonts.cdnfonts.com/css/burbank-big-condensed" rel="stylesheet">
+
+<style>
+/* ============================================================
+   VARIABLES & RESET
+============================================================ */
+:root{
+  --yellow:        #ffff00;
+  --yellow-btn:    #f8f013;
+  --yellow-dark:   #d8d200;
+  --dark:          #0d0e12;
+  --dark-2:        #121214;
+  --header-bg:     rgba(18, 18, 20, 0.90);
+  --card-bg:       rgba(255,255,255,0.05);
+  --card-border:   rgba(255,255,255,0.10);
+  --text:          #ffffff;
+  --text-muted:    #b8bcc6;
+  --green:         #22d97a;
+  --font-title:    'Burbank Big Cd Bd', 'Arial Black', 'Arial Bold', sans-serif;
+  --font-body:     'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --radius:        14px;
+  --maxw:          1240px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background: var(--dark);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1,h2,h3,h4{
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+a{ text-decoration:none; color:inherit; }
+img{ display:block; max-width:100%; }
+
+.container{
+  width:100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   ÉCRAN DE CHARGEMENT (0.49s)
+============================================================ */
+.loading-screen{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loading-screen.hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Logo avec anneau animé */
+.loading-logo{
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+}
+
+.loading-ring{
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,0,0.1);
+}
+
+.loading-ring::before{
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--yellow);
+  border-right-color: var(--yellow);
+  animation: spinRing 0.9s linear infinite;
+  box-shadow: 0 0 20px rgba(255,251,0,0.5);
+}
+
+.loading-ring::after{
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-bottom-color: rgba(255,251,0,0.6);
+  animation: spinRing 1.4s linear infinite reverse;
+}
+
+@keyframes spinRing{
+  to { transform: rotate(360deg); }
+}
+
+.loading-icon{
+  width: 44px;
+  height: 44px;
+  color: var(--yellow);
+  filter: drop-shadow(0 0 12px rgba(255,251,0,0.6));
+  animation: pulseIcon 1.2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon{
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.08); opacity: 0.85; }
+}
+
+/* Texte de chargement */
+.loading-text{
+  text-align: center;
+}
+
+.loading-title{
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.loading-title .hl{
+  color: var(--yellow);
+  text-shadow: 0 0 20px rgba(255,251,0,0.6);
+}
+
+.loading-status{
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  min-height: 18px;
+}
+
+.loading-status::after{
+  content: '...';
+  animation: dots 1.2s steps(4, end) infinite;
+}
+
+@keyframes dots{
+  0%, 20%  { content: ''; }
+  40%      { content: '.'; }
+  60%      { content: '..'; }
+  80%, 100%{ content: '...'; }
+}
+
+/* Barre de progression */
+.loading-bar{
+  width: 240px;
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar-fill{
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--yellow), #ff8c00);
+  border-radius: 999px;
+  box-shadow: 0 0 15px rgba(255,251,0,0.6);
+  animation: fillBar 0.49s ease-out forwards;
+}
+
+@keyframes fillBar{
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ============================================================
+   BOUTONS
+============================================================ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  white-space: nowrap;
+}
+
+.btn-yellow{
+  background: var(--yellow-btn);
+  color: #101010;
+  padding: 16px 30px;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 26px rgba(248,240,19,.28), inset 0 -3px 0 rgba(0,0,0,.18);
+}
+.btn-yellow:hover{
+  background: #fff83a;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(248,240,19,.42), inset 0 -3px 0 rgba(0,0,0,.18);
+}
+.btn-yellow:active{ transform: translateY(0); }
+
+.btn-ghost{
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  padding: 16px 26px;
+  font-size: .95rem;
+}
+.btn-ghost:hover{
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,0,.4);
+  color: var(--yellow);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.header-inner{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 26px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.brand-epic{ height: 28px; width: auto; }
+.brand-fortnite{
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.header-actions{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+  font-family: var(--font-body);
+}
+
+.back-btn:hover{
+  background: rgba(255,255,0,.1);
+  border-color: rgba(255,255,0,.4);
+  color: var(--yellow);
+  transform: translateX(-3px);
+}
+
+.back-btn svg{ width: 16px; height: 16px; }
+
+/* ============================================================
+   FOND ANIMÉ
+============================================================ */
+.bg-grid{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,251,0,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,251,0,0.025) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.bg-orb{
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatOrb 16s ease-in-out infinite;
+}
+
+.orb-1{ width: 500px; height: 500px; background: #fffb00; top: -200px; left: -200px; opacity: 0.15; }
+.orb-2{ width: 400px; height: 400px; background: #ff5f1f; bottom: -150px; right: -150px; opacity: 0.2; animation-delay: -5s; }
+.orb-3{ width: 350px; height: 350px; background: #5f1fff; top: 45%; left: 55%; opacity: 0.15; animation-delay: -10s; }
+
+@keyframes floatOrb{
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(40px, -40px) scale(1.1); }
+  66%      { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+/* ============================================================
+   WRAPPER
+============================================================ */
+.wrapper{
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px 80px;
+}
+
+/* ============================================================
+   HEADER DE PAGE
+============================================================ */
+.page-header{
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeUp 0.8s ease;
+}
+
+.page-eyebrow{
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--yellow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  background: rgba(255,251,0,0.08);
+  border: 1px solid rgba(255,251,0,0.25);
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.page-title{
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+}
+
+.page-title .hl{
+  color: var(--yellow);
+  text-shadow: 0 0 40px rgba(255,251,0,0.6);
+}
+
+.page-desc{
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   CARTE VALEUR
+============================================================ */
+.value-card{
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,251,0,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  padding: 50px 40px 45px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  animation: fadeUp 1s ease 0.2s backwards;
+}
+
+.value-card::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer{
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.value-card::after{
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,251,0,0.08), transparent 60%);
+  pointer-events: none;
+}
+
+/* ====== HAUT DE CARTE ====== */
+.account-info{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--card-border);
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease 0.3s backwards;
+}
+
+.avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--yellow), #ff8c00);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-title);
+  font-size: 26px;
+  color: #101014;
+  box-shadow: 0 0 30px rgba(255,251,0,0.4);
+  flex-shrink: 0;
+}
+
+.account-info-text h3{
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin-bottom: 3px;
+}
+
+.account-info-text p{
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.status-badge{
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(34,217,122,0.1);
+  border: 1px solid rgba(34,217,122,0.3);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.status-badge::before{
+  content: '';
+  width: 7px; height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--green);
+  animation: blinkDot 1.5s infinite;
+}
+
+@keyframes blinkDot{ 50% { opacity: 0.4; } }
+
+/* ====== VALEUR ====== */
+.value-label{
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 12px;
+}
+
+.value-display{
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: clamp(4rem, 14vw, 9rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #fff 0%, var(--yellow) 60%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 8px 30px rgba(255,251,0,0.4));
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.value-display.bump{
+  animation: bump 0.4s ease;
+}
+
+@keyframes bump{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.value-display .currency{
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-right: 4px;
+  opacity: 0.85;
+}
+
+/* ====== BARRE PROGRESSION ====== */
+.progress{
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-bar{
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--yellow), #ff8c00);
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(255,251,0,0.5);
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-bar::after{
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 40px; height: 100%;
+  background: linear-gradient(90deg, transparent, white);
+  opacity: 0.6;
+  animation: shine 1.2s linear infinite;
+}
+
+@keyframes shine{
+  0%   { transform: translateX(-40px); }
+  100% { transform: translateX(0); }
+}
+
+/* ====== MINI STATS ====== */
+.mini-stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.mini-stat{
+  padding: 16px 18px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.mini-stat:hover{
+  border-color: rgba(255,251,0,0.3);
+  transform: translateY(-3px);
+}
+
+.mini-stat-value{
+  font-family: var(--font-title);
+  font-size: 24px;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.mini-stat-label{
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ====== BOUTON PARTAGER UNIQUEMENT ====== */
+.recalc-zone{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease 0.4s backwards;
+}
+
+.recalc-zone .btn svg{ width: 18px; height: 18px; }
+
+/* ====== INFO GRID ====== */
+.info-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  animation: fadeUp 1s ease 0.5s backwards;
+}
+
+.info-card{
+  padding: 24px 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.info-card:hover{
+  border-color: rgba(255,251,0,0.25);
+  transform: translateY(-4px);
+  background: rgba(255,251,0,0.03);
+}
+
+.info-icon{
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,251,0,0.1);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  color: var(--yellow);
+}
+
+.info-icon svg{ width: 20px; height: 20px; }
+
+.info-card h4{
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.info-card p{
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ====== FOOTER ====== */
+.site-footer{
+  background: #08090c;
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding: 34px 0;
+  text-align: center;
+  color: #6f7580;
+  font-size: .84rem;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeUp{
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== CONFETTIS ====== */
+.confetti{
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  z-index: 999;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall{
+  0%   { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px){
+  .header-inner{ height: 72px; gap: 16px; padding: 0 16px; }
+  .brand-epic{ height: 22px; }
+  .brand-fortnite{ height: 38px; }
+}
+
+@media (max-width: 720px){
+  .wrapper{ padding: 40px 16px 60px; }
+  .value-card{ padding: 36px 22px 32px; border-radius: 22px; }
+  .account-info{ flex-wrap: wrap; }
+  .status-badge{ margin-left: 0; }
+  .mini-stats{ grid-template-columns: 1fr; }
+  .info-grid{ grid-template-columns: 1fr; }
+  .value-display{ font-size: clamp(3rem, 18vw, 6rem); }
+  .page-title{ font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     ÉCRAN DE CHARGEMENT (0.49s)
+============================================================ -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-logo">
+    <div class="loading-ring"></div>
+    <svg class="loading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+  </div>
+
+  <div class="loading-text">
+    <div class="loading-title">Connexion <span class="hl">API</span></div>
+    <div class="loading-status" id="loadingStatus">Initialisation</div>
+  </div>
+
+  <div class="loading-bar">
+    <div class="loading-bar-fill"></div>
+  </div>
+</div>
+
+<!-- FOND ANIMÉ -->
+<div class="bg-grid"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-orb orb-3"></div>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <a href="https://hesskahmdl.github.io/locker/" class="brand" aria-label="Epic Games — Fortnite">
+      <img class="brand-epic"
+           src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/960px-Epic_Games_logo.svg.png"
+           alt="Epic Games">
+      <img class="brand-fortnite"
+           src="https://images.seeklogo.com/logo-png/49/2/fortnite-logo-png_seeklogo-499822.png"
+           alt="Fortnite">
+    </a>
+
+    <div class="header-actions">
+      <a href="https://hesskahmdl.github.io/locker/" class="back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Retour</span>
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============================================================
+     WRAPPER
+============================================================ -->
+<div class="wrapper">
+
+  <div class="page-header">
+    <span class="page-eyebrow">Estimation du casier</span>
+    <h1 class="page-title">
+      Ton compte vaut<br>
+      <span class="hl">de l'or</span>
+    </h1>
+    <p class="page-desc">
+      Voici la valeur estimée de ton casier Fortnite en temps réel, basée sur les prix actuels du marché et la rareté de tes objets.
+    </p>
+  </div>
+
+  <div class="value-card" id="valueCard">
+
+    <div class="account-info">
+      <div class="avatar" id="avatar">S</div>
+      <div class="account-info-text">
+        <h3 id="username">Joueur</h3>
+        <p>EPIC GAMES · Compte analysé</p>
+      </div>
+      <div class="status-badge">Synchronisé</div>
+    </div>
+
+    <div class="value-label">Valeur totale estimée</div>
+    <div class="value-display" id="valueDisplay">
+      <span class="currency">$</span><span id="valueNumber">0</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat">
+        <div class="mini-stat-value" id="skinsCount">0</div>
+        <div class="mini-stat-label">Skins</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-value" id="emotesCount">0</div>
+        <div class="mini-stat-label">Emotes</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-value" id="pickaxesCount">0</div>
+        <div class="mini-stat-label">Piochs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bouton PARTAGER uniquement (Recalculer supprimé) -->
+  <div class="recalc-zone">
+    <button class="btn btn-yellow" id="shareBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      Partager mon estimation
+    </button>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z"/>
+        </svg>
+      </div>
+      <h4>Analyse instantanée</h4>
+      <p>Le calcul se base sur plus de 3 millions de casiers et les prix réels du marché.</p>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 7v5l3.2 2"></path>
+        </svg>
+      </div>
+      <h4>Mise à jour live</h4>
+      <p>La valeur est recalculée en temps réel selon les fluctuations du marché Fortnite.</p>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10.5" width="16" height="10.5" rx="2.2"></rect>
+          <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path>
+        </svg>
+      </div>
+      <h4>100% Sécurisé</h4>
+      <p>Aucune donnée sensible n'est stockée. Ton compte reste privé et protégé.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    © 2025 Fortnite Locker Value — Estimations non officielles. Fortnite et Epic Games
+    sont des marques déposées d'Epic Games, Inc.
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   🔒 ÉCRAN DE CHARGEMENT
+============================================================ */
+const loadingScreen = document.getElementById('loadingScreen');
+const loadingStatus = document.getElementById('loadingStatus');
+
+const loadingSteps = [
+  'Initialisation',
+  'Connexion API',
+  'Chargement du casier',
+  'Calcul de la valeur'
+];
+
+let stepIndex = 0;
+const stepInterval = setInterval(() => {
+  stepIndex++;
+  if (stepIndex < loadingSteps.length) {
+    loadingStatus.textContent = loadingSteps[stepIndex];
+  }
+}, 120);
+
+setTimeout(() => {
+  clearInterval(stepInterval);
+  loadingScreen.classList.add('hidden');
+  // Lance l'estimation après la disparition
+  setTimeout(runEstimation, 100);
+}, 490);
+
+/* ============================================================
+   🔢 ANIMATION DU COMPTEUR
+============================================================ */
+const valueNumber   = document.getElementById('valueNumber');
+const valueDisplay  = document.getElementById('valueDisplay');
+const progressBar   = document.getElementById('progressBar');
+const avatar        = document.getElementById('avatar');
+const usernameEl    = document.getElementById('username');
+const skinsCount    = document.getElementById('skinsCount');
+const emotesCount   = document.getElementById('emotesCount');
+const pickaxesCount = document.getElementById('pickaxesCount');
+
+/* Récupère le pseudo depuis l'URL ou localStorage */
+(function initUsername(){
+  const params = new URLSearchParams(window.location.search);
+  const pseudo = params.get('pseudo')
+              || localStorage.getItem('fortvault_pseudo')
+              || localStorage.getItem('epic_email')?.split('@')[0]
+              || 'Joueur';
+
+  usernameEl.textContent = pseudo;
+  avatar.textContent = pseudo.charAt(0).toUpperCase();
+})();
+
+/* ============================================================
+   🎯 VALEUR ALÉATOIRE ENTRE 200 ET 4000
+============================================================ */
+function randomValue(min = 200, max = 4000){
+  const r = Math.pow(Math.random(), 1.4);
+  return Math.round((min + (max - min) * r) * 100) / 100;
+}
+
+/* ============================================================
+   ✨ ANIMATION DU COMPTEUR
+============================================================ */
+function animateValue(target, duration = 2400){
+  const start = performance.now();
+  const startValue = 0;
+
+  function easeOutExpo(t){
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function frame(now){
+    const elapsed = now - start;
+    const t = Math.min(elapsed / duration, 1);
+    const eased = easeOutExpo(t);
+    const current = startValue + (target - startValue) * eased;
+
+    valueNumber.textContent = Math.round(current).toLocaleString('fr-FR');
+
+    const pct = Math.min(((current - 200) / (4000 - 200)) * 100, 100);
+    progressBar.style.width = pct + '%';
+
+    if (t < 1) requestAnimationFrame(frame);
+    else {
+      valueDisplay.classList.add('bump');
+      setTimeout(() => valueDisplay.classList.remove('bump'), 400);
+
+      if (target > 3000) launchConfetti();
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+/* ============================================================
+   📊 ANIMATION DES STATS
+============================================================ */
+function animateCount(el, target, duration = 1200){
+  const start = performance.now();
+  function frame(now){
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.round(target * eased);
+    if (t < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+function generateStats(value){
+  const skins    = Math.floor(30 + (value / 4000) * 220 + Math.random() * 40);
+  const emotes   = Math.floor(15 + (value / 4000) * 100 + Math.random() * 25);
+  const pickaxes = Math.floor(10 + (value / 4000) * 70 + Math.random() * 20);
+
+  animateCount(skinsCount,    skins);
+  animateCount(emotesCount,   emotes);
+  animateCount(pickaxesCount, pickaxes);
+}
+
+/* ============================================================
+   🎉 CONFETTIS
+============================================================ */
+function launchConfetti(){
+  const colors = ['#fffb00', '#ff8c00', '#22d97a', '#5f1fff', '#ffffff'];
+  for (let i = 0; i < 60; i++){
+    setTimeout(() => {
+      const c = document.createElement('div');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = colors[Math.floor(Math.random() * colors.length)];
+      c.style.width = (Math.random() * 8 + 5) + 'px';
+      c.style.height = (Math.random() * 8 + 5) + 'px';
+      c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      c.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      c.style.animationDelay = (Math.random() * 0.4) + 's';
+      document.body.appendChild(c);
+
+      setTimeout(() => c.remove(), 5000);
+    }, i * 20);
+  }
+}
+
+/* ============================================================
+   🚀 LANCEMENT
+============================================================ */
+function runEstimation(){
+  const value = randomValue(200, 4000);
+  animateValue(value);
+  generateStats(value);
+}
+
+/* ============================================================
+   📤 BOUTON PARTAGER
+============================================================ */
+document.getElementById('shareBtn').addEventListener('click', () => {
+  const value = valueNumber.textContent;
+  const text = `Mon casier Fortnite vaut environ $${value} selon FortVault ! 💰`;
+
+  if (navigator.share){
+    navigator.share({ title: 'FortVault', text }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('shareBtn');
+      const original = btn.innerHTML;
+      btn.innerHTML = '✓ Copié !';
+      setTimeout(() => btn.innerHTML = original, 1800);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
